@@ -1,0 +1,114 @@
+Username:  mcintym
+Date:      Mon May 4 20:13:44 EDT 2015
+ 
+*******************
+test-for-loop-1.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1
+       2
+       3
+       4
+       5
+*******************
+test-for-loop-2.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+*******************
+test-for-loop-3.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1      10
+       2       9
+       3       8
+       4       7
+       5       6
+       6       5
+       7       4
+       8       3
+       9       2
+      10       1
+*******************
+test-for-loop-4.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1
+       2
+*******************
+test-for-loop-5.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1       1       1       1       1
+       2       2       2       2       2
+       3       3       3       3       3
+       4       4       4       4       4
+       5       5       5       5       5
+*******************
+test-for-loop-6.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1       3       5       7       9
+*******************
+test-for-loop-7.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1
+       1       2
+       1       2       3
+       1       2       3       4
+       1       2       3       4       5
+*******************
+test-for-loop-8.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       1
+       3
+       5
+       7
+       9
+*******************
+test-write-1.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+      10
+*******************
+test-write-2.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       4
+*******************
+test-write-3.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+       4       5
+*******************
+test-write-4.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+ 13
+*******************
+test-write-5.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+     4
+*******************
+test-write-6.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+  12
+ 8
+6
+*******************
+test-write-7.imp
+*******************
+WARNING: 1 Shift/Reduce, 2 Reduce/Reduce conflicts
+1        9
+ 2        8
+  3        7
+   4        6
+    5        5
+     6        4
+      7        3
+       8        2
+        9        1
+        10        0

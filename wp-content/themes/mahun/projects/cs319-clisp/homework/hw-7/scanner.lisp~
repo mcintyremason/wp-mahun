@@ -1,0 +1,60 @@
+;; Mason McIntyre
+;; 02-15-2015
+
+;; The lexical analyzer for the boolean calculator. Tokens are represented by
+;; multiple values. The first value is the token type (a symbol) and the second
+;; is the token value. Only boolean tokens have values.
+;;
+;; The token types are;
+;;  AND       and
+;;  OR        or
+;;  XOR       xor
+;;  NOT       not
+;;  LPAREN    (
+;;  RPAREN    )
+;;  BOOL      true, false
+;;
+;;  This lexical analyzer is designed to play well with cl-yacc.
+
+;; peek-c: Returns the next character in the input stream without removing it
+;; from the input stream.
+(defun peek-c (stream)
+  (peek-char nil stream nil))
+
+;; read-c: Removes the next character in the input stream and returns it.
+(defun read-c (stream)
+  (read-char stream nil))
+
+;; whitespace-char-p: Determines whether a character is whitespace (space, 
+;; newline, or tab.
+(defun whitespace-char-p (c)
+  (case c 
+	((#\Space #\Newline #\Tab) t)
+	(t nil)))
+
+;; scan-keyword: Scans a boolean, returning an boolean token.
+(defun scan-keyword (stream lexeme-list)
+  (let ((first (peek-c stream)))
+    (cond ((null first) (check-reserved lexeme-list))
+	  ((alphanumericp first)
+          (read-c stream)
+           (scan-keyword stream (cons first lexeme-list)))
+	  (t (check-reserved lexeme-list)))))
+
+(defun check-reserved (lexeme-list)
+  (let ((reserved '(AND OR XOR NOT TRUE FALSE))
+        (lexeme (intern (string-upcase (coerce (reverse lexeme-list) 'string)))))
+    (if (member lexeme reserved)
+        lexeme
+      (values 'BOOL lexeme))))
+
+;; scan: Returns the next token in the input stream. At end of file it returns nil.
+(defun scan (stream)
+  (let ((first (read-c stream)))
+    (cond 
+     ((null first) nil)
+     ((whitespace-char-p first) (scan stream))            
+     ((alpha-char-p first) (scan-keyword stream (list first)))
+     (t (ecase first 
+          (#\( 'LPAREN)
+          (#\) 'RPAREN))))))

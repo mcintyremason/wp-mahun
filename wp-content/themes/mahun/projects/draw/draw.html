@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Paint</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="draw.js"></script>
+    <style type="text/css">
+      canvas { border: 1px solid; }
+
+    </style>
+  </head>
+  <body>
+    <h1>Draw</h1>
+    <div>
+       <select name="shapes" id="shapes">
+	 <option value="rectangle">Rectangle</option>
+	 <option value="line">Line</option>
+	 <option value="ellipse">Ellipse</option>
+	 <option value="text">Text</option>
+       </select>
+       <button type="button" id="undo">Undo</button>
+       <button type="button" id="redo">Redo</button>
+       <button type="button" id="save">Save</button>
+       <button type="button" id="load">Load</button>
+    </div>
+    <div>
+      Outline<input type="checkbox" id="outline">
+      Fill <input type="checkbox" id="fill">
+      <button type="button" id="forward">Forward</button>
+      <button type="button" id="backward">Backward</button>
+    </div>
+    <div>
+      Background <input align="bottom" type="color" name="colors" id="cBackground">
+      Outline <input align="bottom" type="color" name="colors" id="cOutline">
+      Fill <input align="bottom" type="color" name="colors" id="cFill">
+    </div>
+    <div>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+  </body>
+</html>

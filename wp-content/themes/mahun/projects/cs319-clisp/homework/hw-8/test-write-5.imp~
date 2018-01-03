@@ -1,0 +1,2 @@
+i := 2;
+write(i* 2 : i * 3); writeln()

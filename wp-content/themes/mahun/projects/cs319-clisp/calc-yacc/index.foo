@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <title>Fred Sullivan</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body style="position: relative; padding-top: 40px; color: midnightblue;">
+    <div class="container">
+      <div class="well">
+	<div class="row">
+	  <div class="span6">
+	    <div class="thumbnail">
+	      <img src="img/spiral-600.png">
+	    </div>
+	  </div>
+	  <div class="span4">
+	    <h1 style="font-weight: 300; margin-top: 40px; font-size: 36px;">Fred&nbsp;Sullivan</h1>
+	    <h3 style="font-weight: 300; margin-top: 20px; font-size: 18px; line-height: 1.5;">
+	      Mathematics&nbsp;and&nbsp;Computer&nbsp;Science<br>
+	      Wilkes University
+	    </h3>
+	    <ul class="nav nav-list">
+	      <li><a href="/">Home</li>
+	      <li><a href="/contact.html">Contact</li>
+	      <li><a href="/schedule.html">Schedule</li>
+	      <li><a href="/courses">Courses</li>
+	      <li><a href="/anthem.html">Anthem</li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

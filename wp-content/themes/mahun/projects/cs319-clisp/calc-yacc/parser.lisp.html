@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>parser.lisp</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles-2014.css"></link>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/site-2014.js"></script>
+    <meta name="viewport" content="initial-scale=1.0"></meta>
+  </head>
+  <body>
+    <div class="content">
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; The parser for the integer calculator. It uses cl-yacc.</span>
+
+<span class="hl slc">;; Expression structures. </span>
+<span class="hl opt">(</span><span class="hl kwa">defstruct</span> int-const-expr value<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">defstruct</span> binary-expr op left right<span class="hl opt">)</span>
+
+<span class="hl slc">;; This function takes an operator (represented by a symbol) as an</span>
+<span class="hl slc">;; argument and returns an action function for cl-yacc productions</span>
+<span class="hl slc">;; that creates binary expression with that operator.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> binary <span class="hl opt">(</span><span class="hl kwa">op</span><span class="hl opt">)</span> 
+  <span class="hl opt">(</span><span class="hl kwa">lambda</span> <span class="hl opt">(</span><span class="hl kwa">x</span> y z<span class="hl opt">) (</span><span class="hl kwa">make-binary-expr</span> <span class="hl opt">:</span>op op <span class="hl opt">:</span>left x <span class="hl opt">:</span>right z<span class="hl opt">)))</span>
+
+<span class="hl slc">;; The parser.</span>
+<span class="hl opt">(</span><span class="hl kwa">define-parser</span> <span class="hl opt">*</span>expr-parser<span class="hl opt">*</span>
+  <span class="hl opt">(:</span>start-symbol expr<span class="hl opt">)</span>
+  <span class="hl opt">(:</span>terminals <span class="hl opt">(</span><span class="hl kwa">INT-CONST</span>
+	       PLUS MINUS 
+	       TIMES DIV MOD
+	       LPAREN RPAREN<span class="hl opt">))</span>
+  <span class="hl opt">(:</span>precedence <span class="hl opt">((:</span>LEFT TIMES DIV MOD<span class="hl opt">)</span> 
+		<span class="hl opt">(:</span>LEFT PLUS MINUS<span class="hl opt">)))</span>
+  <span class="hl opt">(</span><span class="hl kwa">expr</span> 
+   <span class="hl opt">(</span><span class="hl kwa">expr</span> PLUS expr <span class="hl opt">(</span><span class="hl kwa">binary</span> <span class="hl opt">'</span>PLUS<span class="hl opt">))</span>
+   <span class="hl opt">(</span><span class="hl kwa">expr</span> MINUS expr <span class="hl opt">(</span><span class="hl kwa">binary</span> <span class="hl opt">'</span>MINUS<span class="hl opt">))</span>
+   <span class="hl opt">(</span><span class="hl kwa">expr</span> TIMES expr <span class="hl opt">(</span><span class="hl kwa">binary</span> <span class="hl opt">'</span>TIMES<span class="hl opt">))</span>
+   <span class="hl opt">(</span><span class="hl kwa">expr</span> DIV expr <span class="hl opt">(</span><span class="hl kwa">binary</span> <span class="hl opt">'</span>DIV<span class="hl opt">))</span>
+   <span class="hl opt">(</span><span class="hl kwa">expr</span> MOD expr <span class="hl opt">(</span><span class="hl kwa">binary</span> <span class="hl opt">'</span>MOD<span class="hl opt">))</span>
+   <span class="hl opt">(</span><span class="hl kwa">INT-CONST</span> <span class="hl opt">(</span><span class="hl kwa">lambda</span> <span class="hl opt">(</span><span class="hl kwa">x</span><span class="hl opt">) (</span><span class="hl kwa">make-int-const-expr</span> <span class="hl opt">:</span>value x<span class="hl opt">)))</span>
+   <span class="hl opt">(</span><span class="hl kwa">LPAREN</span> expr RPAREN <span class="hl opt">(</span><span class="hl kwa">lambda</span> <span class="hl opt">(</span><span class="hl kwa">x</span> y z<span class="hl opt">)</span> y<span class="hl opt">))))</span>
+</pre>
+</div>
+</div>
+</div>
+    </div>
+  </body>
+</html>

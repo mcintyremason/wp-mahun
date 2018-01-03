@@ -1,0 +1,56 @@
+Username:  mcintym
+Date:      Tue Feb 17 10:17:34 EST 2015
+ 
+*** compiling ***
+--- running ---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test1.1
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+fetch 2: DR = 255 and PC = 2
+fetch 3: IR = 255 and AR = 2
+HALT
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 2 PC = 2 DR = 255
+--- Running again ---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test1.2
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+fetch 2: DR = 0 and PC = 2
+fetch 3: IR = 0 and AR = 2
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 2 PC = 2 DR = 0
+fetch 1: AR = 2 and PC = 2
+fetch 2: DR = 0 and PC = 3
+fetch 3: IR = 0 and AR = 3
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 3 PC = 3 DR = 0
+fetch 1: AR = 3 and PC = 3
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 4 PC = 4 DR = 0
+fetch 1: AR = 4 and PC = 4
+fetch 2: DR = 0 and PC = 5
+fetch 3: IR = 0 and AR = 5
+NOP instruction
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 5 PC = 5 DR = 0
+fetch 1: AR = 5 and PC = 5
+fetch 2: DR = 255 and PC = 6
+fetch 3: IR = 255 and AR = 6
+HALT
+Instruction Complete: AC = 0 R = 0 flag = 0000 AR = 6 PC = 6 DR = 255

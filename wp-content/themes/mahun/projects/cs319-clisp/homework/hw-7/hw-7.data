@@ -1,0 +1,2504 @@
+false and false and false and false
+false and false and false and true
+false and false and false or false
+false and false and false or true
+false and false and not false
+false and false and not true
+false and false and true and false
+false and false and true and true
+false and false and true or false
+false and false and true or true
+false and false and false
+false and false and true
+false and false or false and false
+false and false or false and true
+false and false or false or false
+false and false or false or true
+false and false or not false
+false and false or not true
+false and false or true and false
+false and false or true and true
+false and false or true or false
+false and false or true or true
+false and false or false
+false and false or true
+false and true and false and false
+false and true and false and true
+false and true and false or false
+false and true and false or true
+false and true and not false
+false and true and not true
+false and true and true and false
+false and true and true and true
+false and true and true or false
+false and true and true or true
+false and true and false
+false and true and true
+false and true or false and false
+false and true or false and true
+false and true or false or false
+false and true or false or true
+false and true or not false
+false and true or not true
+false and true or true and false
+false and true or true and true
+false and true or true or false
+false and true or true or true
+false and true or false
+false and true or true
+false or false and false and false
+false or false and false and true
+false or false and false or false
+false or false and false or true
+false or false and not false
+false or false and not true
+false or false and true and false
+false or false and true and true
+false or false and true or false
+false or false and true or true
+false or false and false
+false or false and true
+false or false or false and false
+false or false or false and true
+false or false or false or false
+false or false or false or true
+false or false or not false
+false or false or not true
+false or false or true and false
+false or false or true and true
+false or false or true or false
+false or false or true or true
+false or false or false
+false or false or true
+false or true and false and false
+false or true and false and true
+false or true and false or false
+false or true and false or true
+false or true and not false
+false or true and not true
+false or true and true and false
+false or true and true and true
+false or true and true or false
+false or true and true or true
+false or true and false
+false or true and true
+false or true or false and false
+false or true or false and true
+false or true or false or false
+false or true or false or true
+false or true or not false
+false or true or not true
+false or true or true and false
+false or true or true and true
+false or true or true or false
+false or true or true or true
+false or true or false
+false or true or true
+not false and false and false
+not false and false and true
+not false and false or false
+not false and false or true
+not false and not false
+not false and not true
+not false and true and false
+not false and true and true
+not false and true or false
+not false and true or true
+not false and false
+not false and true
+not false or false and false
+not false or false and true
+not false or false or false
+not false or false or true
+not false or not false
+not false or not true
+not false or true and false
+not false or true and true
+not false or true or false
+not false or true or true
+not false or false
+not false or true
+not true and false and false
+not true and false and true
+not true and false or false
+not true and false or true
+not true and not false
+not true and not true
+not true and true and false
+not true and true and true
+not true and true or false
+not true and true or true
+not true and false
+not true and true
+not true or false and false
+not true or false and true
+not true or false or false
+not true or false or true
+not true or not false
+not true or not true
+not true or true and false
+not true or true and true
+not true or true or false
+not true or true or true
+not true or false
+not true or true
+true and false and false and false
+true and false and false and true
+true and false and false or false
+true and false and false or true
+true and false and not false
+true and false and not true
+true and false and true and false
+true and false and true and true
+true and false and true or false
+true and false and true or true
+true and false and false
+true and false and true
+true and false or false and false
+true and false or false and true
+true and false or false or false
+true and false or false or true
+true and false or not false
+true and false or not true
+true and false or true and false
+true and false or true and true
+true and false or true or false
+true and false or true or true
+true and false or false
+true and false or true
+true and true and false and false
+true and true and false and true
+true and true and false or false
+true and true and false or true
+true and true and not false
+true and true and not true
+true and true and true and false
+true and true and true and true
+true and true and true or false
+true and true and true or true
+true and true and false
+true and true and true
+true and true or false and false
+true and true or false and true
+true and true or false or false
+true and true or false or true
+true and true or not false
+true and true or not true
+true and true or true and false
+true and true or true and true
+true and true or true or false
+true and true or true or true
+true and true or false
+true and true or true
+true or false and false and false
+true or false and false and true
+true or false and false or false
+true or false and false or true
+true or false and not false
+true or false and not true
+true or false and true and false
+true or false and true and true
+true or false and true or false
+true or false and true or true
+true or false and false
+true or false and true
+true or false or false and false
+true or false or false and true
+true or false or false or false
+true or false or false or true
+true or false or not false
+true or false or not true
+true or false or true and false
+true or false or true and true
+true or false or true or false
+true or false or true or true
+true or false or false
+true or false or true
+true or true and false and false
+true or true and false and true
+true or true and false or false
+true or true and false or true
+true or true and not false
+true or true and not true
+true or true and true and false
+true or true and true and true
+true or true and true or false
+true or true and true or true
+true or true and false
+true or true and true
+true or true or false and false
+true or true or false and true
+true or true or false or false
+true or true or false or true
+true or true or not false
+true or true or not true
+true or true or true and false
+true or true or true and true
+true or true or true or false
+true or true or true or true
+true or true or false
+true or true or true
+false and false and false
+false and false and true
+false and false or false
+false and false or true
+false and not false
+false and not true
+false and true and false
+false and true and true
+false and true or false
+false and true or true
+false and false
+false and true
+false or false and false
+false or false and true
+false or false or false
+false or false or true
+false or not false
+false or not true
+false or true and false
+false or true and true
+false or true or false
+false or true or true
+false or false
+false or true
+not false and false
+not false and true
+not false or false
+not false or true
+not not false
+not not true
+not true and false
+not true and true
+not true or false
+not true or true
+not false
+not true
+true and false and false
+true and false and true
+true and false or false
+true and false or true
+true and not false
+true and not true
+true and true and false
+true and true and true
+true and true or false
+true and true or true
+true and false
+true and true
+true or false and false
+true or false and true
+true or false or false
+true or false or true
+true or not false
+true or not true
+true or true and false
+true or true and true
+true or true or false
+true or true or true
+true or false
+true or true
+false
+true
+false and false and false and true and true and false or not false
+false and false and false or false and false or true and false or false
+false and false and false or true and true or false and false or false
+false and false and false or true or false or false and false or false
+false and false and false or true or true or false and false or true
+false and false and not true or true
+false and false and true and false and false and false or false and true
+false and false and true and false and not false or false or false
+false and false and true and false and not true or false or false
+false and false and true and true and false or false and true and true
+false and false and true or true and not false and false or true
+false and false and false and false or true or not false
+false and false or false and false or false or false and true or true
+false and false or false and true or false and false or true or false
+false and false or false and true or not false or not true
+false and false or false and true or true or false or true or false
+false and false or false or false and true and false or true and false
+false and false or not true and false or false and false and false
+false and false or not true or false and false or not false
+false and false or not true or not true and true
+false and false or true and false and true and true or false or false
+false and false or true and false and true or true or false and false
+false and false or true and false or false and false or false and true
+false and false or true or false or true or true and false or false
+false and false or true or true and false and false or true or false
+false and false or true or true or false and false and true or true
+false and false or true and false and true or false
+false and false or true and not false and true
+false and false or true or false and false and not false
+false and true and false and false or true or true and true or false
+false and true and false or false and false or false or true or true
+false and true and false or false and true and true or true
+false and true and false or true and true or true or true
+false and true and not true and true and false and true or true
+false and true and not true or not false and false or true
+false and true and not true or true and false and false and false
+false and true and not true or true or true and false and false
+false and true and true or false and false or true or false
+false and true and true or false or true or false or false or false
+false and true and true or true or not true or false or true
+false and true and true or false and false or false or true
+false and true and true or false or false or false or true
+false and true and true or true or true and true
+false and true or false and true and false or true
+false and true or false and true or true or true and true and true
+false and true or false or true or not true or false
+false and true or false or true or true and false and not true
+false and true or false or true or true or false and false and false
+false and true or not false and false and false and true or true
+false and true or not false and true or true or true or false
+false and true or not false or true and false or true and true
+false and true or not false or false and true or true
+false and true or true and true and true or true and true
+false and true or true or false and false and false and true or true
+false and true or true or false or true and true and true
+false or false and false or false and false and false or true or false
+false or false and false or true or not false and true and false
+false or false and true and false and false or true and false or true
+false or false and true and false or false and true and false
+false or false and true and false or true and true or false and true
+false or false and true and false or true or false or true
+false or false and true and true and false and true and true and false
+false or false and true and true or not false and true
+false or false and true or false and true or true or not false
+false or false and true or false or not true or false
+false or false and true or true or true and true and false and true
+false or false and true or false and false or false or false
+false or false or false and false and not true and not true
+false or false or false and false or not false or true and true
+false or false or false or true and not true or false
+false or false or false or true or true or false and not true
+false or false or false or true or true or true and false
+false or false or not false and true and false and true or true
+false or false or not false or true or true or false and false
+false or false or not true and not false or false and false
+false or false or true and true and true and true or false or true
+false or false or false or true or false or false
+false or false or true and false and true or false or false
+false or false or true or true and false or true or true
+false or true and false and false and true or false or not true
+false or true and false or false or true or true or false and false
+false or true and not false and false and true and true
+false or true and not false or false or true or false and false
+false or true and not true and true and true and false
+false or true and true and false or false and true and true
+false or true and true and true or true or false or not false
+false or true and false or false and true and true
+false or true and false or true and true and false
+false or true or false and true or true and true or false or true
+false or true or false or false and true and false or true and false
+false or true or false or true and not true or true
+false or true or not false and true and false or true
+false or true or not true or true and true or true or true
+false or true or true and true and false or false and true
+false or true or true and true or false or false or not true
+false or true or true or false and true or true and false or true
+false or true or false and true and false and true or false
+false or true or false and true or true and true and false
+false or true or false and not false and false
+false or true or true and false and true and false and true
+false or true or true or not true or false
+not false and false or false or not false and true and true
+not false and false or true or true and true or false or true
+not false and not false or false and true and false or false
+not false and not false or false or false or false or false
+not false and not false or true or true and true
+not false and not true and false and false and not false
+not false and not true or true or false or false or false
+not false and not true or false or not false
+not false and true and false or false or true and false
+not false and true and true or true and false and false and false
+not false and true and true or false or false and false
+not false and true and false or false or false or false
+not false or false and false or false and false or false or false
+not false or false and true and not true
+not false or false or true or not true or false
+not false or not false and false and false or true or false
+not false or not false and true or true or true or true
+not false or not true and false and true and true
+not false or true and false and true and true and false
+not false or true and false or true and false
+not false or true and true and not true and true and true
+not false or true and true or true or true and false and false
+not false or true or false and false or true and false
+not false or true or false and not true or not false
+not false or true or true and false or false or false
+not false or true or true or true and false and true
+not false or false and not false or false and true
+not false or false and true or true or not false
+not false or false or true and true and false and false
+not false or true and false and false and not true
+not true and false and false or true or false and true and false
+not true and false and true and not true or false
+not true and false or false or not true or not true
+not true and false or false or false or true or true
+not true and false or true and true or false and not true
+not true and false or true or false and not true
+not true and not false or false and not false
+not true and not true and true or false and not false
+not true and not true and not true or true
+not true and not true or true or true and not false
+not true and true and true and true or false and false and false
+not true and true and true or false and true or true and false
+not true and true and false and true or true or false
+not true and true or true or false or not false
+not true and true or false or true and true
+not true or false and false and true or false and true and false
+not true or false and true or not true or false and true
+not true or not true and true or true or true or true
+not true or not true or false or false and true and true
+not true or not true or false or true and false
+not true or true and false and false or true or false or false
+not true or true and true and true and true or false or false
+not true or true and true or false or false and false or false
+not true or true and true or not false or false and false
+not true or true and true or true or false or true
+not true or true or true and not true and false and true
+not true or false and not false or true or true
+not true or false or true and true and false or false
+not true or false or true and true or not true
+not true or true and true and true or not true
+true and false and false and true or not false and false or false
+true and false and false or false and false and true or false
+true and false and false or false or not true or not true
+true and false and false or false or true and true or true
+true and false and false or true and true or true or false and false
+true and false and false or true or false or false or true
+true and false and not false and true and true or true
+true and false and not false or true and true and true or true
+true and false and not false or true or true and false
+true and false and not true or true or false or false
+true and false and true and true and false and false or true and false
+true and false and true or false and not false and true and true
+true and false and true or false or false or true or not true
+true and false and true or true and not true and true or false
+true and false and true or true or true and false or false
+true and false and true and true or true and false or false
+true and false or false and true and false and false and true and false
+true and false or false and true and true and true and false
+true and false or false and true and true or true and true
+true and false or false and true or true and true and true
+true and false or not false and true and true
+true and false or true and false and false or false and false
+true and false or true and false or false and false or true and false
+true and false or true or false and true and true or true and false
+true and false or true or true or true and true and not false
+true and false or false and true and true and false and false
+true and false or true and false or true and true and false
+true and true and false and false or false and true or true or false
+true and true and false and false or true or false or false and false
+true and true and false and true and true and false and true or true
+true and true and false and true or true or false and not false
+true and true and false or true and not true and false and true
+true and true and false or true and not false or false
+true and true and not false and false or true or false and false
+true and true and not true or true or true and false and false
+true and true and true or false and false and false or false or false
+true and true and true or false and false and false
+true and true and true or true or false or true and false or false
+true and true and true or true or false or true or true and false
+true and true and false or false or true and true and false
+true and true and true or false or false and true or true
+true and true or false and true and false or true and false and true
+true and true or not false and not true or false and true
+true and true or not false and false and false and true
+true and true or true and false and true or true or false or true
+true and true or true or true and true and false or true or true
+true and true or false or false or true or false and false
+true and true or true or true and true and false and false
+true or false and false and false and false and false or false and false
+true or false and false and false and false or false and true and true
+true or false and false and false or false and true or false
+true or false and false and true and false and true or true
+true or false and false or true and true or true or false or true
+true or false and true and false and false and false and true and true
+true or false and true and false and true and true and true or true
+true or false and true and true or true or true and false
+true or false and true or false and false and true and true and false
+true or false and true or true and true or true and false or false
+true or false and true or true or false or false and false or false
+true or false and false and true or false or not false
+true or false and false or true and false or false
+true or false and true or false and true or true
+true or false or false and false and true and false or false
+true or false or false and true or true and true or false or true
+true or false or true and false and false and false and false
+true or false or true and false and true or true or false
+true or false or true and false or not false or true
+true or false or true and true and false or false and false or true
+true or false or true and true or true or false and true
+true or false or true or false or not true and true or true
+true or false or true or true and false and true and true or true
+true or false or false or not true and true and true
+true or true and false and false and true and false and not false
+true or true and false and false and false or not true
+true or true and false and false and not false and false
+true or true and false and true and true or true
+true or true and false and true or true and false or true and true
+true or true and false or false and true and false
+true or true and false or false or false or false and true or false
+true or true and false or true or false or false or true and true
+true or true and not false and false and true and false and true
+true or true and not false and true and true or false or false
+true or true and not false or false and false and not true
+true or true and true and true or not false or not true
+true or true and true or true and true or false and not false
+true or true and true or true and true or true or true or false
+true or true and true or true or not false and false or false
+true or true and false and false or false or true and false
+true or true and false or false and true or false and false
+true or true and true or false or true or true and false
+true or true or false and false or true and false or not true
+true or true or false and true and not true or false or true
+true or true or false or false and false and true or false
+true or true or false or true or true or false and true
+true or true or not false or false and false and true or true
+true or true or true and false and not true or false or false
+true or true or true and false and true or false and not true
+true or true or true or false or not true and not true
+true or true or true or false or true and false and false or true
+true or true or true or true or true or true and true or false
+true or true or true and false and false and true
+false and false or false or true or false or false
+false and false or false or true and not true
+false and false or true and false or false and false
+false and not true and false and false and true or true
+false and not true and not false or false and true
+false and true or true and true or true or true and true
+false and false and false or false or false or false
+false and false or true or true or true and false
+false and true and true or false or true or true
+false or false and false and true or false and true or false
+false or false and false or true or true or true
+false or false and false or false and not false
+false or false and true and false or false or true
+false or false and true or false and true or false or true
+false or false or true and true and false or true and true
+false or not false and not true or true
+false or not true or true or false or false and false
+false or true and false and true and true and true and false
+false or true and true and true and false or false and false
+false or true or false and false or false and true and false
+false or true and false or false or false
+false or true or not true and true or false
+false or true or false and true and true
+not false and true or true or false or true
+not false or false and false or true and false
+not false or true and false or false or true
+not false or true or not false or not true
+not false or true or not true and false
+not not true or false or false
+not true or false or false and false or true or false
+not true or true or true and false or true
+not false and false and true and true and true
+true and false and true or true and true and false and true
+true and false or false and false and false or false
+true and not false or true or false and not true
+true and not true and true or true and true and false
+true and true and false and false and false or false or true
+true and true and true and false and false and false
+true and true and true and not false and false or true
+true and true or false and false or false or not true
+true and true or false or false and false and false
+true and false and true and false or false or true
+true or false and false and true or false and false
+true or false and true or true or true and false
+true or false or false and false and false or true or true
+true or false or true and true or false or false and true
+true or false or true and true or true and false and false
+true or false or true or true and not true
+true or true and false and true or false and false and false
+true or true and true or false and false and true
+true or true and true or not false or false and true
+true or true and true or true
+true or true or false and true or true and false or false
+true or true or false or not true and false and true
+true or true or false or true and false and false and true
+true or false and not false or true and false
+true or true or false and false and true and true
+true or true or true and false and false and true
+true or true or true and true or true or false
+true or false and true or true or false
+true or not true or true and true
+true or true or true or true
+((false and false) and (false and false))
+((false and false) and (false and true))
+((false and false) and (false or false))
+((false and false) and (false or true))
+((false and false) and (not false))
+((false and false) and (not true))
+((false and false) and (true and false))
+((false and false) and (true and true))
+((false and false) and (true or false))
+((false and false) and (true or true))
+((false and false) and false)
+((false and false) and true)
+((false and false) or (false and false))
+((false and false) or (false and true))
+((false and false) or (false or false))
+((false and false) or (false or true))
+((false and false) or (not false))
+((false and false) or (not true))
+((false and false) or (true and false))
+((false and false) or (true and true))
+((false and false) or (true or false))
+((false and false) or (true or true))
+((false and false) or false)
+((false and false) or true)
+((false and true) and (false and false))
+((false and true) and (false and true))
+((false and true) and (false or false))
+((false and true) and (false or true))
+((false and true) and (not false))
+((false and true) and (not true))
+((false and true) and (true and false))
+((false and true) and (true and true))
+((false and true) and (true or false))
+((false and true) and (true or true))
+((false and true) and false)
+((false and true) and true)
+((false and true) or (false and false))
+((false and true) or (false and true))
+((false and true) or (false or false))
+((false and true) or (false or true))
+((false and true) or (not false))
+((false and true) or (not true))
+((false and true) or (true and false))
+((false and true) or (true and true))
+((false and true) or (true or false))
+((false and true) or (true or true))
+((false and true) or false)
+((false and true) or true)
+((false or false) and (false and false))
+((false or false) and (false and true))
+((false or false) and (false or false))
+((false or false) and (false or true))
+((false or false) and (not false))
+((false or false) and (not true))
+((false or false) and (true and false))
+((false or false) and (true and true))
+((false or false) and (true or false))
+((false or false) and (true or true))
+((false or false) and false)
+((false or false) and true)
+((false or false) or (false and false))
+((false or false) or (false and true))
+((false or false) or (false or false))
+((false or false) or (false or true))
+((false or false) or (not false))
+((false or false) or (not true))
+((false or false) or (true and false))
+((false or false) or (true and true))
+((false or false) or (true or false))
+((false or false) or (true or true))
+((false or false) or false)
+((false or false) or true)
+((false or true) and (false and false))
+((false or true) and (false and true))
+((false or true) and (false or false))
+((false or true) and (false or true))
+((false or true) and (not false))
+((false or true) and (not true))
+((false or true) and (true and false))
+((false or true) and (true and true))
+((false or true) and (true or false))
+((false or true) and (true or true))
+((false or true) and false)
+((false or true) and true)
+((false or true) or (false and false))
+((false or true) or (false and true))
+((false or true) or (false or false))
+((false or true) or (false or true))
+((false or true) or (not false))
+((false or true) or (not true))
+((false or true) or (true and false))
+((false or true) or (true and true))
+((false or true) or (true or false))
+((false or true) or (true or true))
+((false or true) or false)
+((false or true) or true)
+((not false) and (false and false))
+((not false) and (false and true))
+((not false) and (false or false))
+((not false) and (false or true))
+((not false) and (not false))
+((not false) and (not true))
+((not false) and (true and false))
+((not false) and (true and true))
+((not false) and (true or false))
+((not false) and (true or true))
+((not false) and false)
+((not false) and true)
+((not false) or (false and false))
+((not false) or (false and true))
+((not false) or (false or false))
+((not false) or (false or true))
+((not false) or (not false))
+((not false) or (not true))
+((not false) or (true and false))
+((not false) or (true and true))
+((not false) or (true or false))
+((not false) or (true or true))
+((not false) or false)
+((not false) or true)
+((not true) and (false and false))
+((not true) and (false and true))
+((not true) and (false or false))
+((not true) and (false or true))
+((not true) and (not false))
+((not true) and (not true))
+((not true) and (true and false))
+((not true) and (true and true))
+((not true) and (true or false))
+((not true) and (true or true))
+((not true) and false)
+((not true) and true)
+((not true) or (false and false))
+((not true) or (false and true))
+((not true) or (false or false))
+((not true) or (false or true))
+((not true) or (not false))
+((not true) or (not true))
+((not true) or (true and false))
+((not true) or (true and true))
+((not true) or (true or false))
+((not true) or (true or true))
+((not true) or false)
+((not true) or true)
+((true and false) and (false and false))
+((true and false) and (false and true))
+((true and false) and (false or false))
+((true and false) and (false or true))
+((true and false) and (not false))
+((true and false) and (not true))
+((true and false) and (true and false))
+((true and false) and (true and true))
+((true and false) and (true or false))
+((true and false) and (true or true))
+((true and false) and false)
+((true and false) and true)
+((true and false) or (false and false))
+((true and false) or (false and true))
+((true and false) or (false or false))
+((true and false) or (false or true))
+((true and false) or (not false))
+((true and false) or (not true))
+((true and false) or (true and false))
+((true and false) or (true and true))
+((true and false) or (true or false))
+((true and false) or (true or true))
+((true and false) or false)
+((true and false) or true)
+((true and true) and (false and false))
+((true and true) and (false and true))
+((true and true) and (false or false))
+((true and true) and (false or true))
+((true and true) and (not false))
+((true and true) and (not true))
+((true and true) and (true and false))
+((true and true) and (true and true))
+((true and true) and (true or false))
+((true and true) and (true or true))
+((true and true) and false)
+((true and true) and true)
+((true and true) or (false and false))
+((true and true) or (false and true))
+((true and true) or (false or false))
+((true and true) or (false or true))
+((true and true) or (not false))
+((true and true) or (not true))
+((true and true) or (true and false))
+((true and true) or (true and true))
+((true and true) or (true or false))
+((true and true) or (true or true))
+((true and true) or false)
+((true and true) or true)
+((true or false) and (false and false))
+((true or false) and (false and true))
+((true or false) and (false or false))
+((true or false) and (false or true))
+((true or false) and (not false))
+((true or false) and (not true))
+((true or false) and (true and false))
+((true or false) and (true and true))
+((true or false) and (true or false))
+((true or false) and (true or true))
+((true or false) and false)
+((true or false) and true)
+((true or false) or (false and false))
+((true or false) or (false and true))
+((true or false) or (false or false))
+((true or false) or (false or true))
+((true or false) or (not false))
+((true or false) or (not true))
+((true or false) or (true and false))
+((true or false) or (true and true))
+((true or false) or (true or false))
+((true or false) or (true or true))
+((true or false) or false)
+((true or false) or true)
+((true or true) and (false and false))
+((true or true) and (false and true))
+((true or true) and (false or false))
+((true or true) and (false or true))
+((true or true) and (not false))
+((true or true) and (not true))
+((true or true) and (true and false))
+((true or true) and (true and true))
+((true or true) and (true or false))
+((true or true) and (true or true))
+((true or true) and false)
+((true or true) and true)
+((true or true) or (false and false))
+((true or true) or (false and true))
+((true or true) or (false or false))
+((true or true) or (false or true))
+((true or true) or (not false))
+((true or true) or (not true))
+((true or true) or (true and false))
+((true or true) or (true and true))
+((true or true) or (true or false))
+((true or true) or (true or true))
+((true or true) or false)
+((true or true) or true)
+(false and (false and false))
+(false and (false and true))
+(false and (false or false))
+(false and (false or true))
+(false and (not false))
+(false and (not true))
+(false and (true and false))
+(false and (true and true))
+(false and (true or false))
+(false and (true or true))
+(false and false)
+(false and true)
+(false or (false and false))
+(false or (false and true))
+(false or (false or false))
+(false or (false or true))
+(false or (not false))
+(false or (not true))
+(false or (true and false))
+(false or (true and true))
+(false or (true or false))
+(false or (true or true))
+(false or false)
+(false or true)
+(not (false and false))
+(not (false and true))
+(not (false or false))
+(not (false or true))
+(not (not false))
+(not (not true))
+(not (true and false))
+(not (true and true))
+(not (true or false))
+(not (true or true))
+(not false)
+(not true)
+(true and (false and false))
+(true and (false and true))
+(true and (false or false))
+(true and (false or true))
+(true and (not false))
+(true and (not true))
+(true and (true and false))
+(true and (true and true))
+(true and (true or false))
+(true and (true or true))
+(true and false)
+(true and true)
+(true or (false and false))
+(true or (false and true))
+(true or (false or false))
+(true or (false or true))
+(true or (not false))
+(true or (not true))
+(true or (true and false))
+(true or (true and true))
+(true or (true or false))
+(true or (true or true))
+(true or false)
+(true or true)
+false
+true
+(((false and false) and (false and true)) and ((true and false) or (not false)))
+(((false and false) and (false or false)) and ((false or true) and (false or false)))
+(((false and false) and (false or true)) and ((true or false) and (false or false)))
+(((false and false) and (false or true)) or ((false or false) and (false or false)))
+(((false and false) and (false or true)) or ((true or false) and (false or true)))
+(((false and false) and (not true)) or true)
+(((false and false) and (true and false)) and ((false and false) or (false and true)))
+(((false and false) and (true and false)) and ((not false) or (false or false)))
+(((false and false) and (true and false)) and ((not true) or (false or false)))
+(((false and false) and (true and true)) and ((false or false) and (true and true)))
+(((false and false) and (true or true)) and ((not false) and (false or true)))
+(((false and false) and false) and ((false or true) or (not false)))
+(((false and false) or (false and false)) or ((false or false) and (true or true)))
+(((false and false) or (false and true)) or ((false and false) or (true or false)))
+(((false and false) or (false and true)) or ((not false) or (not true)))
+(((false and false) or (false and true)) or ((true or false) or (true or false)))
+(((false and false) or (false or false)) and ((true and false) or (true and false)))
+(((false and false) or (not true)) and ((false or false) and (false and false)))
+(((false and false) or (not true)) or ((false and false) or (not false)))
+(((false and false) or (not true)) or ((not true) and true))
+(((false and false) or (true and false)) and ((true and true) or (false or false)))
+(((false and false) or (true and false)) and ((true or true) or (false and false)))
+(((false and false) or (true and false)) or ((false and false) or (false and true)))
+(((false and false) or (true or false)) or ((true or true) and (false or false)))
+(((false and false) or (true or true)) and ((false and false) or (true or false)))
+(((false and false) or (true or true)) or ((false and false) and (true or true)))
+(((false and false) or true) and ((false and true) or false))
+(((false and false) or true) and (not (false and true)))
+(((false and false) or true) or ((false and false) and (not false)))
+(((false and true) and (false and false)) or ((true or true) and (true or false)))
+(((false and true) and (false or false)) and ((false or false) or (true or true)))
+(((false and true) and (false or false)) and ((true and true) or true))
+(((false and true) and (false or true)) and ((true or true) or true))
+(((false and true) and (not true)) and ((true and false) and (true or true)))
+(((false and true) and (not true)) or ((not false) and (false or true)))
+(((false and true) and (not true)) or ((true and false) and (false and false)))
+(((false and true) and (not true)) or ((true or true) and (false and false)))
+(((false and true) and (true or false)) and ((false or true) or false))
+(((false and true) and (true or false)) or ((true or false) or (false or false)))
+(((false and true) and (true or true)) or ((not true) or (false or true)))
+(((false and true) and true) or ((false and false) or (false or true)))
+(((false and true) and true) or ((false or false) or (false or true)))
+(((false and true) and true) or (true or (true and true)))
+(((false and true) or (false and true)) and (false or true))
+(((false and true) or (false and true)) or ((true or true) and (true and true)))
+(((false and true) or (false or true)) or ((not true) or false))
+(((false and true) or (false or true)) or ((true and false) and (not true)))
+(((false and true) or (false or true)) or ((true or false) and (false and false)))
+(((false and true) or (not false)) and ((false and false) and (true or true)))
+(((false and true) or (not false)) and ((true or true) or (true or false)))
+(((false and true) or (not false)) or ((true and false) or (true and true)))
+(((false and true) or (not false)) or (false and (true or true)))
+(((false and true) or (true and true)) and (true or (true and true)))
+(((false and true) or (true or false)) and ((false and false) and (true or true)))
+(((false and true) or (true or false)) or (true and (true and true)))
+(((false or false) and (false or false)) and ((false and false) or (true or false)))
+(((false or false) and (false or true)) or ((not false) and (true and false)))
+(((false or false) and (true and false)) and ((false or true) and (false or true)))
+(((false or false) and (true and false)) or ((false and true) and false))
+(((false or false) and (true and false)) or ((true and true) or (false and true)))
+(((false or false) and (true and false)) or ((true or false) or true))
+(((false or false) and (true and true)) and ((false and true) and (true and false)))
+(((false or false) and (true and true)) or (not (false and true)))
+(((false or false) and (true or false)) and ((true or true) or (not false)))
+(((false or false) and (true or false)) or (not (true or false)))
+(((false or false) and (true or true)) or ((true and true) and (false and true)))
+(((false or false) and true) or ((false and false) or (false or false)))
+(((false or false) or (false and false)) and ((not true) and (not true)))
+(((false or false) or (false and false)) or ((not false) or (true and true)))
+(((false or false) or (false or true)) and (not (true or false)))
+(((false or false) or (false or true)) or ((true or false) and (not true)))
+(((false or false) or (false or true)) or ((true or true) and false))
+(((false or false) or (not false)) and ((true and false) and (true or true)))
+(((false or false) or (not false)) or ((true or true) or (false and false)))
+(((false or false) or (not true)) and ((not false) or (false and false)))
+(((false or false) or (true and true)) and ((true and true) or (false or true)))
+(((false or false) or false) or (true or (false or false)))
+(((false or false) or true) and ((false and true) or (false or false)))
+(((false or false) or true) or ((true and false) or (true or true)))
+(((false or true) and (false and false)) and ((true or false) or (not true)))
+(((false or true) and (false or false)) or ((true or true) or (false and false)))
+(((false or true) and (not false)) and (false and (true and true)))
+(((false or true) and (not false)) or ((false or true) or (false and false)))
+(((false or true) and (not true)) and (true and (true and false)))
+(((false or true) and (true and false)) or ((false and true) and true))
+(((false or true) and (true and true)) or ((true or false) or (not false)))
+(((false or true) and false) or ((false and true) and true))
+(((false or true) and false) or (true and (true and false)))
+(((false or true) or (false and true)) or ((true and true) or (false or true)))
+(((false or true) or (false or false)) and ((true and false) or (true and false)))
+(((false or true) or (false or true)) and ((not true) or true))
+(((false or true) or (not false)) and (true and (false or true)))
+(((false or true) or (not true)) or ((true and true) or (true or true)))
+(((false or true) or (true and true)) and (false or (false and true)))
+(((false or true) or (true and true)) or ((false or false) or (not true)))
+(((false or true) or (true or false)) and ((true or true) and (false or true)))
+(((false or true) or false) and ((true and false) and (true or false)))
+(((false or true) or false) and ((true or true) and (true and false)))
+(((false or true) or false) and (not (false and false)))
+(((false or true) or true) and ((false and true) and (false and true)))
+(((false or true) or true) or (not (true or false)))
+(((not false) and (false or false)) or ((not false) and (true and true)))
+(((not false) and (false or true)) or ((true and true) or (false or true)))
+(((not false) and (not false)) or ((false and true) and (false or false)))
+(((not false) and (not false)) or ((false or false) or (false or false)))
+(((not false) and (not false)) or (true or (true and true)))
+(((not false) and (not true)) and ((false and false) and (not false)))
+(((not false) and (not true)) or ((true or false) or (false or false)))
+(((not false) and (not true)) or (false or (not false)))
+(((not false) and (true and false)) or (false or (true and false)))
+(((not false) and (true and true)) or ((true and false) and (false and false)))
+(((not false) and (true and true)) or (false or (false and false)))
+(((not false) and true) and ((false or false) or (false or false)))
+(((not false) or (false and false)) or ((false and false) or (false or false)))
+(((not false) or (false and true)) and (not true))
+(((not false) or (false or true)) or ((not true) or false))
+(((not false) or (not false)) and ((false and false) or (true or false)))
+(((not false) or (not false)) and ((true or true) or (true or true)))
+(((not false) or (not true)) and (false and (true and true)))
+(((not false) or (true and false)) and (true and (true and false)))
+(((not false) or (true and false)) or (true and false))
+(((not false) or (true and true)) and ((not true) and (true and true)))
+(((not false) or (true and true)) or ((true or true) and (false and false)))
+(((not false) or (true or false)) and ((false or true) and false))
+(((not false) or (true or false)) and ((not true) or (not false)))
+(((not false) or (true or true)) and (false or (false or false)))
+(((not false) or (true or true)) or (true and (false and true)))
+(((not false) or false) and ((not false) or (false and true)))
+(((not false) or false) and ((true or true) or (not false)))
+(((not false) or false) or ((true and true) and (false and false)))
+(((not false) or true) and ((false and false) and (not true)))
+(((not true) and (false and false)) or ((true or false) and (true and false)))
+(((not true) and (false and true)) and (not (true or false)))
+(((not true) and (false or false)) or ((not true) or (not true)))
+(((not true) and (false or false)) or (false or (true or true)))
+(((not true) and (false or true)) and ((true or false) and (not true)))
+(((not true) and (false or true)) or (false and (not true)))
+(((not true) and (not false)) or (false and (not false)))
+(((not true) and (not true)) and ((true or false) and (not false)))
+(((not true) and (not true)) and (not (true or true)))
+(((not true) and (not true)) or ((true or true) and (not false)))
+(((not true) and (true and true)) and ((true or false) and (false and false)))
+(((not true) and (true and true)) or ((false and true) or (true and false)))
+(((not true) and true) and ((false and true) or (true or false)))
+(((not true) and true) or ((true or false) or (not false)))
+(((not true) and true) or (false or (true and true)))
+(((not true) or (false and false)) and ((true or false) and (true and false)))
+(((not true) or (false and true)) or ((not true) or (false and true)))
+(((not true) or (not true)) and ((true or true) or (true or true)))
+(((not true) or (not true)) or ((false or false) and (true and true)))
+(((not true) or (not true)) or (false or (true and false)))
+(((not true) or (true and false)) and ((false or true) or (false or false)))
+(((not true) or (true and true)) and ((true and true) or (false or false)))
+(((not true) or (true and true)) or ((false or false) and (false or false)))
+(((not true) or (true and true)) or ((not false) or (false and false)))
+(((not true) or (true and true)) or ((true or false) or true))
+(((not true) or (true or true)) and ((not true) and (false and true)))
+(((not true) or false) and ((not false) or (true or true)))
+(((not true) or false) or ((true and true) and (false or false)))
+(((not true) or false) or ((true and true) or (not true)))
+(((not true) or true) and ((true and true) or (not true)))
+(((true and false) and (false and true)) or ((not false) and (false or false)))
+(((true and false) and (false or false)) and ((false and true) or false))
+(((true and false) and (false or false)) or ((not true) or (not true)))
+(((true and false) and (false or false)) or (true and (true or true)))
+(((true and false) and (false or true)) and ((true or true) or (false and false)))
+(((true and false) and (false or true)) or (false or (false or true)))
+(((true and false) and (not false)) and ((true and true) or true))
+(((true and false) and (not false)) or ((true and true) and (true or true)))
+(((true and false) and (not false)) or (true or (true and false)))
+(((true and false) and (not true)) or (true or (false or false)))
+(((true and false) and (true and true)) and ((false and false) or (true and false)))
+(((true and false) and (true or false)) and ((not false) and (true and true)))
+(((true and false) and (true or false)) or ((false or true) or (not true)))
+(((true and false) and (true or true)) and ((not true) and (true or false)))
+(((true and false) and (true or true)) or (true and (false or false)))
+(((true and false) and true) and ((true or true) and (false or false)))
+(((true and false) or (false and true)) and ((false and false) and (true and false)))
+(((true and false) or (false and true)) and ((true and true) and false))
+(((true and false) or (false and true)) and (true or (true and true)))
+(((true and false) or (false and true)) or (true and (true and true)))
+(((true and false) or (not false)) and (true and true))
+(((true and false) or (true and false)) and (false or (false and false)))
+(((true and false) or (true and false)) or ((false and false) or (true and false)))
+(((true and false) or (true or false)) and ((true and true) or (true and false)))
+(((true and false) or (true or true)) or ((true and true) and (not false)))
+(((true and false) or false) and ((true and true) and (false and false)))
+(((true and false) or true) and ((false or true) and (true and false)))
+(((true and true) and (false and false)) or ((false and true) or (true or false)))
+(((true and true) and (false and false)) or ((true or false) or (false and false)))
+(((true and true) and (false and true)) and ((true and false) and (true or true)))
+(((true and true) and (false and true)) or ((true or false) and (not false)))
+(((true and true) and (false or true)) and ((not true) and (false and true)))
+(((true and true) and (false or true)) and (not (false or false)))
+(((true and true) and (not false)) and ((false or true) or (false and false)))
+(((true and true) and (not true)) or ((true or true) and (false and false)))
+(((true and true) and (true or false)) and ((false and false) or (false or false)))
+(((true and true) and (true or false)) and (false and false))
+(((true and true) and (true or true)) or ((false or true) and (false or false)))
+(((true and true) and (true or true)) or ((false or true) or (true and false)))
+(((true and true) and false) or ((false or true) and (true and false)))
+(((true and true) and true) or ((false or false) and (true or true)))
+(((true and true) or (false and true)) and ((false or true) and (false and true)))
+(((true and true) or (not false)) and ((not true) or (false and true)))
+(((true and true) or (not false)) and (false and (false and true)))
+(((true and true) or (true and false)) and ((true or true) or (false or true)))
+(((true and true) or (true or true)) and ((true and false) or (true or true)))
+(((true and true) or false) or ((false or true) or (false and false)))
+(((true and true) or true) or ((true and true) and (false and false)))
+(((true or false) and (false and false)) and ((false and false) or (false and false)))
+(((true or false) and (false and false)) and ((false or false) and (true and true)))
+(((true or false) and (false and false)) or (false and (true or false)))
+(((true or false) and (false and true)) and (false and (true or true)))
+(((true or false) and (false or true)) and ((true or true) or (false or true)))
+(((true or false) and (true and false)) and ((false and false) and (true and true)))
+(((true or false) and (true and false)) and ((true and true) and (true or true)))
+(((true or false) and (true and true)) or (true or (true and false)))
+(((true or false) and (true or false)) and ((false and true) and (true and false)))
+(((true or false) and (true or true)) and ((true or true) and (false or false)))
+(((true or false) and (true or true)) or ((false or false) and (false or false)))
+(((true or false) and false) and ((true or false) or (not false)))
+(((true or false) and false) or (true and (false or false)))
+(((true or false) and true) or ((false and true) or true))
+(((true or false) or (false and false)) and ((true and false) or false))
+(((true or false) or (false and true)) or ((true and true) or (false or true)))
+(((true or false) or (true and false)) and ((false and false) and false))
+(((true or false) or (true and false)) and (true or (true or false)))
+(((true or false) or (true and false)) or (not (false or true)))
+(((true or false) or (true and true)) and ((false or false) and (false or true)))
+(((true or false) or (true and true)) or ((true or false) and true))
+(((true or false) or (true or false)) or ((not true) and (true or true)))
+(((true or false) or (true or true)) and ((false and true) and (true or true)))
+(((true or false) or false) or ((not true) and (true and true)))
+(((true or true) and (false and false)) and ((true and false) and (not false)))
+(((true or true) and (false and false)) and (false or (not true)))
+(((true or true) and (false and false)) and (not (false and false)))
+(((true or true) and (false and true)) and (true or true))
+(((true or true) and (false and true)) or ((true and false) or (true and true)))
+(((true or true) and (false or false)) and (true and false))
+(((true or true) and (false or false)) or ((false or false) and (true or false)))
+(((true or true) and (false or true)) or ((false or false) or (true and true)))
+(((true or true) and (not false)) and ((false and true) and (false and true)))
+(((true or true) and (not false)) and ((true and true) or (false or false)))
+(((true or true) and (not false)) or ((false and false) and (not true)))
+(((true or true) and (true and true)) or ((not false) or (not true)))
+(((true or true) and (true or true)) and ((true or false) and (not false)))
+(((true or true) and (true or true)) and ((true or true) or (true or false)))
+(((true or true) and (true or true)) or ((not false) and (false or false)))
+(((true or true) and false) and ((false or false) or (true and false)))
+(((true or true) and false) or ((false and true) or (false and false)))
+(((true or true) and true) or ((false or true) or (true and false)))
+(((true or true) or (false and false)) or ((true and false) or (not true)))
+(((true or true) or (false and true)) and ((not true) or (false or true)))
+(((true or true) or (false or false)) and (false and (true or false)))
+(((true or true) or (false or true)) or ((true or false) and true))
+(((true or true) or (not false)) or ((false and false) and (true or true)))
+(((true or true) or (true and false)) and ((not true) or (false or false)))
+(((true or true) or (true and false)) and ((true or false) and (not true)))
+(((true or true) or (true or false)) or ((not true) and (not true)))
+(((true or true) or (true or false)) or ((true and false) and (false or true)))
+(((true or true) or (true or true)) or ((true or true) and (true or false)))
+(((true or true) or true) and ((false and false) and true))
+((false and (false or false)) or ((true or false) or false))
+((false and (false or false)) or (true and (not true)))
+((false and (false or true)) and ((false or false) and false))
+((false and (not true)) and ((false and false) and (true or true)))
+((false and (not true)) and ((not false) or (false and true)))
+((false and (true or true)) and ((true or true) or (true and true)))
+((false and false) and ((false or false) or (false or false)))
+((false and false) or ((true or true) or (true and false)))
+((false and true) and ((true or false) or (true or true)))
+((false or (false and false)) and ((true or false) and (true or false)))
+((false or (false and false)) or ((true or true) or true))
+((false or (false and false)) or (false and (not false)))
+((false or (false and true)) and ((false or false) or true))
+((false or (false and true)) or ((false and true) or (false or true)))
+((false or (false or true)) and ((true and false) or (true and true)))
+((false or (not false)) and (not (true or true)))
+((false or (not true)) or ((true or false) or (false and false)))
+((false or (true and false)) and ((true and true) and (true and false)))
+((false or (true and true)) and ((true and false) or (false and false)))
+((false or (true or false)) and ((false or false) and (true and false)))
+((false or true) and ((false or false) or false))
+((false or true) or ((not true) and (true or false)))
+((false or true) or (false and (true and true)))
+((not (false and true)) or ((true or false) or true))
+((not (false or false)) and (false or (true and false)))
+((not (false or true)) and ((false or false) or true))
+((not (false or true)) or ((not false) or (not true)))
+((not (false or true)) or ((not true) and false))
+((not (not true)) or (false or false))
+((not (true or false)) or ((false and false) or (true or false)))
+((not (true or true)) or (true and (false or true)))
+((not false) and ((false and true) and (true and true)))
+((true and (false and true)) or ((true and true) and (false and true)))
+((true and (false or false)) and ((false and false) or false))
+((true and (not false)) or ((true or false) and (not true)))
+((true and (not true)) and ((true or true) and (true and false)))
+((true and (true and false)) and ((false and false) or (false or true)))
+((true and (true and true)) and ((false and false) and false))
+((true and (true and true)) and ((not false) and (false or true)))
+((true and (true or false)) and ((false or false) or (not true)))
+((true and (true or false)) or ((false and false) and false))
+((true and false) and ((true and false) or (false or true)))
+((true or (false and false)) and (true or (false and false)))
+((true or (false and true)) or (true or (true and false)))
+((true or (false or false)) and ((false and false) or (true or true)))
+((true or (false or true)) and ((true or false) or (false and true)))
+((true or (false or true)) and ((true or true) and (false and false)))
+((true or (false or true)) or (true and (not true)))
+((true or (true and false)) and ((true or false) and (false and false)))
+((true or (true and true)) or ((false and false) and true))
+((true or (true and true)) or ((not false) or (false and true)))
+((true or (true and true)) or true)
+((true or (true or false)) and ((true or true) and (false or false)))
+((true or (true or false)) or ((not true) and (false and true)))
+((true or (true or false)) or ((true and false) and (false and true)))
+((true or false) and ((not false) or (true and false)))
+((true or true) or ((false and false) and (true and true)))
+((true or true) or ((true and false) and (false and true)))
+((true or true) or ((true and true) or (true or false)))
+(true or ((false and true) or (true or false)))
+(true or ((not true) or (true and true)))
+(true or (true or (true or true)))
+false and false and false and false
+false and false and false and true
+false and false and false xor false
+false and false and false xor true
+false and false and not false
+false and false and not true
+false and false and true and false
+false and false and true and true
+false and false and true xor false
+false and false and true xor true
+false and false and false
+false and false and true
+false and false xor false and false
+false and false xor false and true
+false and false xor false or false
+false and false xor false or true
+false and false xor not false
+false and false xor not true
+false and false xor true and false
+false and false xor true and true
+false and false xor true or false
+false and false xor true or true
+false and false xor false
+false and false xor true
+false and true and false and false
+false and true and false and true
+false and true and false xor false
+false and true and false xor true
+false and true and not false
+false and true and not true
+false and true and true and false
+false and true and true and true
+false and true and true xor false
+false and true and true xor true
+false and true and false
+false and true and true
+false and true xor false and false
+false and true xor false and true
+false and true xor false or false
+false and true xor false or true
+false and true xor not false
+false and true xor not true
+false and true xor true and false
+false and true xor true and true
+false and true xor true or false
+false and true xor true or true
+false and true xor false
+false and true xor true
+false xor false and false and false
+false xor false and false and true
+false xor false and false or false
+false xor false and false or true
+false xor false and not false
+false xor false and not true
+false xor false and true and false
+false xor false and true and true
+false xor false and true or false
+false xor false and true or true
+false xor false and false
+false xor false and true
+false xor false or false and false
+false xor false or false and true
+false xor false or false or false
+false xor false or false or true
+false xor false or not false
+false xor false or not true
+false xor false or true and false
+false xor false or true and true
+false xor false or true or false
+false xor false or true or true
+false xor false or false
+false xor false or true
+false xor true and false and false
+false xor true and false and true
+false xor true and false or false
+false xor true and false or true
+false xor true and not false
+false xor true and not true
+false xor true and true and false
+false xor true and true and true
+false xor true and true or false
+false xor true and true or true
+false xor true and false
+false xor true and true
+false xor true or false and false
+false xor true or false and true
+false xor true or false or false
+false xor true or false or true
+false xor true or not false
+false xor true or not true
+false xor true or true and false
+false xor true or true and true
+false xor true or true or false
+false xor true or true or true
+false xor true or false
+false xor true or true
+not false and false and false
+not false and false and true
+not false and false xor false
+not false and false xor true
+not false and not false
+not false and not true
+not false and true and false
+not false and true and true
+not false and true xor false
+not false and true xor true
+not false and false
+not false and true
+not false xor false and false
+not false xor false and true
+not false xor false or false
+not false xor false or true
+not false xor not false
+not false xor not true
+not false xor true and false
+not false xor true and true
+not false xor true or false
+not false xor true or true
+not false xor false
+not false xor true
+not true and false and false
+not true and false and true
+not true and false xor false
+not true and false xor true
+not true and not false
+not true and not true
+not true and true and false
+not true and true and true
+not true and true xor false
+not true and true xor true
+not true and false
+not true and true
+not true xor false and false
+not true xor false and true
+not true xor false or false
+not true xor false or true
+not true xor not false
+not true xor not true
+not true xor true and false
+not true xor true and true
+not true xor true or false
+not true xor true or true
+not true xor false
+not true xor true
+true and false and false and false
+true and false and false and true
+true and false and false xor false
+true and false and false xor true
+true and false and not false
+true and false and not true
+true and false and true and false
+true and false and true and true
+true and false and true xor false
+true and false and true xor true
+true and false and false
+true and false and true
+true and false xor false and false
+true and false xor false and true
+true and false xor false or false
+true and false xor false or true
+true and false xor not false
+true and false xor not true
+true and false xor true and false
+true and false xor true and true
+true and false xor true or false
+true and false xor true or true
+true and false xor false
+true and false xor true
+true and true and false and false
+true and true and false and true
+true and true and false xor false
+true and true and false xor true
+true and true and not false
+true and true and not true
+true and true and true and false
+true and true and true and true
+true and true and true xor false
+true and true and true xor true
+true and true and false
+true and true and true
+true and true xor false and false
+true and true xor false and true
+true and true xor false or false
+true and true xor false or true
+true and true xor not false
+true and true xor not true
+true and true xor true and false
+true and true xor true and true
+true and true xor true or false
+true and true xor true or true
+true and true xor false
+true and true xor true
+true xor false and false and false
+true xor false and false and true
+true xor false and false or false
+true xor false and false or true
+true xor false and not false
+true xor false and not true
+true xor false and true and false
+true xor false and true and true
+true xor false and true or false
+true xor false and true or true
+true xor false and false
+true xor false and true
+true xor false or false and false
+true xor false or false and true
+true xor false or false or false
+true xor false or false or true
+true xor false or not false
+true xor false or not true
+true xor false or true and false
+true xor false or true and true
+true xor false or true or false
+true xor false or true or true
+true xor false or false
+true xor false or true
+true xor true and false and false
+true xor true and false and true
+true xor true and false or false
+true xor true and false or true
+true xor true and not false
+true xor true and not true
+true xor true and true and false
+true xor true and true and true
+true xor true and true or false
+true xor true and true or true
+true xor true and false
+true xor true and true
+true xor true or false and false
+true xor true or false and true
+true xor true or false or false
+true xor true or false or true
+true xor true or not false
+true xor true or not true
+true xor true or true and false
+true xor true or true and true
+true xor true or true or false
+true xor true or true or true
+true xor true or false
+true xor true or true
+false and false and false
+false and false and true
+false and false xor false
+false and false xor true
+false and not false
+false and not true
+false and true and false
+false and true and true
+false and true xor false
+false and true xor true
+false and false
+false and true
+false xor false and false
+false xor false and true
+false xor false or false
+false xor false or true
+false xor not false
+false xor not true
+false xor true and false
+false xor true and true
+false xor true or false
+false xor true or true
+false xor false
+false xor true
+not false and false
+not false and true
+not false xor false
+not false xor true
+not not false
+not not true
+not true and false
+not true and true
+not true xor false
+not true xor true
+not false
+not true
+true and false and false
+true and false and true
+true and false xor false
+true and false xor true
+true and not false
+true and not true
+true and true and false
+true and true and true
+true and true xor false
+true and true xor true
+true and false
+true and true
+true xor false and false
+true xor false and true
+true xor false or false
+true xor false or true
+true xor not false
+true xor not true
+true xor true and false
+true xor true and true
+true xor true or false
+true xor true or true
+true xor false
+true xor true
+false
+true
+false and false and false and true and true and false xor not false
+false and false and false xor false and false or true and false or false
+false and false and false xor true and true or false and false or false
+false and false and false xor true or false or false and false or false
+false and false and false xor true or true or false and false or true
+false and false and not true xor true
+false and false and true and false and false and false xor false and true
+false and false and true and false and not false xor false or false
+false and false and true and false and not true xor false or false
+false and false and true and true and false xor false and true and true
+false and false and true xor true and not false and false or true
+false and false and false and false xor true or not false
+false and false xor false and false or false or false and true or true
+false and false xor false and true or false and false or true or false
+false and false xor false and true or not false or not true
+false and false xor false and true or true or false or true or false
+false and false xor false or false and true and false or true and false
+false and false xor not true and false or false and false and false
+false and false xor not true or false and false or not false
+false and false xor not true or not true and true
+false and false xor true and false and true and true or false or false
+false and false xor true and false and true or true or false and false
+false and false xor true and false or false and false or false and true
+false and false xor true or false or true or true and false or false
+false and false xor true or true and false and false or true or false
+false and false xor true or true or false and false and true or true
+false and false xor true and false and true or false
+false and false xor true and not false and true
+false and false xor true or false and false and not false
+false and true and false and false xor true or true and true or false
+false and true and false xor false and false or false or true or true
+false and true and false xor false and true and true or true
+false and true and false xor true and true or true or true
+false and true and not true and true and false and true xor true
+false and true and not true xor not false and false or true
+false and true and not true xor true and false and false and false
+false and true and not true xor true or true and false and false
+false and true and true xor false and false or true or false
+false and true and true xor false or true or false or false or false
+false and true and true xor true or not true or false or true
+false and true and true xor false and false or false or true
+false and true and true xor false or false or false or true
+false and true and true xor true or true and true
+false and true xor false and true and false or true
+false and true xor false and true or true or true and true and true
+false and true xor false or true or not true or false
+false and true xor false or true or true and false and not true
+false and true xor false or true or true or false and false and false
+false and true xor not false and false and false and true or true
+false and true xor not false and true or true or true or false
+false and true xor not false or true and false or true and true
+false and true xor not false or false and true or true
+false and true xor true and true and true or true and true
+false and true xor true or false and false and false and true or true
+false and true xor true or false or true and true and true
+false xor false and false or false and false and false or true or false
+false xor false and false or true or not false and true and false
+false xor false and true and false and false or true and false or true
+false xor false and true and false or false and true and false
+false xor false and true and false or true and true or false and true
+false xor false and true and false or true or false or true
+false xor false and true and true and false and true and true and false
+false xor false and true and true or not false and true
+false xor false and true or false and true or true or not false
+false xor false and true or false or not true or false
+false xor false and true or true or true and true and false and true
+false xor false and true or false and false or false or false
+false xor false or false and false and not true and not true
+false xor false or false and false or not false or true and true
+false xor false or false or true and not true or false
+false xor false or false or true or true or false and not true
+false xor false or false or true or true or true and false
+false xor false or not false and true and false and true or true
+false xor false or not false or true or true or false and false
+false xor false or not true and not false or false and false
+false xor false or true and true and true and true or false or true
+false xor false or false or true or false or false
+false xor false or true and false and true or false or false
+false xor false or true or true and false or true or true
+false xor true and false and false and true or false or not true
+false xor true and false or false or true or true or false and false
+false xor true and not false and false and true and true
+false xor true and not false or false or true or false and false
+false xor true and not true and true and true and false
+false xor true and true and false or false and true and true
+false xor true and true and true or true or false or not false
+false xor true and false or false and true and true
+false xor true and false or true and true and false
+false xor true or false and true or true and true or false or true
+false xor true or false or false and true and false or true and false
+false xor true or false or true and not true or true
+false xor true or not false and true and false or true
+false xor true or not true or true and true or true or true
+false xor true or true and true and false or false and true
+false xor true or true and true or false or false or not true
+false xor true or true or false and true or true and false or true
+false xor true or false and true and false and true or false
+false xor true or false and true or true and true and false
+false xor true or false and not false and false
+false xor true or true and false and true and false and true
+false xor true or true or not true or false
+not false and false xor false or not false and true and true
+not false and false xor true or true and true or false or true
+not false and not false xor false and true and false or false
+not false and not false xor false or false or false or false
+not false and not false xor true or true and true
+not false and not true and false and false and not false
+not false and not true xor true or false or false or false
+not false and not true xor false or not false
+not false and true and false xor false or true and false
+not false and true and true xor true and false and false and false
+not false and true and true xor false or false and false
+not false and true and false xor false or false or false
+not false xor false and false or false and false or false or false
+not false xor false and true and not true
+not false xor false or true or not true or false
+not false xor not false and false and false or true or false
+not false xor not false and true or true or true or true
+not false xor not true and false and true and true
+not false xor true and false and true and true and false
+not false xor true and false or true and false
+not false xor true and true and not true and true and true
+not false xor true and true or true or true and false and false
+not false xor true or false and false or true and false
+not false xor true or false and not true or not false
+not false xor true or true and false or false or false
+not false xor true or true or true and false and true
+not false xor false and not false or false and true
+not false xor false and true or true or not false
+not false xor false or true and true and false and false
+not false xor true and false and false and not true
+not true and false and false xor true or false and true and false
+not true and false and true and not true xor false
+not true and false xor false or not true or not true
+not true and false xor false or false or true or true
+not true and false xor true and true or false and not true
+not true and false xor true or false and not true
+not true and not false xor false and not false
+not true and not true and true xor false and not false
+not true and not true and not true xor true
+not true and not true xor true or true and not false
+not true and true and true and true xor false and false and false
+not true and true and true xor false and true or true and false
+not true and true and false and true xor true or false
+not true and true xor true or false or not false
+not true and true xor false or true and true
+not true xor false and false and true or false and true and false
+not true xor false and true or not true or false and true
+not true xor not true and true or true or true or true
+not true xor not true or false or false and true and true
+not true xor not true or false or true and false
+not true xor true and false and false or true or false or false
+not true xor true and true and true and true or false or false
+not true xor true and true or false or false and false or false
+not true xor true and true or not false or false and false
+not true xor true and true or true or false or true
+not true xor true or true and not true and false and true
+not true xor false and not false or true or true
+not true xor false or true and true and false or false
+not true xor false or true and true or not true
+not true xor true and true and true or not true
+true and false and false and true xor not false and false or false
+true and false and false xor false and false and true or false
+true and false and false xor false or not true or not true
+true and false and false xor false or true and true or true
+true and false and false xor true and true or true or false and false
+true and false and false xor true or false or false or true
+true and false and not false and true and true xor true
+true and false and not false xor true and true and true or true
+true and false and not false xor true or true and false
+true and false and not true xor true or false or false
+true and false and true and true and false and false xor true and false
+true and false and true xor false and not false and true and true
+true and false and true xor false or false or true or not true
+true and false and true xor true and not true and true or false
+true and false and true xor true or true and false or false
+true and false and true and true xor true and false or false
+true and false xor false and true and false and false and true and false
+true and false xor false and true and true and true and false
+true and false xor false and true and true or true and true
+true and false xor false and true or true and true and true
+true and false xor not false and true and true
+true and false xor true and false and false or false and false
+true and false xor true and false or false and false or true and false
+true and false xor true or false and true and true or true and false
+true and false xor true or true or true and true and not false
+true and false xor false and true and true and false and false
+true and false xor true and false or true and true and false
+true and true and false and false xor false and true or true or false
+true and true and false and false xor true or false or false and false
+true and true and false and true and true and false and true xor true
+true and true and false and true xor true or false and not false
+true and true and false xor true and not true and false and true
+true and true and false xor true and not false or false
+true and true and not false and false xor true or false and false
+true and true and not true xor true or true and false and false
+true and true and true xor false and false and false or false or false
+true and true and true xor false and false and false
+true and true and true xor true or false or true and false or false
+true and true and true xor true or false or true or true and false
+true and true and false xor false or true and true and false
+true and true and true xor false or false and true or true
+true and true xor false and true and false or true and false and true
+true and true xor not false and not true or false and true
+true and true xor not false and false and false and true
+true and true xor true and false and true or true or false or true
+true and true xor true or true and true and false or true or true
+true and true xor false or false or true or false and false
+true and true xor true or true and true and false and false
+true xor false and false and false and false and false or false and false
+true xor false and false and false and false or false and true and true
+true xor false and false and false or false and true or false
+true xor false and false and true and false and true or true
+true xor false and false or true and true or true or false or true
+true xor false and true and false and false and false and true and true
+true xor false and true and false and true and true and true or true
+true xor false and true and true or true or true and false
+true xor false and true or false and false and true and true and false
+true xor false and true or true and true or true and false or false
+true xor false and true or true or false or false and false or false
+true xor false and false and true or false or not false
+true xor false and false or true and false or false
+true xor false and true or false and true or true
+true xor false or false and false and true and false or false
+true xor false or false and true or true and true or false or true
+true xor false or true and false and false and false and false
+true xor false or true and false and true or true or false
+true xor false or true and false or not false or true
+true xor false or true and true and false or false and false or true
+true xor false or true and true or true or false and true
+true xor false or true or false or not true and true or true
+true xor false or true or true and false and true and true or true
+true xor false or false or not true and true and true
+true xor true and false and false and true and false and not false
+true xor true and false and false and false or not true
+true xor true and false and false and not false and false
+true xor true and false and true and true or true
+true xor true and false and true or true and false or true and true
+true xor true and false or false and true and false
+true xor true and false or false or false or false and true or false
+true xor true and false or true or false or false or true and true
+true xor true and not false and false and true and false and true
+true xor true and not false and true and true or false or false
+true xor true and not false or false and false and not true
+true xor true and true and true or not false or not true
+true xor true and true or true and true or false and not false
+true xor true and true or true and true or true or true or false
+true xor true and true or true or not false and false or false
+true xor true and false and false or false or true and false
+true xor true and false or false and true or false and false
+true xor true and true or false or true or true and false
+true xor true or false and false or true and false or not true
+true xor true or false and true and not true or false or true
+true xor true or false or false and false and true or false
+true xor true or false or true or true or false and true
+true xor true or not false or false and false and true or true
+true xor true or true and false and not true or false or false
+true xor true or true and false and true or false and not true
+true xor true or true or false or not true and not true
+true xor true or true or false or true and false and false or true
+true xor true or true or true or true or true and true or false
+true xor true or true and false and false and true
+false and false xor false or true or false or false
+false and false xor false or true and not true
+false and false xor true and false or false and false
+false and not true and false and false and true xor true
+false and not true and not false xor false and true
+false and true xor true and true or true or true and true
+false and false and false xor false or false or false
+false and false xor true or true or true and false
+false and true and true xor false or true or true
+false xor false and false and true or false and true or false
+false xor false and false or true or true or true
+false xor false and false or false and not false
+false xor false and true and false or false or true
+false xor false and true or false and true or false or true
+false xor false or true and true and false or true and true
+false xor not false and not true or true
+false xor not true or true or false or false and false
+false xor true and false and true and true and true and false
+false xor true and true and true and false or false and false
+false xor true or false and false or false and true and false
+false xor true and false or false or false
+false xor true or not true and true or false
+false xor true or false and true and true
+not false and true xor true or false or true
+not false xor false and false or true and false
+not false xor true and false or false or true
+not false xor true or not false or not true
+not false xor true or not true and false
+not not true xor false or false
+not true xor false or false and false or true or false
+not true xor true or true and false or true
+not false and false and true and true and true
+true and false and true xor true and true and false and true
+true and false xor false and false and false or false
+true and not false xor true or false and not true
+true and not true and true xor true and true and false
+true and true and false and false and false xor false or true
+true and true and true and false and false and false
+true and true and true and not false and false xor true
+true and true xor false and false or false or not true
+true and true xor false or false and false and false
+true and false and true and false xor false or true
+true xor false and false and true or false and false
+true xor false and true or true or true and false
+true xor false or false and false and false or true or true
+true xor false or true and true or false or false and true
+true xor false or true and true or true and false and false
+true xor false or true or true and not true
+true xor true and false and true or false and false and false
+true xor true and true or false and false and true
+true xor true and true or not false or false and true
+true xor true and true or true
+true xor true or false and true or true and false or false
+true xor true or false or not true and false and true
+true xor true or false or true and false and false and true
+true xor false and not false or true and false
+true xor true or false and false and true and true
+true xor true or true and false and false and true
+true xor true or true and true or true or false
+true xor false and true or true or false
+true xor not true or true and true
+true xor true or true or true
+((false and false) and (false and false))
+((false and false) and (false and true))
+((false and false) and (false xor false))
+((false and false) and (false xor true))
+((false and false) and (not false))
+((false and false) and (not true))
+((false and false) and (true and false))
+((false and false) and (true and true))
+((false and false) and (true xor false))
+((false and false) and (true xor true))
+((false and false) and false)
+((false and false) and true)
+((false and false) xor (false and false))
+((false and false) xor (false and true))
+((false and false) xor (false or false))
+((false and false) xor (false or true))
+((false and false) xor (not false))
+((false and false) xor (not true))
+((false and false) xor (true and false))
+((false and false) xor (true and true))
+((false and false) xor (true or false))
+((false and false) xor (true or true))
+((false and false) xor false)
+((false and false) xor true)
+((false and true) and (false and false))
+((false and true) and (false and true))
+((false and true) and (false xor false))
+((false and true) and (false xor true))
+((false and true) and (not false))
+((false and true) and (not true))
+((false and true) and (true and false))
+((false and true) and (true and true))
+((false and true) and (true xor false))
+((false and true) and (true xor true))
+((false and true) and false)
+((false and true) and true)
+((false and true) xor (false and false))
+((false and true) xor (false and true))
+((false and true) xor (false or false))
+((false and true) xor (false or true))
+((false and true) xor (not false))
+((false and true) xor (not true))
+((false and true) xor (true and false))
+((false and true) xor (true and true))
+((false and true) xor (true or false))
+((false and true) xor (true or true))
+((false and true) xor false)
+((false and true) xor true)
+((false xor false) and (false and false))
+((false xor false) and (false and true))
+((false xor false) and (false or false))
+((false xor false) and (false or true))
+((false xor false) and (not false))
+((false xor false) and (not true))
+((false xor false) and (true and false))
+((false xor false) and (true and true))
+((false xor false) and (true or false))
+((false xor false) and (true or true))
+((false xor false) and false)
+((false xor false) and true)
+((false xor false) or (false and false))
+((false xor false) or (false and true))
+((false xor false) or (false or false))
+((false xor false) or (false or true))
+((false xor false) or (not false))
+((false xor false) or (not true))
+((false xor false) or (true and false))
+((false xor false) or (true and true))
+((false xor false) or (true or false))
+((false xor false) or (true or true))
+((false xor false) or false)
+((false xor false) or true)
+((false xor true) and (false and false))
+((false xor true) and (false and true))
+((false xor true) and (false or false))
+((false xor true) and (false or true))
+((false xor true) and (not false))
+((false xor true) and (not true))
+((false xor true) and (true and false))
+((false xor true) and (true and true))
+((false xor true) and (true or false))
+((false xor true) and (true or true))
+((false xor true) and false)
+((false xor true) and true)
+((false xor true) or (false and false))
+((false xor true) or (false and true))
+((false xor true) or (false or false))
+((false xor true) or (false or true))
+((false xor true) or (not false))
+((false xor true) or (not true))
+((false xor true) or (true and false))
+((false xor true) or (true and true))
+((false xor true) or (true or false))
+((false xor true) or (true or true))
+((false xor true) or false)
+((false xor true) or true)
+((not false) and (false and false))
+((not false) and (false and true))
+((not false) and (false xor false))
+((not false) and (false xor true))
+((not false) and (not false))
+((not false) and (not true))
+((not false) and (true and false))
+((not false) and (true and true))
+((not false) and (true xor false))
+((not false) and (true xor true))
+((not false) and false)
+((not false) and true)
+((not false) xor (false and false))
+((not false) xor (false and true))
+((not false) xor (false or false))
+((not false) xor (false or true))
+((not false) xor (not false))
+((not false) xor (not true))
+((not false) xor (true and false))
+((not false) xor (true and true))
+((not false) xor (true or false))
+((not false) xor (true or true))
+((not false) xor false)
+((not false) xor true)
+((not true) and (false and false))
+((not true) and (false and true))
+((not true) and (false xor false))
+((not true) and (false xor true))
+((not true) and (not false))
+((not true) and (not true))
+((not true) and (true and false))
+((not true) and (true and true))
+((not true) and (true xor false))
+((not true) and (true xor true))
+((not true) and false)
+((not true) and true)
+((not true) xor (false and false))
+((not true) xor (false and true))
+((not true) xor (false or false))
+((not true) xor (false or true))
+((not true) xor (not false))
+((not true) xor (not true))
+((not true) xor (true and false))
+((not true) xor (true and true))
+((not true) xor (true or false))
+((not true) xor (true or true))
+((not true) xor false)
+((not true) xor true)
+((true and false) and (false and false))
+((true and false) and (false and true))
+((true and false) and (false xor false))
+((true and false) and (false xor true))
+((true and false) and (not false))
+((true and false) and (not true))
+((true and false) and (true and false))
+((true and false) and (true and true))
+((true and false) and (true xor false))
+((true and false) and (true xor true))
+((true and false) and false)
+((true and false) and true)
+((true and false) xor (false and false))
+((true and false) xor (false and true))
+((true and false) xor (false or false))
+((true and false) xor (false or true))
+((true and false) xor (not false))
+((true and false) xor (not true))
+((true and false) xor (true and false))
+((true and false) xor (true and true))
+((true and false) xor (true or false))
+((true and false) xor (true or true))
+((true and false) xor false)
+((true and false) xor true)
+((true and true) and (false and false))
+((true and true) and (false and true))
+((true and true) and (false xor false))
+((true and true) and (false xor true))
+((true and true) and (not false))
+((true and true) and (not true))
+((true and true) and (true and false))
+((true and true) and (true and true))
+((true and true) and (true xor false))
+((true and true) and (true xor true))
+((true and true) and false)
+((true and true) and true)
+((true and true) xor (false and false))
+((true and true) xor (false and true))
+((true and true) xor (false or false))
+((true and true) xor (false or true))
+((true and true) xor (not false))
+((true and true) xor (not true))
+((true and true) xor (true and false))
+((true and true) xor (true and true))
+((true and true) xor (true or false))
+((true and true) xor (true or true))
+((true and true) xor false)
+((true and true) xor true)
+((true xor false) and (false and false))
+((true xor false) and (false and true))
+((true xor false) and (false or false))
+((true xor false) and (false or true))
+((true xor false) and (not false))
+((true xor false) and (not true))
+((true xor false) and (true and false))
+((true xor false) and (true and true))
+((true xor false) and (true or false))
+((true xor false) and (true or true))
+((true xor false) and false)
+((true xor false) and true)
+((true xor false) or (false and false))
+((true xor false) or (false and true))
+((true xor false) or (false or false))
+((true xor false) or (false or true))
+((true xor false) or (not false))
+((true xor false) or (not true))
+((true xor false) or (true and false))
+((true xor false) or (true and true))
+((true xor false) or (true or false))
+((true xor false) or (true or true))
+((true xor false) or false)
+((true xor false) or true)
+((true xor true) and (false and false))
+((true xor true) and (false and true))
+((true xor true) and (false or false))
+((true xor true) and (false or true))
+((true xor true) and (not false))
+((true xor true) and (not true))
+((true xor true) and (true and false))
+((true xor true) and (true and true))
+((true xor true) and (true or false))
+((true xor true) and (true or true))
+((true xor true) and false)
+((true xor true) and true)
+((true xor true) or (false and false))
+((true xor true) or (false and true))
+((true xor true) or (false or false))
+((true xor true) or (false or true))
+((true xor true) or (not false))
+((true xor true) or (not true))
+((true xor true) or (true and false))
+((true xor true) or (true and true))
+((true xor true) or (true or false))
+((true xor true) or (true or true))
+((true xor true) or false)
+((true xor true) or true)
+(false and (false and false))
+(false and (false and true))
+(false and (false xor false))
+(false and (false xor true))
+(false and (not false))
+(false and (not true))
+(false and (true and false))
+(false and (true and true))
+(false and (true xor false))
+(false and (true xor true))
+(false and false)
+(false and true)
+(false xor (false and false))
+(false xor (false and true))
+(false xor (false or false))
+(false xor (false or true))
+(false xor (not false))
+(false xor (not true))
+(false xor (true and false))
+(false xor (true and true))
+(false xor (true or false))
+(false xor (true or true))
+(false xor false)
+(false xor true)
+(not (false and false))
+(not (false and true))
+(not (false xor false))
+(not (false xor true))
+(not (not false))
+(not (not true))
+(not (true and false))
+(not (true and true))
+(not (true xor false))
+(not (true xor true))
+(not false)
+(not true)
+(true and (false and false))
+(true and (false and true))
+(true and (false xor false))
+(true and (false xor true))
+(true and (not false))
+(true and (not true))
+(true and (true and false))
+(true and (true and true))
+(true and (true xor false))
+(true and (true xor true))
+(true and false)
+(true and true)
+(true xor (false and false))
+(true xor (false and true))
+(true xor (false or false))
+(true xor (false or true))
+(true xor (not false))
+(true xor (not true))
+(true xor (true and false))
+(true xor (true and true))
+(true xor (true or false))
+(true xor (true or true))
+(true xor false)
+(true xor true)
+false
+true
+(((false and false) and (false and true)) and ((true and false) xor (not false)))
+(((false and false) and (false xor false)) and ((false or true) and (false or false)))
+(((false and false) and (false xor true)) and ((true or false) and (false or false)))
+(((false and false) and (false xor true)) or ((false or false) and (false or false)))
+(((false and false) and (false xor true)) or ((true or false) and (false or true)))
+(((false and false) and (not true)) xor true)
+(((false and false) and (true and false)) and ((false and false) xor (false and true)))
+(((false and false) and (true and false)) and ((not false) xor (false or false)))
+(((false and false) and (true and false)) and ((not true) xor (false or false)))
+(((false and false) and (true and true)) and ((false xor false) and (true and true)))
+(((false and false) and (true xor true)) and ((not false) and (false or true)))
+(((false and false) and false) and ((false xor true) or (not false)))
+(((false and false) xor (false and false)) or ((false or false) and (true or true)))
+(((false and false) xor (false and true)) or ((false and false) or (true or false)))
+(((false and false) xor (false and true)) or ((not false) or (not true)))
+(((false and false) xor (false and true)) or ((true or false) or (true or false)))
+(((false and false) xor (false or false)) and ((true and false) or (true and false)))
+(((false and false) xor (not true)) and ((false or false) and (false and false)))
+(((false and false) xor (not true)) or ((false and false) or (not false)))
+(((false and false) xor (not true)) or ((not true) and true))
+(((false and false) xor (true and false)) and ((true and true) or (false or false)))
+(((false and false) xor (true and false)) and ((true or true) or (false and false)))
+(((false and false) xor (true and false)) or ((false and false) or (false and true)))
+(((false and false) xor (true or false)) or ((true or true) and (false or false)))
+(((false and false) xor (true or true)) and ((false and false) or (true or false)))
+(((false and false) xor (true or true)) or ((false and false) and (true or true)))
+(((false and false) xor true) and ((false and true) or false))
+(((false and false) xor true) and (not (false and true)))
+(((false and false) xor true) or ((false and false) and (not false)))
+(((false and true) and (false and false)) xor ((true or true) and (true or false)))
+(((false and true) and (false xor false)) and ((false or false) or (true or true)))
+(((false and true) and (false xor false)) and ((true and true) or true))
+(((false and true) and (false xor true)) and ((true or true) or true))
+(((false and true) and (not true)) and ((true and false) and (true xor true)))
+(((false and true) and (not true)) xor ((not false) and (false or true)))
+(((false and true) and (not true)) xor ((true and false) and (false and false)))
+(((false and true) and (not true)) xor ((true or true) and (false and false)))
+(((false and true) and (true xor false)) and ((false or true) or false))
+(((false and true) and (true xor false)) or ((true or false) or (false or false)))
+(((false and true) and (true xor true)) or ((not true) or (false or true)))
+(((false and true) and true) xor ((false and false) or (false or true)))
+(((false and true) and true) xor ((false or false) or (false or true)))
+(((false and true) and true) xor (true or (true and true)))
+(((false and true) xor (false and true)) and (false or true))
+(((false and true) xor (false and true)) or ((true or true) and (true and true)))
+(((false and true) xor (false or true)) or ((not true) or false))
+(((false and true) xor (false or true)) or ((true and false) and (not true)))
+(((false and true) xor (false or true)) or ((true or false) and (false and false)))
+(((false and true) xor (not false)) and ((false and false) and (true or true)))
+(((false and true) xor (not false)) and ((true or true) or (true or false)))
+(((false and true) xor (not false)) or ((true and false) or (true and true)))
+(((false and true) xor (not false)) or (false and (true or true)))
+(((false and true) xor (true and true)) and (true or (true and true)))
+(((false and true) xor (true or false)) and ((false and false) and (true or true)))
+(((false and true) xor (true or false)) or (true and (true and true)))
+(((false xor false) and (false or false)) and ((false and false) or (true or false)))
+(((false xor false) and (false or true)) or ((not false) and (true and false)))
+(((false xor false) and (true and false)) and ((false or true) and (false or true)))
+(((false xor false) and (true and false)) or ((false and true) and false))
+(((false xor false) and (true and false)) or ((true and true) or (false and true)))
+(((false xor false) and (true and false)) or ((true or false) or true))
+(((false xor false) and (true and true)) and ((false and true) and (true and false)))
+(((false xor false) and (true and true)) or (not (false and true)))
+(((false xor false) and (true or false)) and ((true or true) or (not false)))
+(((false xor false) and (true or false)) or (not (true or false)))
+(((false xor false) and (true or true)) or ((true and true) and (false and true)))
+(((false xor false) and true) or ((false and false) or (false or false)))
+(((false xor false) or (false and false)) and ((not true) and (not true)))
+(((false xor false) or (false and false)) or ((not false) or (true and true)))
+(((false xor false) or (false or true)) and (not (true or false)))
+(((false xor false) or (false or true)) or ((true or false) and (not true)))
+(((false xor false) or (false or true)) or ((true or true) and false))
+(((false xor false) or (not false)) and ((true and false) and (true or true)))
+(((false xor false) or (not false)) or ((true or true) or (false and false)))
+(((false xor false) or (not true)) and ((not false) or (false and false)))
+(((false xor false) or (true and true)) and ((true and true) or (false or true)))
+(((false xor false) or false) or (true or (false or false)))
+(((false xor false) or true) and ((false and true) or (false or false)))
+(((false xor false) or true) or ((true and false) or (true or true)))
+(((false xor true) and (false and false)) and ((true or false) or (not true)))
+(((false xor true) and (false or false)) or ((true or true) or (false and false)))
+(((false xor true) and (not false)) and (false and (true and true)))
+(((false xor true) and (not false)) or ((false or true) or (false and false)))
+(((false xor true) and (not true)) and (true and (true and false)))
+(((false xor true) and (true and false)) or ((false and true) and true))
+(((false xor true) and (true and true)) or ((true or false) or (not false)))
+(((false xor true) and false) or ((false and true) and true))
+(((false xor true) and false) or (true and (true and false)))
+(((false xor true) or (false and true)) or ((true and true) or (false or true)))
+(((false xor true) or (false or false)) and ((true and false) or (true and false)))
+(((false xor true) or (false or true)) and ((not true) or true))
+(((false xor true) or (not false)) and (true and (false or true)))
+(((false xor true) or (not true)) or ((true and true) or (true or true)))
+(((false xor true) or (true and true)) and (false or (false and true)))
+(((false xor true) or (true and true)) or ((false or false) or (not true)))
+(((false xor true) or (true or false)) and ((true or true) and (false or true)))
+(((false xor true) or false) and ((true and false) and (true or false)))
+(((false xor true) or false) and ((true or true) and (true and false)))
+(((false xor true) or false) and (not (false and false)))
+(((false xor true) or true) and ((false and true) and (false and true)))
+(((false xor true) or true) or (not (true or false)))
+(((not false) and (false xor false)) or ((not false) and (true and true)))
+(((not false) and (false xor true)) or ((true and true) or (false or true)))
+(((not false) and (not false)) xor ((false and true) and (false or false)))
+(((not false) and (not false)) xor ((false or false) or (false or false)))
+(((not false) and (not false)) xor (true or (true and true)))
+(((not false) and (not true)) and ((false and false) and (not false)))
+(((not false) and (not true)) xor ((true or false) or (false or false)))
+(((not false) and (not true)) xor (false or (not false)))
+(((not false) and (true and false)) xor (false or (true and false)))
+(((not false) and (true and true)) xor ((true and false) and (false and false)))
+(((not false) and (true and true)) xor (false or (false and false)))
+(((not false) and true) and ((false xor false) or (false or false)))
+(((not false) xor (false and false)) or ((false and false) or (false or false)))
+(((not false) xor (false and true)) and (not true))
+(((not false) xor (false or true)) or ((not true) or false))
+(((not false) xor (not false)) and ((false and false) or (true or false)))
+(((not false) xor (not false)) and ((true or true) or (true or true)))
+(((not false) xor (not true)) and (false and (true and true)))
+(((not false) xor (true and false)) and (true and (true and false)))
+(((not false) xor (true and false)) or (true and false))
+(((not false) xor (true and true)) and ((not true) and (true and true)))
+(((not false) xor (true and true)) or ((true or true) and (false and false)))
+(((not false) xor (true or false)) and ((false or true) and false))
+(((not false) xor (true or false)) and ((not true) or (not false)))
+(((not false) xor (true or true)) and (false or (false or false)))
+(((not false) xor (true or true)) or (true and (false and true)))
+(((not false) xor false) and ((not false) or (false and true)))
+(((not false) xor false) and ((true or true) or (not false)))
+(((not false) xor false) or ((true and true) and (false and false)))
+(((not false) xor true) and ((false and false) and (not true)))
+(((not true) and (false and false)) xor ((true or false) and (true and false)))
+(((not true) and (false and true)) and (not (true xor false)))
+(((not true) and (false xor false)) or ((not true) or (not true)))
+(((not true) and (false xor false)) or (false or (true or true)))
+(((not true) and (false xor true)) and ((true or false) and (not true)))
+(((not true) and (false xor true)) or (false and (not true)))
+(((not true) and (not false)) xor (false and (not false)))
+(((not true) and (not true)) and ((true xor false) and (not false)))
+(((not true) and (not true)) and (not (true xor true)))
+(((not true) and (not true)) xor ((true or true) and (not false)))
+(((not true) and (true and true)) and ((true xor false) and (false and false)))
+(((not true) and (true and true)) xor ((false and true) or (true and false)))
+(((not true) and true) and ((false and true) xor (true or false)))
+(((not true) and true) xor ((true or false) or (not false)))
+(((not true) and true) xor (false or (true and true)))
+(((not true) xor (false and false)) and ((true or false) and (true and false)))
+(((not true) xor (false and true)) or ((not true) or (false and true)))
+(((not true) xor (not true)) and ((true or true) or (true or true)))
+(((not true) xor (not true)) or ((false or false) and (true and true)))
+(((not true) xor (not true)) or (false or (true and false)))
+(((not true) xor (true and false)) and ((false or true) or (false or false)))
+(((not true) xor (true and true)) and ((true and true) or (false or false)))
+(((not true) xor (true and true)) or ((false or false) and (false or false)))
+(((not true) xor (true and true)) or ((not false) or (false and false)))
+(((not true) xor (true and true)) or ((true or false) or true))
+(((not true) xor (true or true)) and ((not true) and (false and true)))
+(((not true) xor false) and ((not false) or (true or true)))
+(((not true) xor false) or ((true and true) and (false or false)))
+(((not true) xor false) or ((true and true) or (not true)))
+(((not true) xor true) and ((true and true) or (not true)))
+(((true and false) and (false and true)) xor ((not false) and (false or false)))
+(((true and false) and (false xor false)) and ((false and true) or false))
+(((true and false) and (false xor false)) or ((not true) or (not true)))
+(((true and false) and (false xor false)) or (true and (true or true)))
+(((true and false) and (false xor true)) and ((true or true) or (false and false)))
+(((true and false) and (false xor true)) or (false or (false or true)))
+(((true and false) and (not false)) and ((true and true) xor true))
+(((true and false) and (not false)) xor ((true and true) and (true or true)))
+(((true and false) and (not false)) xor (true or (true and false)))
+(((true and false) and (not true)) xor (true or (false or false)))
+(((true and false) and (true and true)) and ((false and false) xor (true and false)))
+(((true and false) and (true xor false)) and ((not false) and (true and true)))
+(((true and false) and (true xor false)) or ((false or true) or (not true)))
+(((true and false) and (true xor true)) and ((not true) and (true or false)))
+(((true and false) and (true xor true)) or (true and (false or false)))
+(((true and false) and true) and ((true xor true) and (false or false)))
+(((true and false) xor (false and true)) and ((false and false) and (true and false)))
+(((true and false) xor (false and true)) and ((true and true) and false))
+(((true and false) xor (false and true)) and (true or (true and true)))
+(((true and false) xor (false and true)) or (true and (true and true)))
+(((true and false) xor (not false)) and (true and true))
+(((true and false) xor (true and false)) and (false or (false and false)))
+(((true and false) xor (true and false)) or ((false and false) or (true and false)))
+(((true and false) xor (true or false)) and ((true and true) or (true and false)))
+(((true and false) xor (true or true)) or ((true and true) and (not false)))
+(((true and false) xor false) and ((true and true) and (false and false)))
+(((true and false) xor true) and ((false or true) and (true and false)))
+(((true and true) and (false and false)) xor ((false and true) or (true or false)))
+(((true and true) and (false and false)) xor ((true or false) or (false and false)))
+(((true and true) and (false and true)) and ((true and false) and (true xor true)))
+(((true and true) and (false and true)) xor ((true or false) and (not false)))
+(((true and true) and (false xor true)) and ((not true) and (false and true)))
+(((true and true) and (false xor true)) and (not (false or false)))
+(((true and true) and (not false)) and ((false xor true) or (false and false)))
+(((true and true) and (not true)) xor ((true or true) and (false and false)))
+(((true and true) and (true xor false)) and ((false and false) or (false or false)))
+(((true and true) and (true xor false)) and (false and false))
+(((true and true) and (true xor true)) or ((false or true) and (false or false)))
+(((true and true) and (true xor true)) or ((false or true) or (true and false)))
+(((true and true) and false) xor ((false or true) and (true and false)))
+(((true and true) and true) xor ((false or false) and (true or true)))
+(((true and true) xor (false and true)) and ((false or true) and (false and true)))
+(((true and true) xor (not false)) and ((not true) or (false and true)))
+(((true and true) xor (not false)) and (false and (false and true)))
+(((true and true) xor (true and false)) and ((true or true) or (false or true)))
+(((true and true) xor (true or true)) and ((true and false) or (true or true)))
+(((true and true) xor false) or ((false or true) or (false and false)))
+(((true and true) xor true) or ((true and true) and (false and false)))
+(((true xor false) and (false and false)) and ((false and false) or (false and false)))
+(((true xor false) and (false and false)) and ((false or false) and (true and true)))
+(((true xor false) and (false and false)) or (false and (true or false)))
+(((true xor false) and (false and true)) and (false and (true or true)))
+(((true xor false) and (false or true)) and ((true or true) or (false or true)))
+(((true xor false) and (true and false)) and ((false and false) and (true and true)))
+(((true xor false) and (true and false)) and ((true and true) and (true or true)))
+(((true xor false) and (true and true)) or (true or (true and false)))
+(((true xor false) and (true or false)) and ((false and true) and (true and false)))
+(((true xor false) and (true or true)) and ((true or true) and (false or false)))
+(((true xor false) and (true or true)) or ((false or false) and (false or false)))
+(((true xor false) and false) and ((true or false) or (not false)))
+(((true xor false) and false) or (true and (false or false)))
+(((true xor false) and true) or ((false and true) or true))
+(((true xor false) or (false and false)) and ((true and false) or false))
+(((true xor false) or (false and true)) or ((true and true) or (false or true)))
+(((true xor false) or (true and false)) and ((false and false) and false))
+(((true xor false) or (true and false)) and (true or (true or false)))
+(((true xor false) or (true and false)) or (not (false or true)))
+(((true xor false) or (true and true)) and ((false or false) and (false or true)))
+(((true xor false) or (true and true)) or ((true or false) and true))
+(((true xor false) or (true or false)) or ((not true) and (true or true)))
+(((true xor false) or (true or true)) and ((false and true) and (true or true)))
+(((true xor false) or false) or ((not true) and (true and true)))
+(((true xor true) and (false and false)) and ((true and false) and (not false)))
+(((true xor true) and (false and false)) and (false or (not true)))
+(((true xor true) and (false and false)) and (not (false and false)))
+(((true xor true) and (false and true)) and (true or true))
+(((true xor true) and (false and true)) or ((true and false) or (true and true)))
+(((true xor true) and (false or false)) and (true and false))
+(((true xor true) and (false or false)) or ((false or false) and (true or false)))
+(((true xor true) and (false or true)) or ((false or false) or (true and true)))
+(((true xor true) and (not false)) and ((false and true) and (false and true)))
+(((true xor true) and (not false)) and ((true and true) or (false or false)))
+(((true xor true) and (not false)) or ((false and false) and (not true)))
+(((true xor true) and (true and true)) or ((not false) or (not true)))
+(((true xor true) and (true or true)) and ((true or false) and (not false)))
+(((true xor true) and (true or true)) and ((true or true) or (true or false)))
+(((true xor true) and (true or true)) or ((not false) and (false or false)))
+(((true xor true) and false) and ((false or false) or (true and false)))
+(((true xor true) and false) or ((false and true) or (false and false)))
+(((true xor true) and true) or ((false or true) or (true and false)))
+(((true xor true) or (false and false)) or ((true and false) or (not true)))
+(((true xor true) or (false and true)) and ((not true) or (false or true)))
+(((true xor true) or (false or false)) and (false and (true or false)))
+(((true xor true) or (false or true)) or ((true or false) and true))
+(((true xor true) or (not false)) or ((false and false) and (true or true)))
+(((true xor true) or (true and false)) and ((not true) or (false or false)))
+(((true xor true) or (true and false)) and ((true or false) and (not true)))
+(((true xor true) or (true or false)) or ((not true) and (not true)))
+(((true xor true) or (true or false)) or ((true and false) and (false or true)))
+(((true xor true) or (true or true)) or ((true or true) and (true or false)))
+(((true xor true) or true) and ((false and false) and true))
+((false and (false xor false)) or ((true or false) or false))
+((false and (false xor false)) or (true and (not true)))
+((false and (false xor true)) and ((false or false) and false))
+((false and (not true)) and ((false and false) and (true xor true)))
+((false and (not true)) and ((not false) xor (false and true)))
+((false and (true xor true)) and ((true or true) or (true and true)))
+((false and false) and ((false xor false) or (false or false)))
+((false and false) xor ((true or true) or (true and false)))
+((false and true) and ((true xor false) or (true or true)))
+((false xor (false and false)) and ((true or false) and (true or false)))
+((false xor (false and false)) or ((true or true) or true))
+((false xor (false and false)) or (false and (not false)))
+((false xor (false and true)) and ((false or false) or true))
+((false xor (false and true)) or ((false and true) or (false or true)))
+((false xor (false or true)) and ((true and false) or (true and true)))
+((false xor (not false)) and (not (true or true)))
+((false xor (not true)) or ((true or false) or (false and false)))
+((false xor (true and false)) and ((true and true) and (true and false)))
+((false xor (true and true)) and ((true and false) or (false and false)))
+((false xor (true or false)) and ((false or false) and (true and false)))
+((false xor true) and ((false or false) or false))
+((false xor true) or ((not true) and (true or false)))
+((false xor true) or (false and (true and true)))
+((not (false and true)) xor ((true or false) or true))
+((not (false xor false)) and (false or (true and false)))
+((not (false xor true)) and ((false or false) or true))
+((not (false xor true)) or ((not false) or (not true)))
+((not (false xor true)) or ((not true) and false))
+((not (not true)) xor (false or false))
+((not (true xor false)) or ((false and false) or (true or false)))
+((not (true xor true)) or (true and (false or true)))
+((not false) and ((false and true) and (true and true)))
+((true and (false and true)) xor ((true and true) and (false and true)))
+((true and (false xor false)) and ((false and false) or false))
+((true and (not false)) xor ((true or false) and (not true)))
+((true and (not true)) and ((true xor true) and (true and false)))
+((true and (true and false)) and ((false and false) xor (false or true)))
+((true and (true and true)) and ((false and false) and false))
+((true and (true and true)) and ((not false) and (false xor true)))
+((true and (true xor false)) and ((false or false) or (not true)))
+((true and (true xor false)) or ((false and false) and false))
+((true and false) and ((true and false) xor (false or true)))
+((true xor (false and false)) and (true or (false and false)))
+((true xor (false and true)) or (true or (true and false)))
+((true xor (false or false)) and ((false and false) or (true or true)))
+((true xor (false or true)) and ((true or false) or (false and true)))
+((true xor (false or true)) and ((true or true) and (false and false)))
+((true xor (false or true)) or (true and (not true)))
+((true xor (true and false)) and ((true or false) and (false and false)))
+((true xor (true and true)) or ((false and false) and true))
+((true xor (true and true)) or ((not false) or (false and true)))
+((true xor (true and true)) or true)
+((true xor (true or false)) and ((true or true) and (false or false)))
+((true xor (true or false)) or ((not true) and (false and true)))
+((true xor (true or false)) or ((true and false) and (false and true)))
+((true xor false) and ((not false) or (true and false)))
+((true xor true) or ((false and false) and (true and true)))
+((true xor true) or ((true and false) and (false and true)))
+((true xor true) or ((true and true) or (true or false)))
+(true xor ((false and true) or (true or false)))
+(true xor ((not true) or (true and true)))
+(true xor (true or (true or true)))

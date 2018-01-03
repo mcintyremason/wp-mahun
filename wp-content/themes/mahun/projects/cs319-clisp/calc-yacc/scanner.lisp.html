@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <title>scanner.lisp</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles-2014.css"></link>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/site-2014.js"></script>
+    <meta name="viewport" content="initial-scale=1.0"></meta>
+  </head>
+  <body>
+    <div class="content">
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; The lexical analyzer for the integer calculator. Tokens are represented by</span>
+<span class="hl slc">;; multiple values. The first value is the token type (a symbol) and the second</span>
+<span class="hl slc">;; is the token value. Only integer tokens have values.</span>
+<span class="hl slc">;;</span>
+<span class="hl slc">;; The token types are;</span>
+<span class="hl slc">;;  PLUS      +</span>
+<span class="hl slc">;;  MINUS     -</span>
+<span class="hl slc">;;  TIMES     *</span>
+<span class="hl slc">;;  DIV       /</span>
+<span class="hl slc">;;  MOD       %</span>
+<span class="hl slc">;;  LPAREN    (</span>
+<span class="hl slc">;;  RPAREN    )</span>
+<span class="hl slc">;;  INT-CONST [0-9]*</span>
+<span class="hl slc">;;</span>
+<span class="hl slc">;;  This lexical analyzer is designed to play well with cl-yacc.</span>
+
+<span class="hl slc">;; peek-c: Returns the next character in the input stream without removing it</span>
+<span class="hl slc">;; from the input stream.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> peek-c <span class="hl opt">(</span><span class="hl kwa">stream</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">peek-char</span> nil stream nil<span class="hl opt">))</span>
+
+<span class="hl slc">;; read-c: Removes the next character in the input stream and returns it.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> read-c <span class="hl opt">(</span><span class="hl kwa">stream</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">read-char</span> stream nil<span class="hl opt">))</span>
+
+<span class="hl slc">;; whitespace-char-p: Determines whether a character is whitespace (space, </span>
+<span class="hl slc">;; newline, or tab.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> whitespace-char-p <span class="hl opt">(</span><span class="hl kwa">c</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">case</span> c 
+	<span class="hl opt">((#</span>\Space <span class="hl opt">#</span>\Newline <span class="hl opt">#</span>\Tab<span class="hl opt">)</span> t<span class="hl opt">)</span>
+	<span class="hl opt">(</span><span class="hl kwa">t</span> nil<span class="hl opt">)))</span>
+
+<span class="hl slc">;; int-const-token: Takes a list of digit characters in reverse order and</span>
+<span class="hl slc">;; creates an integer token. The token has multiple values: the type (INT-CONST)</span>
+<span class="hl slc">;; and the integer value.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> int-const-token <span class="hl opt">(</span><span class="hl kwa">lexeme-list</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">values</span> <span class="hl opt">'</span>INT-CONST 
+	  <span class="hl opt">(</span><span class="hl kwa">parse-integer</span> <span class="hl opt">(</span><span class="hl kwa">coerce</span> <span class="hl opt">(</span><span class="hl kwa">reverse</span> lexeme-list<span class="hl opt">) '</span>string<span class="hl opt">))))</span>
+
+<span class="hl slc">;; scan-int-const: Scans an integer constant, returning an integer token.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> scan-int-const <span class="hl opt">(</span><span class="hl kwa">stream</span> lexeme-list<span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">first</span> <span class="hl opt">(</span><span class="hl kwa">peek-c</span> stream<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> <span class="hl opt">((</span><span class="hl kwa">null</span> first<span class="hl opt">) (</span><span class="hl kwa">int-const-token</span> lexeme-list<span class="hl opt">))</span>
+	  <span class="hl opt">((</span><span class="hl kwa">digit-char-p</span> first<span class="hl opt">)</span> 
+	   <span class="hl opt">(</span><span class="hl kwa">scan-int-const</span> stream <span class="hl opt">(</span><span class="hl kwa">cons</span> <span class="hl opt">(</span><span class="hl kwa">read-c</span> stream<span class="hl opt">)</span> lexeme-list<span class="hl opt">)))</span>
+	  <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">int-const-token</span> lexeme-list<span class="hl opt">)))))</span>
+
+<span class="hl slc">;; scan: Returns the next token in the input stream. At end of file it returns nil.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> scan <span class="hl opt">(</span><span class="hl kwa">stream</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">first</span> <span class="hl opt">(</span><span class="hl kwa">read-c</span> stream<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> 
+     <span class="hl opt">((</span><span class="hl kwa">null</span> first<span class="hl opt">)</span> nil<span class="hl opt">)</span>
+     <span class="hl opt">((</span><span class="hl kwa">whitespace-char-p</span> first<span class="hl opt">) (</span><span class="hl kwa">scan</span> stream<span class="hl opt">))</span>            
+     <span class="hl opt">((</span><span class="hl kwa">digit-char-p</span> first<span class="hl opt">) (</span><span class="hl kwa">scan-int-const</span> stream <span class="hl opt">(</span><span class="hl kwa">list</span> first<span class="hl opt">)))</span>
+     <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">ecase</span> first 
+          <span class="hl opt">(#</span>\<span class="hl opt">+ '</span>PLUS<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\- <span class="hl opt">'</span>MINUS<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\<span class="hl opt">* '</span>TIMES<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\<span class="hl opt">/ '</span>DIV<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\% <span class="hl opt">'</span>MOD<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\<span class="hl opt">( '</span>LPAREN<span class="hl opt">)</span>
+          <span class="hl opt">(#</span>\<span class="hl opt">) '</span>RPAREN<span class="hl opt">))))))</span>
+</pre>
+</div>
+</div>
+</div>
+    </div>
+  </body>
+</html>

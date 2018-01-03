@@ -1,0 +1,2330 @@
+**********
+01-12-2015
+**********
+
+- write interpreters
+- will use Lisp
+- Common Lisp, specifically
+
+Languages
+- Imperative
+- Functional
+- Logic
+- Object-Oriented
+
+Program Components
+- Expressions
+  - 3+4
+  - Are evaluated
+- Statements
+  - x = 5
+  - Have effects
+- Predicates
+  - True/False
+
+Imperative
+- Programs are sequences of statements
+- Use iteration
+- Ex) C, Fortran, COBAL, C++, Java, JavaScript
+
+Functional
+- Programs are composed of expressions
+- Use recursion
+- Examples: Lisp, Ruby, ML, Haskell
+
+F# = OCaml + .NET
+OCaml = Caml + Objects
+Caml = French dialect of ML
+
+Logic
+- Predicates are expressions that evaluate to true or false
+- Programs are composed of predicates
+- Programs are executable specifications
+- Examples: lProlog, Datalog
+
+Object-Oriented Languages
+- Progtams consist of objects exchanging messages
+- Examples: Simula, Smalltalk, C++, Java, JavaScript
+
+Smalltalk example:
+[reciever msg: args...]
+[3 + 4]
+
+C equivalent:
+reciever.msg(args...)
+
+Compilers and Interpreters
+- Compilers translate programs into another language
+  -(assembly, machine code, virtual machine code, C, etc)
+- Interpreters read and	execute	programs directly
+
+Components of a Compiler
+- Lexical analyzer (scanner)
+- Parser
+- Intermidiate code generator
+- Optimizer
+
+Components of a	Interpreter
+- Lexical analyzer
+- Parser
+- Executer
+
+Lexical	Analyzer
+- Separates input into lexemes (short clumps of	text that form atomic untis).
+- Produces a stream of	tokens.
+- Discard coments, white space,	etc.
+
+Tokens
+- Small	data structures	that represent lexemes.
+- Have a type and possible a value.
+- Can also store extra information (lines, etc)
+
+Lexical	Analysis Example
+- Input	text:
+  for(int i = 0; i < 10; i++){
+    printf("%d\n", a[i]);
+  }
+- Tokens:
+FOR LPAREN (IDENT, int)	(IDENT,	i) EQ (CONST, 0)
+SEMI (IDENT, i) LT (CONST, 10) SEMI (IDENT, i)
+POSTINC	RPAREN LBRACE (IDENT, printf) LPAREN
+(STRING, %d\n) COMMA (IDENT, a) LBRACKET
+(IDENT,	i) RBRACKET RPAREN SEMI	RBRACE
+
+lex:
+- input
+  - is a description of lexemes with regular expressions
+- output
+  - lexical analysis funtion
+flex:
+- improved lex
+
+Lisp
+- Prefixed language
+  - Operators come first
+  - (+ 1 2) = 3
+  - (* 5 (+ 3 4)) = 35
+
+**********
+01-14-2015
+**********
+
+Lisp data types
+- Numbers
+- Characters
+- Symbols
+- Arrays (strings)
+- Functions
+- Conses and lists
+- Structures
+- Streams
+- Hashtables
+
+Numbers
+- Integers
+- Ratios
+- Floating point numbers
+- Complex numbers
+
+Characters
+- #\a #\0 etc
+- #\Space #\Newline #\Tab
+
+Symbols
+- Identifiers
+- Names of variables and functions
+- Also can be used like enumerated types
+- Can contain letters, digits
+- Also can contain + = * / @ $ % ~ & _ + < > .
+
+Arrays
+- Vectors
+  - Heterogeneous array, anything can be in the array
+  - ex. #(1 2 3 4 5)
+        #(a b c)
+        #()
+- Strings
+  - ex. "Foobar"
+        ""
+        "\"\""
+
+Functions
+- (defun f (x y) (+ 2 x y)) // returns (y+x+2)
+- (defun g () '(a b c)) // returns list (a b c)
+
+Read-Eval-Print Loop
+- The value of a numeric expression is the number.
+- The value of a symbol is whatever it is bound to.
+  - if a=5 and >a // prints 5
+- Quote suppresses evaluation.
+  - >'a // prints a
+- To evaluate a list expression: apply the function binding of the first item to the remaining i\
+tems.
+
+(+ 3 4) // returns 7
+'(+ 3 4) // returns list of symbols + 3 4
+'(a b c) // returns list of symbols a b c
+(a b c) // applies the function a to the value of the arguments b and c
+        // passes value of b and c to a
+
+Conditionals
+- if
+  - (if(< x 0) (-x)x)
+- cond // for nested if's, somewhat like switch statement
+  - (cond
+      ((= e 0) 'zero)
+      ((= e 1) 'one)
+      ((= e 2) 'two)
+      (t 'other))
+
+Local Binding
+- let
+  - (let((binding) (binding))
+     expression)
+  - ex
+    (let ((x 1) (y 2))
+      (+ y x))
+
+Lists
+- '(a b c)
+- '()
+- nil // counts as false
+- '(a (b c ()) ()) // list of length 3: a, list b c (), ()
+- () = nil
+
+List Functions
+3 functions to manipulate lists
+- car
+  - returns first item in a lst
+  - (car '(a b c)) // returns a
+- cdr
+  - returns the list of all items in lst except the car
+  - (cdr '(a b c)) returns (b c)
+- cons
+  - returns a list whos car is c and whos cdr is lst
+  - (cons c (lst))
+  - (cons 1 '(2 3)) returns (1 2 3)
+- cadr
+  - (car (cdr '(a b c))) // b
+- caddr
+  - (car (cdr ( cdr '(a b c)))) // c
+
+cons // most primitive structuring decive
+  - 2 parts
+    - car
+    - cdr
+  - (cons 'a 'b) = (a . b)
+- '(a b c d)
+  - Like linked list
+    - a-> b-> c-> dnil
+    - (a.(b.(c.(d.nil))))
+Box diagram
+- '((a b) (c d))
+  car
+    - (a b)
+      car
+        - a
+      cdr
+        - (b nil)
+          car
+            - b
+          cdr
+            - nil
+  cdr
+    - ((c d))
+      car
+        - (c d)
+         car
+            - c
+          cdr
+            - (d nil)
+              car
+                - d
+              cdr
+                - nil
+      cdr
+        - nil
+
+
+cltl
+table of contents
+go to index
+
+(load "filename.lisp")
+
+
+**********
+01-16-2015
+**********
+
+Length of a list
+
+(car '(a b c d)) // = a
+(cdr '(a b c d)) // = (b c d)
+(a | b c d)
+(+ 1 (length (cdr lst)))
+
+(defun len (lst)
+   (if (null lst) 0
+     (+1 (len (cdr lst)))
+   )
+)
+
+concatination of two lists
+
+(defun cat (lst1 lst2)
+  (if (null lst1) lst2
+    (cons (car lst1)(cat (cdr lst1) lst2))
+  )
+)
+
+(defun nth (lst n)
+  (cond
+    ((null lst) (error "called nth with empty list"))
+    ((= n 0) (car lst))
+    (t (nth (cdr lst) (- n 1)))
+  )
+)
+
+reversing a list
+(define reverse (lst)
+  (if (null lst) nil
+    (append (reverse (cdr lst)) (list a))
+  )
+)
+
+
+**********
+01-19-2015
+**********
+
+EMACS key bindings
+
+ctrl-c ctrl-e
+  - sends preceding expression to the other window
+
+crl-x o
+  -switch between screens
+
+ctrl-h ctrl-b
+  - help and then key bindings
+
+ctrl-x 2
+  - open 2 windows
+
+(defun add (x y) (+ x y))
+
+(defun fact (n)
+  (if (= n 0) 1
+    (* n (fact (- n 1)))))
+
+(defun fib (n p1 p2)
+  (if (= n 0) p2
+    (fib (- n 1) (+ p1 p2) p1)))
+
+(defun badfib (n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+	(t (+ (badfib (- n 1)) badfib((- n 2)))))))
+
+- trace is your friend
+
+(defun add-1 (lst)  ;; add one to every element in the list
+  (if (null lst) ()
+    (cons (+ (car lst) 1) (add-1 (cdr lst)))))
+
+(defun extractcars (lst)  ;; ((a 1) (b 2) (c 3)) -> (a b c)
+  (if (null lst) ()
+    (cons (car (car lst)) (extract-cars(cdr lst)))))
+
+(defun mmap (f lst)  ;; manipulate every element in the list
+  (if (null lst) ()
+    (cons (funcall f (car lst)) (map f (cdr lst)))))
+
+(defun a1 (x)
+  (+ 1 x))
+
+(mmap #'a1 '(1 2 3 4))  ;; #'a1 looks at the variable binding to function rather than the value binding
+
+(mmap (lambda (x) (+ x 1)) '(1 2 3 4))
+
+(lambda (x ...) e)
+(lambda (args) value)
+  - special form in lisp where you have an expression whose value is a funtion
+
+(defun a1 (x) (+ x 1))
+(lambda (x) (+ x 1))
+  - these two expressions define functions that have equal value
+
+(mapcar (lambda (x) (+ x 1)) '(1 2 3 4))
+  - built in map function
+
+(mapcar #'car ((a b) (c d) (e f)))
+  - (A C E)
+
+(mapcar #'null '(1 2 () 3 () 4))
+  - (NIL NIL T NIL T NIL)
+
+(mapcar #'fact '(0 1 2 3 4 5 6 7 8 9 10))
+
+(defun sum (lst)
+  (if (null lst) 0
+    (+ (car lst) (sum (cdr lst)))))
+
+(defun product (lst)
+  (if (null lst) 1
+    (* (car lst) (product (cdr lst)))))
+
+
+**********
+01-21-2015
+**********
+
+(defun filter (p lst)
+  (cond ((null lst) ())
+       ((funcall p (car lst)) (cons (car lst) (filter p (cdr lst))))
+       (t (filter p (cdr lst)))))
+  - applies predicate (p) to the list (lst) and return a list of true false values
+
+(filter (lambda (x) (= 0 (mod x 2))) '(1 2 3 4 5 6))
+  - filter for even
+(filter (lambda (x) (= 1 (mod x 2))) '(1 2 3 4 5 6))
+  - filter for odd
+(filter #'numberp '(1 2 3 a b 4 5 d e 6))
+  - (1 2 3 4 5 6)
+(filter #'symbolp '(1 2 3 a b 4 5 d e 6))
+  - (A B D E)
+
+(defun truelistp (x)
+  (cond ((null x) t)
+        ((consp x) (truelistp (cdr x)))
+	(t nil)))
+    
+(defun fold-r (op lst start)
+  (if (null lst) start
+    (funcall op (car lst) (fold-r op (cdr lst) start))))
+- trace through
+  (fold + '(1 2 3 4) 0)
+    (+ 1 (fold + '(2 3 4) 0))
+      (+ 1 (+ 2 (fold + '(3 4) 0)))
+        (+ 1 (+ 2 (+ 3 (fold + '(4) 0))))
+          (+ 1 (+ 2 (+ 3 (+ 4(fold + '() 0)))))
+	    -> (+ 1 (+ 2 (+ 3 (+ 4 (+ 0)))))
+
+(defun fold-l (op lst start)
+  (if (null lst) start
+    (fold-l op (car lst) (funcall op start (car lst)))))
+- trace through
+  (fold-l #'+ '(1 2 3) 0)
+    (fold-l #'+ '(2 3) (+ 0 1))
+      (fold-l #'+ '(3) (+ (+ 0 1) 2))
+        (fold-l #'+ '() (+ (+ (+ 0 1) 2) 3))
+	  -> (+ (+ (+ 0 1) 2) 3))
+
+Insertion Sort
+(defun merge (lst1 lst2)
+  (cond ((null lst1) lst2)
+        ((null lst2) lst1)
+	((< (car lst1) (car lst2)) (cons (car lst1) (merge (cdr lst 1) lst2)))
+	(t (cons (car lst2) (merge lst1 (cdr lst2))))))
+
+(defun isort (lst)
+  (if (null lst) ()
+    (merge (car lst) (isort (cdr lst)))))
+
+(let ((x 0))
+  (defun ccount ()
+    (setq x (+ x 1)) //setq makes assignment to x
+    x))
+
+// in C
+int count (){
+  static int x = 0;
+  x++;
+  return x;
+}
+
+(progn e1 e2 ... en)
+  - evaluate e1-en left to right
+  - value of progn is the value of en
+
+
+**********
+01-23-2015
+**********
+
+(setq x 3) // x = 3
+  - sets quote
+
+(set y x) 
+  - set y to the value that x contains
+
+(set y 5) // y = 3
+  - cannot set y, 3 is not a symbol
+
+(setq y 'x)
+  - set y to the symbol x
+
+(set y 5)
+  - sets the symbol that y points to, which is x to 5
+  - y = x
+  - x = 5
+
+(defun dotpair (x)
+  (cond ((consp x) (concatenate 'string "(" (dotpair (car x)) " . " (dotpair (cdr x)) ")"))
+        (t (string x))))
+
+(setq e '(+ 1 2))
+  - e = (+ 1 3)
+
+(eval e)
+  - 3
+
+(setq f '(lambda (x) (+ x 5)))
+  - f = '(lambda (x) (+ x 5))
+
+(funcall (eval f) 6)
+  - 11
+
+(eval f)
+  -  #<FUNCTION :LAMBDA (X) (+ X5)>
+
+// helper function
+(defun helper (x)
+  (+ x 5))
+
+(defun f (y)
+  (helper (* y 7)))
+
+(f 7)
+  - 54
+
+// locally scoped defined function
+(defun f (y)
+  (flet ((helper (x) (+ x 5)))
+    (helper (* y 7))))
+
+(flet 
+  ( (f1 (args) val) ;; locally defined function
+    (f2 (args) val) ;; locally defined function
+    ...
+  )
+  value of entire expression
+)
+
+- flet cannot do recursive functions
+
+- if you want to use recursion, you must use labels
+
+(labels ((odd (x) (if (= x 0) nil (even (- x 1))))
+	 (even (x) (if (= x 0) t (odd (- x 1)))))
+  (concatenate 'list (mapcar #'odd '(1 2 3 4 5 6)) (mapcar #'even '(1 2 3 4 5 6))))
+
+convert string to list
+  - (coerce "foobar" 'list)
+      - (#\f #\o #\o #\b #\a #\r)
+
+write helper function
+(helper (list of characters) (currstring) (resultlst)
+  - if delim cons currstring to resultlst
+  - else, build currstring
+  - will be reversed in result, must rearrange
+)
+
+(member (anything lst))
+
+Test for equallity
+(= 3 5) ;; numbers
+(eq x y) ;; pointers (lists, strings)
+(eq 'a 'a) ;; T
+(eq "a" "a") ;; NIL
+(eq '(a) '(a)) ;; NIL
+(setq x '(a b c))
+(eq x x) ;; T
+(eq x '(a b c)) ;; NIL
+(equal x '(a b c)) ;; T
+
+**********
+01-26-2015
+**********
+
+Structures:
+  - like structure in C
+
+(defstruct name f1 f2 ... fn)
+(defstruct point x y)
+(setq p (make-point :x 12 :y 15))
+  - like constructor using keyword variables, must name variable
+  - (point-x p)
+  - (point-y p)
+
+(setf (point-x p) 33)
+  - sets the x component of p to 33
+(setq lst '(a b c d))
+(setf (car lst) 12)
+  - (12 b c d)
+(setf (cadr lst) 'foo)
+  - (12 foo c d)
+(setf (car lst) lst)
+  - creates a pointer in the car of lst with lst
+(replaca lst ...)
+  - repalce car
+(replacd lst ...)
+  - replace cdr
+
+for hw-6
+  - implement arithimatic for polynomials
+  - ex) 2x^3 - x + 3
+    - store as list ((2 3) (-1 1) (3 0))
+  - add x^4 - 2
+    - store as list ((1 4) (-2 0))
+  - similar to merge  
+(defstruct term coef exp)
+
+(truncate 1 2)
+  - one argument, truncates after division
+  - two arguments, divides and truncates
+
+- create multiple values
+(values 3 5)
+  3 ;
+  5
+  
+- extract values
+(multiple-value-bind (x y) (values 3 5) (+ x y))
+  - 8
+(multiple-value-bind (x y) (truncate 35 4) (+ x y))
+  - 11, 8 r 3, x = 8 : y = 3 
+
+Define Language
+1) Syntax
+  - What is an allowable program?
+  - Lexical Structure
+    - What are allowable tokens?
+      - Defined by regular expressions
+  - Grammer
+    - How do tokens fit together in a program?
+2) Semantics
+  - What does a program do?
+
+Regular Expressions
+x
+  - one character expression x
+[0-9]
+  - one character expression 0 to 9
+[a-z]
+  - one character expression a to z
+[a-zA-Z]
+  - one character expression a to z or A to Z
+[a-zA-Z0-9]
+  - one character expression a to z or A to Z or 0 to 9
+[a-zA-Z_][a-zA-Z_0-9]*
+  - expression who's value is a letter followed by any number of letters or a numbers
+*
+  - 0 or more of preceeding expression
++
+  - 1 or more of preceeding expression
+?
+  - 0 or 1 of preceeding expression
+
+
+**********
+01-28-2015
+**********
+
+calculator
+
+repl 
+  - The read-eval-print loop.
+
+           (scanner)         (parser)            (eval) 
+input line    ->     tokens     ->    parse tree   ->   answer
+
+integer constants
+  - string of digits
+
+make buffer size one that stores next token of characters
+
+
+- to look one character ahead without reading it
+(peek-c)
+(defun peek-c ()
+  (peek-char nil *standard-input* nil nil))
+
+- Reads character from standard input, returning nil at the end of file.
+(read-c)
+(defun read-c ()
+  (read-char nil *standard-input* nil nil))
+  
+
+(defvar *buffer* nil)
+- Returns, but does not discard, the next token
+(defun peek-t ()
+  (if (null *buffer*) (fill-buffer))
+  *buffer*)
+
+(defun read-t ()
+  (prog1 *buffer* (setq *buffer* nil))) ;; prog1 returns the first argument to it, and executes the following expression
+
+(defun read-digits()
+  (let ((c (peek-c)))
+    (cond
+      ((null c) nil)
+      ((digit-char-p c) (read-c) (cons c (read-digits)))
+      (t nil))))
+
+- convert a string of digits to a number
+(defun make-integer (digits)
+  (read-from-string (coerce digits 'string)))
+
+;; store token in the buffer.
+(defun store-token (type &optional (value nul))
+  (setq *buffer* (list :type type :value value)))
+
+;; fill-buffer - Fills the buffer with the next token.
+(defun fill-buffer ()
+  (let ((c (peek-c)))
+    (cond ((null c) (store-token 'eof))
+          ((char= c #\space (read-c) (fill-buffer)))
+	  ((digit-char-p c)
+	    (store-token 'integer (make-integer (read-digits))))
+	  ((char= c #\newline (read-c) (store-token 'eol)))
+	  ((char= c #\newline (read-c) (store-token 'left-paren)))
+	  ((char= c #\newline (read-c) (store-token 'right-paren)))
+	  ((char= c #\newline (read-c) (store-token 'plus)))
+	  ((char= c #\newline (read-c) (store-token 'minus)))
+	  ((char= c #\newline (read-c) (store-token 'times)))
+	  ((char= c #\newline (read-c) (store-token 'div)))
+	  ((char= c #\newline (read-c) (store-token 'mod)))
+	  (t (flush-line) (error (format nil "Syntax Error: invalid character [~a]" c))))))
+- format is like printf
+  - first argument is where to print to, if nil then returns a string
+  - [~a] normal printing
+
+(defun flush-line ()
+  (let ((c (read-c)))
+    (cond ((null c) nil)
+          ((char= c #\newline) nil)
+	  (t (flush-line)))))
+
+
+**********
+01-30-2015
+**********
+
+(split "abc:def:xyzzy" ";")
+
+(splith chars delims word words)
+
+- chars
+    - list of characters in input string
+- delims
+  - list
+- word
+  - accumulate current word
+- words
+  - list of words
+
+if chars is empty, return (cons word words)
+if (car chars) is a delim (splith (cdr chars) delims nil (cons word words)
+else
+(splith (cdr chars) delims (cons (car chars) word) words)
+
+the list will be a reversed list of list of characters 
+use mapcar and reverse all items in the list
+
+
+Grammer
+* (| is a logical or)
+
+  - line -> expr EOL | EOL
+  - expr -> add-expr
+  - add-expr -> mult-exp add-expr-tail
+  - add-expr-tail -> empty | CPLUS | MINUS) milt-expr add-expr-tail
+  - mult-expr -> prim-expr mult-expr-tail
+  - mult-expr-tail -> empty | (TIMES | DIV | MOD) prim-expr mult-expr-tail
+  - prim-expr -> INTEGER | LEFT-PAREN expr RIGHT_PAREN
+
+another way to do this
+line -> EOL | EOL
+expr-> expr PLUS expr  ;; known as a production
+     | expr MINUS expr
+     | expr TIMES expr
+     | expr DIV expr
+     | expr MOD expr
+     | INTEGER
+     | LEFT_PAREN expr RIGHT_PAREN
+
+ALL CAPS WORDS ARE TOKENS
+  - these are known as Terminals
+    - terminals are not defined, part of lexical analyzer
+  - non terminals defined in of other things
+
+precedence
+  - Which opperator gets done first??
+
+Recursive Descent Parser
+  - write a function that parses every non-terminal
+
+predictive grammer
+  - one where you can always determine which alternative for a given non-terminal is correct by looking at the next token.  
+
+
+**********
+02-04-2015
+**********
+
+(defstruct term coef exp)
+(make-term :coef ... :exp ...)
+(setq tm (make-term :coef 4 :exp 3))
+(term-coef tm)
+  - 4
+(term-exp tm)
+  - 3
+
+(let*
+  ((x 4)
+   (y x)
+  )
+)
+- this sets x to 4 and y to x in this scope, not from global scope
+
+same as doing
+(let ((x 4))
+  (let ((y x)))
+  ...)
+
+sullivan.mathcs.wilkes.edu/courses/cs319-spring-2015/lisp/calc/parser.lisp.html
+
+~a
+  - regular format
+~% 
+  -like /n in c
+
+
+**********
+02-06-2015
+**********
+
+Compare strings
+(setq s1 (intern "abz"))
+(setq s2 (intern "abc"))
+(eq s1 s2) = nil
+
+Variable names:
+  - store as symbols
+  - Lexical Analyzer
+    - have a scan-identifier function.
+      - Scan string
+      - intern it (convert string to list of symbols)
+      - return token with type 'ident unless it's a reserrved word
+        - reserve wod -> token with type ('for, 'while, etc...)
+	- and value = interned string (a symbol)
+
+Calculator with tool for parser
+  - calc-yacc
+    - http://sullivan.mathcs.wilkes.edu/courses/cs319-spring-2013/interps/calc-yacc/
+- ecase 
+  - like switch statement
+
+
+**********
+02-06-2015
+**********
+
+http://sullivan.mathcs.wilkes.edu/courses/cs319-spring-2015/lisp/calc-yacc/parser.lisp.html
+
+scanner created with yacc
+
+Scanner returns two values
+  - type of token
+  - value
+  - (values type value)
+
+(handler-case
+  - like a try catch in Java
+
+(stream (make-string-input-stream line))
+
+(ecase (coerce ...)
+  ('|true| 'TRUE)
+  ...
+  ...
+)
+
+
+**********
+02-13-2015
+**********
+
+writeln(5);
+writeln(3*7);
+x:=5;
+y:=(7+2)mod4;
+writeln(x+y);
+
+- use alphanumeric
+
+- coerce the reverse of the list to a string
+  - use intern to turn strings to symbols
+
+Assiciation List:
+(setq 
+lst ((x 30 (y 4) (z 5)))
+  - (assoc y lst)
+    - returns pointer to the sublist containing the match, y in this case.
+
+env
+  - environment
+  - associates variables with locations
+
+
+**********
+02-16-2015
+**********
+
+- to which if does the else belong?
+if __ then
+  if __ then
+    S1
+  else
+    s2
+
+(:muffle-conflicts (1 0))
+  - to handle the "dangline else" problem
+shift
+  - push tokens onto stack
+reduce
+  - replace a collection of symbols on stack by a nonterminal
+
+shift/reduce conflicts
+  - the example above is classified as such
+
+reduce/reduce conflicts
+
+
+**********
+02-18-2015
+**********
+
+breaks before 31st last line
+
+Short-Circuit evaluation:
+  - if the left operand to and is false, don't eval the right operand 
+  - if the left operand to or is true, don't eval to the right operand
+
+Static type checking
+  - check for running
+
+Dynamic type checking
+  - check while running
+
+Type Checking:
+  - Type declarations
+  - Type Inference
+
+Pascal
+  program;
+  var x,y;
+  procedure p(x, y, z);  // looks like a function , but does not return a value // (x, y, z) known as formal arguments (parameters)
+  var a,b,c;
+  begin
+    .
+    .
+    .
+  end;
+    .
+    .
+    .
+  begin // main program
+    .
+    p(1, 2, 3)   // (1, 2, 3), known as actual arguments
+    .
+    .
+  end.
+
+Executing a procedure call:
+  - arguments passed by value
+  1) Evaluate actual args
+  2) Extend environment by binding the formal args to the values of the corresponding actual args
+  3) Extend environment again, binding local variables to nil values.
+  4) In extended environment, execute the body of the procedure.
+
+
+**********
+02-20-2015
+**********
+
+program p;
+var
+  a : integer;
+  x, y : boolean;
+.
+.
+.
+procedure q(x, y : integer; a : boolean);
+var
+  x : integer;
+.
+.
+
+Type checking:
+  x := e
+    - find the type of x and then find the type of e
+  Compute type for an expression:
+    - write function
+      - eval-type(expr, type-env)
+        - type-env
+	  - ((x integer) (a boolean))
+  - assignments, statements, arguments
+similar to eval-expr
+
+
+**********
+02-23-2015
+**********
+
+Stream
+  - like a list that never terminates
+  - infinite lists
+  - stream of integers >= 2
+
+  - a stream is a pair consisting of a starting point, and a method for computing the next item.
+  - whenever an item is computed, it gets cached
+  (2 (lambda (x) (+ x 1)))
+
+Macros
+  - In C, C++, macros are defined with #define
+    - #define N 100
+      - preprocessor replaces all of occurences of N by 100;
+    - Not the same as 
+      const int N = 100;
+
+  #define twice (x) x+x
+  #define square (x) x*x
+     y = square(x);
+     y = square(1+2) = 1+2 * 1+2 = 5, not 9 like a function call would make
+     y = twice(x++); = x++ + x++ = 1 + 2 = {y = 3, x = 3}, not {y = 2, x = 2} like a function call would retrun
+     surrounding the arguments in parenthasis to prevent error in order of operations
+       #define twice (x) ((x)+(x))
+       #define square (x) ((x)*(x))
+
+To define macro in lisp
+(defmacro name (x)
+  value)
+
+Delayed Evaluation
+  - create a thunk
+    - funciton with no arguments
+      (lambda () x)
+        - delays evaluation of expression until the function is called.
+      use a backquote which allows you to quote the whole expression but unquote things that have commas in front of them
+      (defmacro thunk (x)
+        `(lambda () ,x))
+    Equivalent to
+      (defmacro thunk (x)
+        (list 'lamda '() x))
+  promise
+    - the value of a delayed expression
+
+**********
+02-25-2015
+**********
+
+Alonzo Church (1930's)
+  - Did all this before computers!!
+
+  - Notation for functions
+    - lambda notation
+      - lambda(x) (x+3)
+      - Anonymous function
+        - lamdba calculus
+	  - calculating lambdas
+
+  Lambda Calculus
+    - Variables
+    - Applications (x y)
+      - x: function
+      - y: argument
+    - Abstractions (lambda(x) E)
+      - E: expression
+    
+    Bound Variable
+      - (lambda(x) x)
+        - indentity function
+    Free variable
+      - (lambda(x) y)
+        - constant function
+	  - (lambda(x) (lambda(y) x))
+	    - makes constant functions
+    ((lambda(x) (lambda(y) x )) A) = (lambda(y) A)
+    ((lambda(x) E) F) -> E [x<-F]
+                             - substitute F for free occurances of x in E. 
+    ((lambda(x) (lambda(x) x)) A) = (lambda(x) x)
+                ------E-----       
+    lambda-Expressions with no free variables
+      - Combinators
+
+    Y-Combinator
+      - YC = (lambda(f) ((lambda(x) (f (x x))) (lambda(x) (f (x x)))))
+      Algebric Properties
+       - (YC A) = ((lambda(x) (A (x x))) (lambda(x) (A (x x)))))
+       - A ((lambda(x) (A (x x))) (lambda(x) (A (x x)))))
+       - a fixed point of a function f is a point Xo such that f(Xo) = Xo.
+         - f(x) = x
+	   - Every x is a fixed point
+	 - f(x) = x^2
+	   - 0 and 1
+	 - f(x) = e^x
+	   - no fixed point
+	 - (YA) = (A (YA))
+	   - (YA) is a fixed point of A
+	     - Y is called the fixed point combinator (or the paradoxiacal compinator)
+	 - Factorial
+	   - (defun fact (x) 
+	       (if (= x 0) 1 (* x (fact (- x 1)))))
+	   - fact = (lambda(x) (if (= x 0) 1 (* (fact (- x 1)))))
+	   - F = (lambda(f) (lambda(x) (if (= x 0) 1 (* (f (- x 1))))))
+	   - (F fact) = fact
+	     - so fact is a fixed point of F.	
+	   - In fact, fact = (YF))
+       
+**********
+03-09-2015
+**********
+
+Dynamiic binding vs lexical binding:
+
+int x;
+void f(){
+  x = 1;
+}
+void g(){
+  int x;
+  f();
+}
+int main(){
+  x = 2;
+  g();
+  printf("%d\n", x);
+}
+
+// prints x with the value 1
+
+Dynamic binding
+  - A global variable refers to the declaration whose scope includes the function declaration.
+
+Lexical binding
+  - A global varaible refers to the declaration whose scope includes the function call.
+  - Most languages use this method
+
+example input program to our interpreter
+program p;
+var x;
+procedure f();
+begin
+  x:=1
+end;
+procedure g();
+var x;
+begin
+  f()
+end;
+
+begin
+  x:=2
+  g();
+  writeln(x)
+end.
+
+// prints x with the value 2
+
+To implement lexical binding:
+  Bind procedure names to closures:
+    Closure
+      - (formals locals body env)
+      - env: the environment in which the function is declared
+  Backpatching
+    - put in dummy bindings for the environments in the closures for the procedures
+    - fill them in later, after the new environment is created
+
+Parameter passing:
+  1) Call by value
+    - when a procedure is called, the actual argument is evaluated and the formal argument is bound to that value in an extended environment that has a new slot for the name of the formal.
+    - i.e. the procedure operates on new memory location
+    - (pass an r-value)
+  2) Call by reference
+    - what's passed to the procedure is the location of the actual argument
+    - (pass an l-value)
+
+For actual aruments that are expressions:
+   a) forbid them
+   or
+   b) store actual value in a temporary location and pass its address
+
+  3) Call by value-result (copy in - copy out)
+    - pass the value as in call by value.
+    - As the procedure returns, copy the value of the formal back to the actual
+
+
+**********
+03-11-2015
+**********
+
+Call by value
+  - A copy of the value of the actual arg is passed to the procedure
+
+Call by reference
+  - A reference to the actual arg is passed to the procedure
+
+call by value in c
+
+void swap(int m, int n){
+  int tmp = m;
+  m = n;
+  n = tmp;
+}
+
+int main(){
+  int a = 3;
+  int b = 5;
+  swap(a, b); // does nothing essentially
+}
+
+call by reference in C
+
+void swap(int *m, int *n){
+  int tmp = *m;
+  *m = *n;
+  *n = tmp;
+}
+
+int main(){
+  int a = 3;
+  int b = 5;
+  swap(&a, &b);
+}
+
+int a = 3;
+int* b = &a;
+*b = 5; // *b == 5, a == 5
+
+in C++ reference == implicit pointer
+int a = 3;
+int& b;
+b = a;
+b = 5; // b == 5, a == 5
+
+in C++ call by reference, with coercion of value of passed argument
+  - thus C++ does not do call by reference explicitly, but rather implicitly with a call by value
+
+void swap(int& m, int& n){
+  int tmp = m;
+  m = n;
+  n = tmp;
+}
+
+int main(){
+  int a = 3;
+  int b = 5;
+  swap(a, b);
+}
+
+Call by value-result/copy-in-copy-out
+  - A copy of the value of the actual is passed to the procedure.
+  - As the procedure returns, the value of the formal is copied back to the actual.
+
+void p(int m, int n){
+  m++;
+  n++;
+}
+
+int main(){
+  int a = 3;
+  p(a, a); 
+}
+Call by reference
+  m == 4, n == 5
+  a == 4, a == 5
+
+Call by value result
+  m == 4, n == 4
+  a == 4
+
+In C, C++ the value of an array variable is a pointer to the start of the beginning of the array
+
+void p(int n, int a[n]){
+  . 
+  .
+  .
+}
+
+int main(){
+  int c[100];
+  .
+  .
+  .
+  p(100, c);
+}
+
+Call-by-name
+  - The unevaluated actual is passed to the procedure.
+  - Every time it is referenced in the procedure, it's reevaluated
+
+int p(int x){
+  return x + x + y;
+}
+
+int main(){
+  int a = 3;	
+  int b = p(a++);
+}
+
+Call by value for after function call above 
+  - x == 3, a == 4, b == 6
+Call by name for after function call
+  - x == a++, a == 5, b == 7
+
+Implementation:
+  - A thunk with body = actual is passed
+  - Every time the formal is referenced the thunk is called
+
+ALGOL60
+  - First language that introduced block structuring
+  - Grandfather of all modern languages
+  - Used Call-by-Name 
+    - It is impossible to write a swap function that always works correctly with call by name (if you have arrays)
+
+
+**********
+03-13-2015
+**********
+
+A function is tail-recursive if the value that is returned from the recursive call is returned without any additional computation.
+  - does not require a stack.
+  - can trivially convert any tail recursion to a while loop.
+
+recursive function, but not tail recursive
+  (defun fact (n)
+    (if (- n 0) 1
+      (*n (fact (- n 1)))))
+
+in C
+  int fact(int n){
+    if (n == 0) 
+      return 1; 
+    else
+      return n * fact(n-1);
+  }
+
+one way to make tail recursive is to implement an accumulating parameter
+  int facth(int n, int a){ // a*n!
+    if(n == 0)
+      return a;
+    else
+      return facth((n-1), (n*a));
+  }
+  int fact(int n){
+    return facth(n, 1);
+  }
+
+Transforming recursive function into iterative function
+  - a good compiler will do this for you!
+  int fact(int n){
+    int a = 1;
+    while(n != 0){
+      a = n*a;   
+      n = n-1;
+    }
+    return a;
+  }
+
+Tail recursive version in Lisp
+  (defun fact (n &optional (a 1))
+    (if (= n 0) a
+      (fact (- n 1) (* n a))))
+
+Iterative version in Lisp
+  (defun fact (n &optional (a 1))
+    (loop while (not (= n 0)) do
+      (setq a (* n a))
+      (setq n (- n 1)))
+    a)
+
+(defun append (lst1 lst2)
+  (if (null lst1) lst2
+    (cons (car lst1) (append (cdr lst1) lst2))))
+
+Tail recursive version, yet not exactly correct
+(defun append (lst1 lst2)
+  (if (null lst1) lst2
+    (append (cdr lst1) (cons (car lst1) lst2))))
+
+Written in Continuation passing style
+(defun append(lst1 lst2 &optional (k #'identity))
+  (if (null lst1) (funcall k lst2)
+    (append (cdr lst1) lst2 (lambda (x) (funcall k (cons (car lst1) x))))))
+
+  - k parameter is known as a continuation
+  coninuation
+    - function you can call to finish the computation
+
+Continuation passing style
+  - write a function that is tail recursive where the last argument is a continuation function that accumulates a function that you can apply to the base case to get the result.
+
+
+**********
+03-16-2015
+**********
+
+(defun length (lst)
+  (if (null lst) 0
+    (+ 1 (length (cdr lst)))))
+
+Continuation passing style, tail recusive
+(defun length (lst &optional (k #identity))
+  (if (null lst) (funcall k 0)
+    (length (cdr lst) (lambda (x) (funcall k (+ 1 x))))))
+
+(length '(a b c d))
+(length '(b c d) (lambda (x) (funcall #'identity (+ 1 x))))
+	         -----------------k1---------------------
+(length '(b c d) (lambda (x) (funcall k1 (+ 1 x))))
+	         ---------------k2---------------
+(length '(b c d) (lambda (x) (funcall k2 (+ 1 x))))
+	         ---------------k3---------------
+(length '(b c d) (lambda (x) (funcall k3 (+ 1 x))))
+	         ---------------k4---------------
+(funcall k4 0)
+(funcall k3 1)
+(funcall k2 2)
+(funcall k1 3)
+(funcall #'identity 4)
+4
+
+
+(defun count-symbols (lst)
+  (cond ((null lst) 0)
+    ((symbolp (car lst)) (+ 1 (count-symbols (cdr lst))))
+    (t (count-symbold (cdr lst)))))
+
+Continuation passing style, tail recusive
+(defun count-symbols (lst &optional (k #'identity))
+  (cond 
+    ((null lst) (funcall k 0))
+    ((symbolp (car lst) (count-symbols (cdr lst) (lambda (x) (funcall k (+ 1 x))))))
+    (t (count-symbols (cdr lst) (lambda (x) (funcall k x))))))
+                                 -----------k------------
+
+Works on nested lists
+(defun count-symbols-old (lst)
+  (cond
+    ((null lst) 0)
+    ((symbolp lst) 1)
+    ((consp lst) (+ (count-symbols-old (car lst) (count-symbols-old (cdr lst)))))
+    (t 0)))
+
+Continuation passing style, tail recusive
+(defun count-symbols (lst &optional (k #'identity))
+  (cond 
+    ((null lst) (funcall k 0))
+    ((symbolp lst) (funcall k 1))
+    ((consp lst) (count-symbols (car lst) (lambda (x) (count-symbols (cdr lst) (lambda (y) (funcall k (+ x y)))))))))
+
+
+(fib (n)
+  (cond
+     ((= n 0) 0)
+     ((= n 1) 1)
+     (t (+ (fib (- n 1)) (fib (- n 2))))))
+
+Continuation passing style, tail recusive
+(defun fib-cps (n &optional (k #'identity))
+  (cond
+    ((= n 0) (funcall k 0))
+    ((= n 1) (funcall k 1))
+    ;;(t (fib-cps (- n 2) (lambda (x) (funcall k (+ (fib (- n 1) x))))))))
+    (t (fib-cps (- n 2) (lambda (x) (fib-cps (- n 1) (lambda (y) (funcall k (+ y x)))))))))
+
+Continuations in non-functional languages. (C, C++, Java)
+  1) For each type of continuation, define a structure/object that contains the information that is stored in the contunuation.
+  2) Write a function called apply-cont that takes as arguments a continuation structure/object and the argument that you would pass to the continuation in a functional language 
+     (i.e. the x in (lambda (x)))
+     and make apply-cont do what the functional continuation would do.
+
+(defun fact (n &optional (k #'identity))
+  (if (= n 0) (funcall k 1)
+    (fact (- n 1) (lambda (x) (funcall k (* n x))))))
+
+
+**********
+01-12-2015
+**********
+
+Coninuation passing style with lambdas
+(defun fact (n &optional (k #'identity))
+  (if (= n 0) (funcall k 1)
+    (fact (- n 1) (lambda (x) (funcall k (* n x))))))
+
+Continuation passing style using structures
+(defstruct i-cont)
+(defstruct m-cont k n)
+
+(defun apply-cont (k x)
+  (etypecase k
+    (int-cont x)
+    (m-cont (funcall (m-cont-k k) (* (m-cont-n k) x)))))
+
+(defun fact (n &optional (k (make-i-cont)))
+  (if (= n 0) (apply-cont k 1)
+    (fact (- n 1) (make-m-cont :k k :n n))))
+
+Continuation passing style in Java using classes
+abstract class cont{
+  public abstract int apply(int x);
+}
+
+class i_cont extends cont{
+  public int apply(int x){
+    return x;
+  }
+}
+
+class m_cont extends cont{
+  int n;
+  cont k;
+  public int apply(int x){
+    return k.apply(n *x);
+  }
+}
+
+public m_cont(int n, cont k){
+  this.n = n;
+  this.k = k;
+}
+
+public class fact_cps{
+  public static fact(int n, cont k){
+    if(n == 0)
+      k.apply(1);
+    else
+      fact(n-1, new m_cont(n, k));
+  }
+  
+  public static void main(String args[]){
+    System.out.println(fact(Integer.parseInt(args[0]), new i_cont()));
+  }
+}
+
+Continuation passing style in C
+#include <stdio.h>
+#include <stdlib.h>
+
+#define I_CONT 0
+#define M_CONT 1
+
+typedef struct cont cont;
+
+typedef struct i_cont{
+} i_cont;
+
+typedef struct m_cont{
+  int n;
+  cont *k;
+} m_cont;
+
+struct cont{
+  int type;
+  union{
+    i-cont* i;
+    m-cont* m;
+  };
+};
+
+cont* new-i-cont(){
+  cont* c = malloc(sizeof(cont));
+  c->type  = I_CONT;
+  c->i = malloc(sizeof(i-cont));
+  return c;
+}
+
+cont* new-m-cont(cont* k, int n){
+  cont* c = malloc(sizeof(cont));
+  c->type  = M_CONT;
+  c->m = malloc(sizeof(m-cont));
+  c->m->n = n;
+  c->m->k = k;
+  return c;
+}
+
+int apply-cont(cont *k, int x){
+  switch(k->type){
+    case I_CONT:
+      return x;
+    case M_CONT:
+      return apply-cont(k->m->k, k->m->n * x);
+  }
+}
+
+**********
+03-20-2015
+**********
+
+Continued from previous class
+
+int fact-cps(int n, cont* k){
+  if(n == 0)
+    return apply-cont(k, 1);
+  else
+    fact-cps(n-1, new-m-cont(k, n));
+}
+
+int main(){
+  int n;
+  fact-cps(n, make-i-cont());
+}
+
+(defun mapcar (f lst)
+  (if (null lst) nil
+    (cons (funcall f (car lst)) (mapcar f (cdr lst)))))
+
+(defun mapcar-cps (f lst &optional (k #'identity))
+  (if (null lst) (funcall k nil)
+    (mapcar-cps f (funcall f (cdr lst)) (lambda (x) (funcall k (cons (funcall f (car lst)) x))))))
+
+(defun swap (lst)
+  (if (null lst) nil
+    (cons (list (cadar lst) (caar lst)) (swap (cdr lst)))))
+
+(defun swap-cps (lst &optional (k #'identity))
+  (if (null lst) (funcall k nil)
+    (swap-cps (cdr lst) (lambda (x) (cons (list (cadar lst) (caar lst)) x)))))
+
+(defun sum (lst)
+  (if (null lst) 0
+    (+ (car lst) (sum (cdr lst)))))
+
+(defun sum-cps (lst &optional (k #'identity))
+  (if (null lst) (funcall k 0)
+    (sum-cps (cdr lst) (lambda (x) (+ (car lst) x)))))
+
+(defun flatten (lst)
+  (cond
+    ((null lst) nil)
+    ((consp lst) (append (flatten (car lst)) (flatten (cdr lst))))
+    (t (list lst))))
+
+
+**********
+03-23-2015
+**********
+
+(defun flatten-cps (lst &optional (k #'identity))
+  (cond
+     ((null lst) (funcall k nil))
+     ((consp lst) (flatten-cps (car lst) (lambda (x) (funcall k (append (x (flatten (cdr lst))))))))
+     (t (funcall k (list lst)))))
+
+(defun flatten-cps (lst &optional (k #'identity))
+  (cond
+     ((null lst) (funcall k nil))
+     ((consp lst) (flatten-cps (car lst) (lambda (x) (funcall k (append (x (flatten-cps (cdr lst) (lambda (y) (funcall k (append x y))))))))))
+     (t (funcall k (list lst)))))
+
+
+exec-for-stmt(body control valueUpper newEnv)
+in exec-stmt
+
+var
+  i, j: integer;
+  a, b: boolean;
+  procedure p (i: integer, a: boolean)
+    var x:integer;
+        y:boolean;
+ 
+ ((i integer) (j integer) (a boolean) (b boolean) (p procedure (integer boolean)))
+
+
+type check statement:
+  create inital type environment
+  
+typecheck procedure:
+  ((x integer) (y boolean) (i integer) (a boolean) ... old env)
+
+  typecheck body using this env.
+  typecheck body of main using the inital env
+
+typecheck stmt:
+  assignment x:=expr
+    lookup typeddef
+    eval type of expr
+    see if they match
+
+  while test body
+    eval type of test
+      should be boolean
+        if not print error
+      typecheck body
+      
+  if test body 
+    same as while
+
+  proc call p list of actuals
+    compute list of types of actuals
+    compare to list of types of formals
+
+  eval type of expr:
+    int const
+      - return integer
+    bool const
+      - return boolean
+    variable
+      - lookup in type env
+    unary
+      - op rand
+        - eval of rand, does it match? return type
+    binary 
+      - check types of eval operands and ensure they match
+
+  (typecheck stmt type-env)
+  (eval-type expr type-env)
+
+
+C library functions
+  setjmp(jmp_buf buf)
+  longjmp(jmp_buf buf, int n)
+
+  setjmp returns 0.
+    stores execution environment in jmp_buf.
+  later, call longjmp
+    setjmp returns n.
+
+read eval print loop
+void  repl(){
+  .
+  .
+  .
+}
+
+eval_expr(e, env, status){
+  switch(e->type){
+    case binary:
+      int val1 = eval_expr(e->lrand, env, &status1);
+      int val2 = eval_expr(e->rrand, env, &status2);
+
+   check status before returning.
+   check status in every case.
+   
+to avoid doing this tedious task
+
+void repl(){
+  setjmp(buf);
+  print prompt
+  read expr
+  eval expr
+  print value
+}
+
+when an error occurs:
+  print message 
+  call longjmp
+
+restriction on setjmp and longjmp
+  rule:
+    you can't call longjmp after the function containing the call to setjmp has returned.
+
+
+**********
+03-25-2015
+**********
+
+in Scheme
+
+(define fact
+  (lamdba(n) (if (= n 0) 1 (fact (- n 1)))))
+
+call/cc
+  - call-with-current-continuation
+
+(call/cc (lambda (k) (e, continuation function argument)))
+  - if you call (k x) then call/cc returns x.
+  - if you dont't, then call/cc returns the value of e.
+
+(define x #f)
+
+(define go 
+  (lambda (n)
+    (if (= n 0) #f
+      (begin
+        (call-with-current-continuation
+	  (lambda (k)
+	    (if (= n 5)
+	      (set! x k)
+	      ())))
+	  (display n)
+	  (newline)
+	  (go (- n 1))))))
+
+F#
+  - developed by Microsoft
+  - extended OCAML basically to contain .NET libraries
+
+
+back in lisp 
+(defun count (lst x)
+  (cond
+  ((null lst) 0)
+  ((eq (car lst) x) (+ 1 (count (cdr lst) x)))
+  (t (count (cdr lst) x))))
+
+(defun count-cps (lst x &optional (k #'identity))
+  (cond
+  ((null lst) (funcall k 0))
+  ((eq (car lst) x) (count-cps (cdr lst) x (lambda (y) (funcall k (+ 1 y)))))
+  (t (count-cps (cdr lst) x k))))
+
+(defstruct i-count)
+(defstruct cnt-cont k)
+(defun apply-cont (k x)
+  (etypecase k
+    (i-cont x)
+    (cnt-cont (apply-cont (cnt-cont-k k) (+ 1 x)))))
+
+(defun count-scps (lst x &optional (k make-i-cont))
+  (cond 
+  ((null lst) (apply-cont k 0))
+  ((eq (car lst) x) (count-scps (cdr lst) x (make-cnt-cont :k k)))
+  (t (count-scps (cdr lst) x k))))
+
+
+**********
+03-27-2015
+**********
+
+Continued from last class...
+
+written as a loop
+(defun count-i (lst x)
+  (setq k (make-i-cont))
+  (loop while (not (null lst)) do
+    (if (eq (car lst) x)
+      (setq k (make-cnt-cont :k k)))
+    (setq lst (cdr lst))
+    (apply-cont k 0))
+
+
+**********
+04-01-2015
+**********
+
+inside a let
+
+(define x 3)
+(define y 4)
+(define f 2)
+env = ((f 2) (y 4) (x 3))
+
+(let ((f (lambda (n) (= n 0) 1 (* n (f (- n 1)))))))
+(f #s((n) body env))
+    ----closure----
+env = ((f #s(...)) (f 2) (y 4) (x 3))
+
+inside a letrec
+env = ((f #s(...)) (f 2) (y 4) (x 3))
+
+**********
+04-10-2015
+**********
+
+Object-Oriented interpreters:
+  Expression:
+    - constants
+    - variables
+    - unary
+    - binary
+
+  - Define an abstract expression with an abstract methos eval.
+
+  abstract class Expr{
+    abstract int eval();
+  }
+  
+  class ConstExpr extends Expr{
+    int value;
+    int eval(){
+      return value;	
+    }
+  }
+
+  enum UnaryOp {U_PLUS, U_MINUS};
+
+  class UnaryExpr extends Expr{
+    Unary op;
+    Expr rand;
+    int eval(){
+      int value  = rand.eval();
+      if(op == U_PLUS) return value;
+      else return -value;
+    }
+  }
+
+YACC
+  - Yet Another Compiler Compiler
+
+replaced by BISON
+
+lex
+  - generates scannners.
+replaced by flex
+
+Types of Objects 
+  Expressions      -- syntax
+    - evaluate     \
+    - typecheck    -- interpretations
+    - optimization /
+  Statements       -- syntax
+    - exacute      \
+    - typecheck    -- interpretations
+    - optimization /
+    
+Obect-oriented organization
+  Syntax
+    Interp 1
+    Interp 2
+
+Syntax separate from interpretation
+  Interpretation     
+    Syntax 1
+    Syntax 2
+
+class Interp{
+  int eval(Expr e){
+    if(e instanceOf ConstExpr){
+      ...
+    }
+    else if(e instanceOf UnaryExpr){
+      ...
+    }
+  }
+}
+
+In C:	
+  enum ExprType{ CONST_EXPR, VAR_EXPR, UNARY_EXPR, BINARY_EXPR}
+  struct Expr{
+    ExprType tag;
+    union {
+      int value;
+      char* name;
+      struct{
+        int op;
+	ExprType* rand;
+      } unary;
+      ...
+    }
+  }
+
+  int eval(struct Expr e){
+    switch(tag){
+      case CONST_EXPR:
+        return e.value;
+      ...
+    }
+  }
+
+  class Expr{
+    ExprType tag;
+  }
+
+  class ConstExpr : Expr{
+    int value;
+  }
+
+**********
+04-15-2015
+**********
+
+Closures vs. Objects
+
+(let ((x 1) (y 2)) (+ x y))
+  ==
+(funcall (lambda (x y) (+ x y)) 1 2)
+
+(let ((X1 V1) (X2 V2) (Xn Vn)) E)
+  ==
+(funcall (lambda (X1 X2 ... Xn) E) V1 V2 ... Vn)
+
+Objects:
+  Instance Variables
+  Methods
+  Inheritence
+
+in C++ or Java
+  o.m(arg1, ..., argn)
+
+in Smalltalk of Objective C
+  [o m arg1 ... argn]
+    - pass message m to object o with arguments arg1 to argn and see if something returns
+  1 + 2 == [1 + 2]
+    
+(let ((c 0))
+  (defun count ()
+    (prog1 c (setq c (+ c 1)))))
+
+(count) = 0
+(count) = 1
+(count) = 2
+
+equivalent in Java
+class counter{
+  int c;
+  void counter(){
+    c = 0;
+  } 
+  int count(){
+    return c++;
+  }
+}
+
+(defun send (obj msg &rest args)
+  (apply (funcall obj msg) args))
+
+(defun point (&optional (x0 0) (y0 0))
+  (let
+    ((x x0) (y y0))
+    (lambda (method)
+      (case method
+        ('setx (lambda (xnew) (setq x xnew)))
+	('sety (lambda (ynew) (setq y ynew)))
+	('getx (lambda () x)) 
+	('gety (lambda () y)) 
+	('dist (lambda () (sqrt (+ (* x x) (* y y)))))))))
+
+Inheritence
+(defun point-3d (&optional (x0 0) (y0 0) (z0 0))
+  (let
+    ((z z0)
+     (p (point x0 y0)))
+    (lambda (methond)
+      (case method
+        ('setz (lambda (znew) (setq z znew)))
+	('getz (lambda () z))
+	('dist (lambda ()
+	         (let ((x (send p 'getx))
+		       (y (send p 'gety)))
+		   (sqrt (+ (* x x) (* y y) (* z z))
+	(t funcall p method)))))))))
+
+(let
+    ((next-serial 0))
+  (defun cpoint (&optional (x0 0) (y0 0))
+    (let
+      ((serial next-serial)
+
+
+**********
+04-20-2015
+**********
+
+Lambda Calculus
+  Alonzo Church
+    - 20's to 30's
+      - invented lambda calculus
+
+  3 types of lambda-expressions
+    - variables x, y, z
+    - applications (A B)
+      - A is a function
+      - B is the argument
+    - abstractions (lambda (x) A)
+      - (lambda-expression)
+
+  Grammar
+    expr -> var
+    expr -> (expr expr)
+    expr -> (lambda (var) expr)
+  (lambda (x) (x y))
+    - x is bound by the lambda
+    - y is free
+
+Beta-reduction
+  ((lambda (x) (x y)) z) -> (z y)
+  ((lambda (x) (lambda (x) x)) z) -> (lambda (x) x)
+  ((lambda (x) A) B) -> A [x <- B]
+    - substitute B for free occurences of x in A
+
+Substitution
+Formal definition of...
+  A[x <- B]:
+    case 1:
+      x[x <- B] = B
+    case 2:
+      y[x <- B] = y
+    case 3:
+      (E F)[x <- B] = (E[x <- B] F[x <- B])
+    case 4:   
+      (lambda (x) E)[x <- B] = (lambda (x) E)
+    case 5:
+      (lambda (y) E)[x <- B] = (lambda (y) E[x <- B])
+        - (lambda (x) y)[y <- x] = constant function
+	  (lambda (x) y[y <- x]) = (lambda (x) x)
+	    - this is the identity function when it should be a constant function since x got captured by the function
+	- if y is not free in B then first function is okay
+	otherwise
+	- if y is free in B
+	- (lambda (z) E[y <- z][x <- B])
+	  - rename y to z to avoid capturing y
+	  - where z is a fresh variable
+  free(x, E)
+    case 1:
+      E = x -> true
+    case 2:
+      E = y -> false
+    case 3:
+      E = (A B) -> free(x, A) or free(x, B)
+    case 4:
+      E = (lambda (x) A) -> false
+    case 5:
+      E = (lambda (y) A) -> free(x, A)
+
+(defstruct var name)
+(defstruct appl fun arg)
+  - arg: actual argument
+(defstruct abstr arg body)
+  - arg: formal argument
+
+(defun parse (e)
+  (cond
+    ((symbolp e) (make-var :name e))
+    ((listp e)
+      (cond 
+        ((= (length e) 2) 
+	  (make-appl 
+	    :fun (parse (car e)) 
+	    :arg (parse (cadr e))))
+	((and (= (length e) 3) (eq (car e) 'lambda) (listp (cadr e)) (symbolp caadr e)) 
+	  (make-abstr 
+	    :arg (caadr e) 
+	    :body (parse (caddr e))))
+	(t (error ...))))
+    (t (error ...))))
+
+(defun unparse (e)
+  (etypecase
+    (var (var-name e))
+    (appl (list (unparse (appl-fun e)) (unparse (appl-arg e))))
+    (abstr (list 'lambda (list (abstr-arg e)) (unparse (abstr-body e))))))
+
+**********
+04-22-2015
+**********
+
+Functions of several variables?
+Curried functions
+  - Turn function of several variables into a function of 1 variable:
+    - (f x y z) = E
+    - (lambda (x) (lambda (y) (lambda (z) E)))
+
+(define curry (lambda (f) (lambda (x) (lambda (y) (f x y)))))
+  (+ 2 3) = 5
+  (curry +) = compund-procedure
+  ((curry +) 2) = compund-procedure
+  (((curry +) 2) 3)
+
+  A curried function is applied to its arguments "one at a time"
+
+  (format *standard-output* "~a~%" value-to-print)
+    - curry this function to stop putting *standard-output*
+
+Church numberals:
+  0 = (lambda (f) (lambda (x) x))
+  1 = (lambda (f) (lambda (x) (f x)))
+  2 = (lambda (f) (lambda (x) (f (f x))))
+  ...
+  n = (lambda (f) (lambda (x) (f (f (... (f x))))))
+                              -- apply f n times --
+  (succ n) = (lambda (f) (lambda (x) (f (f (... (f (f x))))))) = n+1
+                                     --   apply f n times   --
+
+  succ = (lambda (n) (lambda (f) (lambda (x) (f ((n f) x)))))
+  (succ 0) = (lambda (f) (lambda (x) (f ((0 f) x)))) = 1
+  (succ 1) = (lambda (f) (lambda (x) (f ((1 f) x)))) = 2
+
+  plus = (lambda (m) (lambda (n) (lambda (f) (lambda (x) ((m f) (n f) x)))))
+  times = (lambda (m) (lambda (n) (lambda (f) (m (n f)))))
+  power = (lambda (m) (lambda (n) (lambda (f) (m n) f)))
+        = (lambda (m) (lambda (n) (m n)))
+
+  True(T) = (lambda (x) (lambda (y) x)
+  ((T A) B) = ((lambda (y) A) B) = A
+
+  False(F) = (lambda (x) (lambda (y) y)
+  ((F A) B) = ((lambda (y) y) B) = B
+
+  IF = (lambda (p) (lambda (x) (lambda (y) ((p x) y))))
+  (((IF T) x) y) = ((T x) y) = x
+  (((IF T) F) y) = ((F x) y) = y
+
+**********
+04-24-2015
+**********
+
+Identity
+I = (lambda (x) x)
+
+Constant
+K = (lambda (x) (lambda (y) x))
+
+S = (lambda (x) (lambda (y) (lambda (z) ((x z) (y z)))))
+
+IA = A
+KAB = A
+SABC = A C (B C)
+SKKA = K A (K A) = A
+SKK = I
+
+Removing lambdas
+
+(lambda (x) x) -> I
+(lambda (x) A) -> KA
+  - x not free in A
+(lambda (x) A B) -> S(lambda (x) A) (lambda (x) B)
+((lambda (x) A B) C) -> S((lambda (x) A) (lambda (x) B) C)
+  - A B
+
+(lambda (x) (lambda (y) (y x)))
+  - (lambda (x) (S (lambda (y) y) (lambda (y) x)))
+    - (lambda (x) (S I (K x)))
+      - (S (lambda (x) S I) (lambda (x) K x))
+        - (S (K (S I)) (S (lambda (x) K) (lambda (x) x)))
+	  - (S (K (S I)) (S (K K) I))
+
+IF X = (lambda (x) x K S K)
+XXX = K
+X(X X) = S
+
+(lambda (x) (x x)) (lambda (x) (x x)) -> (lambda (x) (x x)) (lambda (x) (x x))
+  - way of looping
+  - how do you stop?
+
+Y-combinator
+Y = (lambda (f) (lambda (x) (f (x x)) (lambda (x) (f (x x)))))
+  - (Y A) -> (lambda (x) A (x x)) (lambda (x) A (x x))
+          -> (A ((lambda (x) (A (x x))) (lambda (x) (A (x x)))))
+	  -> A (Y A) = A (A (Y A)) = A (A (A (Y A)))
+Reduction strategies
+1. Applicative order
+    - reduce arguments first then apply funciton
+    - (call by value)
+2. Normal order
+    - (lambda (x) A) B
+      - (lambda (x) A) = Abstraction
+      - (lambda (x) A) B = Application
+      - redex = abstraction (lambda) applied to something
+  Always apply redex with its opening parentasis furthest to the left first
+  ((lambda (x) B) ((lambda (x) x) A)) 
+  Applicative order -> ((lambda (x) B) A)
+  Normal order -> B[x <- (lambda (x) x) A]
+  (Call by name)
+
+Normal Form:
+  - lambda expression with no redexes.
+  - (lambda (x) x)
+  - normal forms cannot be reduced!
+
+Theorem:
+  - If a lambda expression can be reduced to a normal form,
+    1. That normal is unique.
+    2. Normal order reduction will reduce to the normal form.
+
+Factorial
+fact = (lambda (n) (IF (= n 0) 1 (* n fact (- n 1))))
+F = (lambda (f) (lambda (n) (IF (= n 0) 1 (* n (f (- n 1))))))
+(F fact) = fact
+(Y F) = F (Y F)
+(F fact) = fact
+F (Y F) = (Y F)
+
+((Y F) 2) = (F (Y F) 2)
+          = (* 2((Y F) 1))
+	  = (* 2 (F (Y F) 1))
+	  = (* 2 (* 1 ((Y F) 0)))
+	  = (* 2 (* 1 (F (Y F) 0)))
+	  = (* 2 (* 1 1)) = 2
+
+
+**********
+04-27-2015
+**********
+
+((lambda (x) (lambda (y) (y (y x)))) (y y))
+  - the y's conflict so you must rename the bounded y
+((lambda (x) (lambda (z) (z (z x)))) (y y))
+  - now the arguments y have a relationship with the functions
+
+(((lambda (x) (lambda (y) x)) x) ((lambda (x) (x x)) (lambda (x) (x x))))
+
+Applicative order:
+  - reduce arguments before applying
+  - reduces to itself
+Normal order:
+  - reduce the furthest left redex
+  - ((lambda (y) x)((lambda (x) (x x)) (lambda (x) (x x))))
+
+Normal form:
+  - lambda expression with no redexes (cannot be reduced)
+  - if an expression has a normal form, then normal order reduction will produce it.
+  - not all expressions have normal forms
+    - ex. ((lambda (x) (x x)) (lambda (x) (x x)))
+      - reduces to itself
+
+Algebraically reducing lambda expressions
+  I = (lambda (x) x)
+    - (I A) = A
+  K = (lambda (x) (lambda (y) x))
+    - ((K A) B) = A
+  S = (lambda (x) ((lambda (y) ((lambda (z) ((x z) (y z)))))))
+    - (S (A B C)) = ((A C) (B C))
+
+  Q = (lambda (x) (lambda (y) (lambda (z) (x (y z)))))
+    - (Q (A B C)) = A (B C)
+    - Composition function
+
+  Y = (lambda (f) ((lambda (x) (f (x x))) (lambda (x) (f (x x)))))
+    - (Y A) = (lambda (x) (A (x x))) ((lambda (x) (A (x x))))
+      - A ((lambda (x) (A (x x))) ((lambda (x) (A (x x)))))
+        - (A (Y A))
+	  - (A (A (Y A)))
+	    - (A (A (A (Y A))))...
+
+A fixed point x0 of a function f is a value such that f(x0) = x0
+  - f(x) = x^2 = (0, 1)
+  - f(x) = x^3 = (0, 1, -1)
+  - f(x) = cos(x) 
+  - (Y A) = A (Y A)
+  - A (Y A) = (Y A)
+    - (Y A) is a fixed point of A
+
+Recursive definitions:
+  - f(n) = { some values (base case)
+             g(f(n - 1))             }
+  - f = (lambda (n) (if (...) ()
+                    (g (f (...)))))
+  - F = (lambda (f) (lambda (n) (if (...) () (g (f (...))))))
+    - F(f) = f
+      - thus f is a fixed point of F
+
+Define recursive functions by defining f to be (Y F)
+  (defun length (l)
+    (if (null l) 0 (+ 1 (length (cdr l)))))
+  (Y (lambda (length) (lambda (l) (if (null l) 0 (+ 1 (length (cdr l)))))))
+     --------------------------------F-----------------------------------
+  ((Y F) '(a b c)):
+    = (F (Y F) '(a b c))
+    = (+ 1 (Y F) '(b c))
+    = (+ 1 (F (Y F) '(b c)))
+    = (+ 1 (+ 1 (Y F) '(c)))
+    = (+ 1 (+ 1 (F (Y F) '(c))))
+    = (+ 1 (+ 1 (+ 1 (Y F) '())))
+    = (+ 1 (+ 1 (+ 1 (F (Y F) '()))))
+    = (+ 1 (+ 1 (+ 1 0))) = 3
+

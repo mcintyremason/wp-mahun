@@ -1,0 +1,82 @@
+/* Mahun Theme styles */
+/* General Start */
+body{
+    /*background-color:#e6e6e6*/
+    background-color: #ffffff;
+    height:1000px;
+}
+
+a,span{
+    color:#fccc9c;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    background-color: #ffffff;
+}
+
+a{
+    border-bottom: 2px solid;
+    border-color: transparent;
+    transition: all .5s;
+}
+a:hover{
+    color:#ffe6cc;
+    border-bottom: 2px solid;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+a.phone:hover{
+    border-color: transparent;
+}
+
+.inner-width{
+    max-width:1200px;
+    width:100%;
+    display:block;
+    margin:0 auto;
+}
+/* General End */
+
+/* Header Start */
+.header{
+    position:fixed;
+    width:100%;
+    background-color:rgba(26, 26, 26, 0.8);
+    padding:10px 0;
+    z-index:10;
+}
+.header .inner-width{
+    padding: 0 50px;
+}
+.primary-nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.primary-nav ul li{
+    display:inline-block;
+}
+.primary-nav ul li a{
+    font-size: 18px;
+}
+.primary-nav ul li span{
+    font-size: 21px;
+}
+/* Header End */
+
+/* About Start */
+.about{
+    margin:50px 0 0 0;
+    padding: 50px 0 0 0;
+}
+.about p{
+    padding:20px 15px 0;
+}
+/* About End */
+
+@media(min-width: 768px){
+    .about p{
+	padding: 0 15px;
+    }
+}

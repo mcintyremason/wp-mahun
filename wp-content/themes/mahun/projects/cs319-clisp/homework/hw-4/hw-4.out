@@ -1,0 +1,20 @@
+Username:  mcintym
+Date:      Wed Feb 4 12:36:39 EST 2015
+ 
+(POWERS-OF-TWO (2 3 5)) => (4 8 32) correct
+(POWERS-OF-TWO NIL) => NIL correct
+(POWERS-OF-TWO (0)) => (1) correct
+(WRAP (2 3 5)) => ((2) (3) (5)) correct
+(WRAP NIL) => NIL correct
+(WRAP (A)) => ((A)) correct
+(WRAP ((A B) C)) => (((A B)) (C)) correct
+(WRAP (((NIL NIL)) NIL)) => ((((NIL NIL))) (NIL)) correct
+(ADD-PAIRS (2 4 5) (1 2 -2)) => (3 6 3) correct
+(ADD-PAIRS NIL NIL) => NIL correct
+(ADD-PAIRS (2) (3)) => (5) correct
+(ZIP (A B C) (1 2 3)) => ((A 1) (B 2) (C 3)) correct
+(ZIP NIL NIL) => NIL correct
+(ZIP (x y) (NIL ((A)))) => ((x NIL) (y ((A)))) correct
+(SWAP ((A B) (2 3) (foo bar))) => ((B A) (3 2) (bar foo)) correct
+(SWAP NIL) => NIL correct
+(SWAP (((A B) (2 3)) (foo bar) (NIL NIL))) => (((2 3) (A B)) (bar foo) (NIL NIL)) correct

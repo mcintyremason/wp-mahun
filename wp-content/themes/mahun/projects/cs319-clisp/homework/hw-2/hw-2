@@ -1,0 +1,55 @@
+Mason McIntyre
+1. 
+  a. (a. (b. (c. ())))
+  b. ((a. ()). (b. (c. ())))
+  c. (a. ((b. ()). (c. ())))
+  d. (a. (b. ((c. ()). ())))
+  e. ((a. ()). ((b. ()). ((c. ()). ())))
+  f. ((a. (b. ()). ()). ())
+3.
+  a. (a)
+  b. (() a)
+  c. (a b c)
+  d. ((a b (a)))
+  e. (a ((b c)))
+4. 
+  a. NIL
+  b. NIL
+  c. X is not a list
+  d. X is not a list
+  e. x
+  f. NIL
+  g. X
+  h. (Y Z)
+  i. X is not a list
+  j. Y
+  k. X is not a list
+  l. (Z)
+  m. X
+  n. NIL
+  o. (Y Z)
+  p. NIL
+  q. (X Y)
+  r. (Z A)
+  s. X
+  t. (Z A)
+  u. X is not a list
+  v. NIL
+  w. NIL
+  x. (((X Y)))
+5. 
+  a. (cadar ((c a t)))
+  b. (caar '((a)))
+  c. (cadr '(m a r t))
+  d. (cdr '(b . a))
+  e. (caddr '(s m a r t))
+  f. (cadddr '(x y z a))
+  g. (caar '((a . b) . (c . d)))
+  h. (cdar '((b . a) . (c . d)))
+  i. (caar '((a . b) (c . d)))
+  j. (cdar '((b . a) (c . d)))
+  k. (caaadr '(((c)) ((a))))
+  l. (caadr '((x . y) (a . b)))
+  m. (cadr '((x . y) . (a . b)))
+  n. (cadadr '((x . y) (b a)))
+  o. (caddr '((x . y) . (b a)))

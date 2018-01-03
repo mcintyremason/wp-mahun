@@ -1,0 +1,70 @@
+(defvar buffer nil)
+(defvar line 1)
+(defvar column 0)
+
+(defun track (c)
+  (if (char= c #\newline)
+      (progn (setq line (+ 1 line))
+             (setq column 0))
+    (setq column (+ 1 column))))
+
+(defun next ()
+  (if (null buffer) (fill-buffer))  
+  buffer)
+
+(defun toss ()
+  (setq buffer nil))
+
+(defun whitespace-char-p (c)
+  (or (char= c #\space) (char= c #\newline) (char= c #\tab)))
+
+(defun make-lexeme (chars)
+  (coerce (reverse chars) 'string))
+
+(defun fill-identifier (chars)
+  (let ((c (read-char *standard-input* nil nil)))
+    (cond ((null c) (store-token 'identifier (make-lexeme chars)))
+    ((alphanumericp c) (track c) (fill-identifier (cons c chars)))
+    (t (progn (unread-char c) 
+              (store-token 'identifier 
+                           (make-lexeme chars) 
+                           (+ 1 (- column (length chars)))))))))
+
+(defun make-integer (chars)
+  (parse-integer (coerce (reverse chars) 'string)))
+
+(defun fill-integer (chars)
+  (let ((c (read-char *standard-input* nil nil)))
+    (cond 
+     ((null c) (store-token 'integer (make-integer chars)))
+     ((digit-char-p c) (track c) (fill-integer (cons c chars)))
+     (t (progn (unread-char c) 
+               (store-token 'integer 
+                            (make-integer chars)
+                            (+ 1 (- column (length chars)))))))))
+
+(defun store-token (type &optional (value nil) (column column))
+  (setq buffer (list :type type :value value :line line :column column)))
+
+(defun fill-buffer ()
+  (let ((c (read-char *standard-input* nil nil)))
+    (cond ((null c) (store-token 'eof))
+          ((whitespace-char-p c) (track c) (fill-buffer))
+          ((alpha-char-p c) (track c) (fill-identifier (list c)))
+          ((digit-char-p c) (track c) (fill-integer (list c)))
+          ((char= c #\() (track c) (store-token 'left-parenthesis))
+          ((char= c #\)) (track c) (store-token 'right-parenthesis))
+          ((char= c #\;) (track c) (store-token 'semicolon))
+          ((char= c #\.) (track c) (store-token 'period))
+          ((char= c #\=) (track c) (store-token 'equals))
+          ((char= c #\+) (track c) (store-token 'plus))
+          ((char= c #\-) (track c) (store-token 'minus))
+          ((char= c #\*) (track c) (store-token 'times))
+          ((char= c #\/) (track c) (store-token 'div))
+          (t (error (format nil "Invalid character: ~a~%" c))))))
+
+(defun scan ()
+  (let ((token (next)))
+    (if (not (eq (getf token :type) 'eof))
+        (progn (format *standard-output* "~a~%" token) (toss) (scan)))))
+

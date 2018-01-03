@@ -1,0 +1,1212 @@
+**********
+01-12-2015
+**********
+
+Organization
+- Units and Interconnection
+  - external memory (secondary)
+  - CPU
+  - internal memory (primary)
+  - I/O devices
+
+Architechture
+- Things that impact what programmer must deal with.
+  - Multiply vs multiple additions
+
+Microcomputers
+- allows for multiple processors on a single processing chip
+
+What must a computer be able to do?
+- Data movement/manipulation
+- Data Storage
+- Data processing
+- Control over above components
+
+(Computer, Storage, Processing) // main computer
+  - Communication lines
+  - Peripherals
+
+When were computers invented?
+Babbage Machines (1800's)
+  - mechanical
+  - gears/pullys
+  - steam engines
+
+WWII (1939 - 1945)
+  - Alan Turing
+    - Wrote paper about what is computable and not computable
+    - Worked as British code decipher
+    - Unencrypting (Crack/Break) German Enigma Code
+
+**********
+01-16-2015
+**********
+
+n bits : values
+1        2 = 2^1
+2        4 = 2^2
+3        8 = 2^3
+8        256 = 2^8
+10       1024 = 2^10
+20       1M = 2^20
+30       1B = 2^30
+
+ENIAC - Base 10
+Need for recabeling to reprogram
+
+EDVAC - Base 2
+Stored Program
+
+von Neumann machine
+- main memory
+  - stored programmed data
+- ALU
+  - binary data
+- Control Unit
+- I/O
+
+IAS
+- Designed at Princeton
+- 1000 words of memory
+- 40 bit words
+  - (2^39) - 1
+    - largest word in system
+- two instructions per word
+  - 8 bit opcode
+    - 256 operations
+  - 12 bit opperand
+    - 4096 memory addresses
+- one address machine
+
+- Accumulator
+
+Generations
+1 - Vacuum Tube
+2 - Transistor
+ 
+
+**********
+01-19-2015
+**********
+
+Branch (Jump)
+  - in op code tell which half of the word you wish to execute.
+    - Left or Right half
+  - load the address in the instruction into program counter
+  
+Generations (after relay technology, first commerically produced.
+  1. Vacuum tubes 1946-1957
+    - one tube per bit (size of a light bulb)
+  2. Transistors 1958-1964
+    - one transistor per bit (size of fingernail)
+    - Less power, less heat, more reliable
+    - allowed for faster creation of computers, but costs near the same due to complexity
+  3. Integrated Circuits 1965-1971
+    - resistors, transistors, and capacitors on one chip
+    - Small Scale Integration (SSI)
+    - Medium Scale Integration (MSI)
+  4. Large Scale Integration (LSI) 1972-1977
+  5. Very Large Scale Integration (VLI) 1978-1991
+  6. Ultra Large Scale Integration (ULSI) 1991-present
+
+- This rapid change in the latest years due to microprocessing
+- Defined by Moore's Law
+  - Founder of Intel
+  - Amount of transistors on chip doubles in size every year
+
+Early Machines
+UNIVAC
+  - built so they were backward compatable
+    - I->II
+IBM
+  - developed business machines
+    - 700->7000 series
+    - System/360
+      - Not compatable with the 700->7000 series
+      - 32 bit word
+      - allowed for the creation of a family of computers
+        - Memory Size             30  40   50   65   75
+	- Data Rate (mb/s)       64K 256K 256K 512K 512K
+	- Processor cycle        0.5 0.8  2.0  8.0  16.0
+	- Relative Speed         1   3.5  10   21   50
+	- Maximum data channels  3   3    4    6    6
+	- Maximum data rate
+  - instruction set
+    - remains the same throughout models
+  - identical OS
+  - increasing speed
+  - increasing I/O ports
+  - increasing memory size
+  - increasing cost
+
+DEC
+  - PDP
+    - minicomputer
+    - OEM
+    - cheaper to purchase than big system
+
+Decimal
+  - 98/2 = 49 r 0
+    49/2 = 24 r 1
+    24/2 = 12 r 0
+    12/2 = 6  r 0
+    6/2  = 3  r 0
+    3/2  = 1  r 1
+    1/2  = 0  r 1
+  read from bottom up
+  98 = 1100010
+
+Binary
+  - 1101
+    3201
+    (1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 13
+       8   +   4   +   0   +   1    = 13
+
+Octal
+  n   binary
+  0    000
+  1    001
+  2    010
+  3    011
+  4    100
+  5    101
+  6    110
+  7    111
+  - break the binary into 3 bit segments
+  1101 = 001 101 = 15
+  1100010 = 001 100 010 = 142
+  
+Hexadecimal
+  - 0-9 and A,B,C,D,E,F
+    10 = (1*16)+(0*16)
+  n   binary
+  0    0000
+  1    0001
+  2    0010
+  3    0011
+  4    0100
+  5    0101
+  6    0110
+  7    0111
+  8    1000
+  9    1001
+  A    1010
+  B    1011
+  C    1100
+  D    1101
+  E    1110
+  F    1111
+
+  .625 * 2 = 1.250
+  .25 * 2  = 0.5
+  .5 * 2   = 1.0
+  .625 = .101 in binary
+
+other direction
+  .101
+  (1*2^-1)+(0*2^-2)+(1*2^-3)
+
+
+**********
+01-21-2015
+**********
+
+Integer Representation
+
+Binary  Decimal  Sign Magnitude  One's Comp.  Two's Comp.  Biased by 7 //because 4 bits long, subject to change based on number of bits per integer
+11..11    15          -7            -0*          -1           8
+11..10    14          -6            -1           -2           7
+...
+10..01     9          -1            -6           -7           2
+10..00     8          -0*           -7           -8           1
+----------------------------------------------------------------------
+01..11     7           7             7            7           0
+00..01     1           1             1            1           -6
+00..00     0           0*            0*           0           -7
+
+9's compliment
+999  -0
+994  -5
+.
+.
+500  -499
+499
+000
+
+ex)
+999
+- 5
+___
+994
+
+- below represents the same number
+ 994
++997
+____
+1991 -> 1 + 991 = 992 -> -7
+
+999
+- 7
+___
+992
+
+ 997
++  4
+____
+1001 -> 1 + 001 = 002
+
+
+One's compliment
+
+ 1111
+-0010 ->  2
+_____
+ 1101 -> -2
+
+ 1101 -> -2
+-1101 -> -2
+_____
+11010 -> 1010 + 1 = 1011 -> -4
+
+ 1101 -> -2
+-1110 -> -1
+_____
+11011 -> 1011 + 1 = 1100 -> -3
+
+
+
+6 bits
+Binary  Decimal  Sign Magnitude  One's Comp.  Two's Comp.  Biased by 31 
+11..11    63         -31            -0*          -1           32
+11..10    62         -30            -1           -2           31
+...
+10..01    33          -1            -30         -31           2
+10..00    32          -0*           -31         -32           1
+----------------------------------------------------------------------
+01..11    31          31            31           31           0
+00..01     1           1             1            1          -30
+00..00     0           0*            0*           0          -31
+
+A  B  A+B  Carry bit
+0  0   0       0
+0  1   1       0 
+1  0   1       0
+1  1   0       1
+
+Multiplication
+   1011
+  x1101
+  _____
+   1011
+  0000
+ 1011
+1011
+______
+100111
+
+C   A     Q     M
+0  0000  1101  1011  initial
+____________________________
+0  1011  1101  1011  Add
+0  0101  1110  1011  Shift
+____________________________
+0  0010  1111  1011  Shift
+____________________________
+0  1101  1111  1011  Add
+0  0110	 1111  1011  Shift
+____________________________
+0  1011  1111  1011  Add
+0  0001  1111  1011  Shift
+   1000  1111  1011
+
+**********
+01-26-2015
+**********
+
+Floating Point
+1. Manissa represented in Sign Magnitude
+2. The exponent is in Biased by the number of total bits available (total bits - sign bit, then convert to decimal and add to the number you want to represent.
+
+Base 10
+35642.51 = 3.564251 x10^4
+	 = 3.564251 E+04
+	 = (manissa) (exponent)
+
+Base 2
+10101010.10 = 1.010101010 x2^7
+	    = (manissa) (exponent)
+           
+32 bit
+  - bit ordering
+   1  |    8      |     23     |
+ Sign   Exponent     Manitssa
+ bit    (biased)
+
+2.5 = 10.1 base2 = 1.01 x2^1
+ 
+2/2 1 r 0
+1/2 0 r 1
+
+.5 * 2 = 1.0
+
+01111111 = "0"
+10000000 = "1" = 127 base2
+Biased by 127
+  - add 127 to the exponent in decimal and then convert to binary 
+
+thus do to bit ordering
+  - 2 = 01000000001000000000000000000000
+in hex
+  - 0100|0000|0010|0000|0000|0000|0000|0000 = 40200000x0
+  - negative
+    - 0100|0000|0010|0000|0000|0000|0000|0000 = C0200000x0
+
+Largest positive number
+  - 0 11111111 11111111111111111111111
+  in hex
+  - 7FFFFFFF
+1.11111111111111111111111 x2^128 ~ 10^38
+
+Smallest number closest to zero
+  0 00000001 00000000000000000000000
+  = 1.00000000000000000000000 x2^-126
+  
+  0 00000000 00000000000000000000000 = 0
+
+Largest negative number closest to zero
+  1 00000000 00000000000000000000000
+  = 1.00000000000000000000000 x2^-127
+
+
+**********
+01-28-2015
+**********
+
+Steps for converting from decimal to Hex
+1. Convert whole number 
+  - to binary (/2)
+2. Convert fraction to binary
+  - to binary (*2)
+3. Normalize (1... x2^n)
+4. Sign bit
+5. Convert to exp (biased by 127)
+6. Mantissa (remove leading 1. in scientific notation)
+7. Convert to Hex
+
+Steps for converting Hex to decimal
+1. Convert to binary
+2. Note sign (neg/pos)
+3. Convert exponent to decimal minus biased
+4. Convert mantissa to decimal
+5. Denormalize (get rid of scientific notation)
+6. Convert to decimal (whole & fraction)
+
+
+Reserved Special Values
+
+         Biased
+Sign    Exponent      Fraction           Value
+ 0         0             0                +0
+ 1         0             0                -0
+ 0      all 1's          0             +INFINITY
+ 1      all 1's          0             -INFINITY 
+0or1    all 1's    +-0,firstbit=1      quiet NaN
+0or1    all 1's    +-0,firstbit=0    signaling NaN
+ 0      0<e<255          f           2^(e-127)(1.f)
+ 1      0<e<255          f          -2^(e-127)(1.f)
+ 0         0           f!=0          2^(e-126)(0.f)
+-1         0           f!=0         -2^(e-126)(0.f)
+
+
+**********
+01-30-2015
+**********
+
+Study Page 21 for program
+
+Guard bits prevent loss of infromation 
+
+Double Precision floating point numbers
+
+Biased by      32          Biased by       64        Biased by      128
+  127       8 bit exp        1023      11 bit exp      16383     15 bit exp
+           23 bit mant                 56 bit mant              112 bit mant            
+
+
+**********
+02-11-2015
+**********
+
+AC
+  - Accumulator, stores the results of operations
+R
+  - General purpose register, used for secondary opperand
+Flag ZCVN
+  - zero, carry, overflow, negative
+AR
+  - Address register, stores the address to where data is indexed
+PC
+  - The address of the next instruction
+IR
+  - stores the op code, operation code
+DR
+  - Data register DR<-M[AR]
+TR
+  - Temporary register
+
+use switch statent on the opcode, which calls subroutine specific to the operation needed to be performed
+Registers can be global variables
+use and array of bytes or characters
+  - initally set to zero
+
+Fetch 1: AR<-PC
+Fetch 2: DR<-M[AR], PC<-PC+1
+Fetch 3: IR<-DR, AR<-PC
+
+LDAC //load the accumulator
+  opcode  byteh  bytel 
+    01     20     00
+multiply higher order byte to get proper address into AR
+
+
+**********
+02-13-2015
+**********
+
+byte datatype
+Copy bit
+AND 1
+
+(byte)(0xFF & 255)
+  - for getting the byte value of a 32 bit integer
+
+
+Chapter 11
+
+Multiplexer
+  - multiple inputs to one output
+
+Decoder
+  - n inputs, 2^n outputs
+  - used in memory chips
+  - opposite of multiplexer
+
+Addr 
+
+
+**********
+02-16-2015
+**********
+
+Methods of designing a computer
+  - similar to structural design
+
+Instuction
+  Operation code (opcode)
+  Source operand
+    - one or more source operands
+  Result operand
+  Next Instruction reference
+
+possible locations for source and result operands
+  1) Main or Virtual Memory
+  2) Processor register (AR, AC, etc.)
+  3) Immediate value
+       - When the operand is physically in the instruction itself
+       - usefull for small integer arithemetic
+
+Three address machine
+Two address machine
+One address machine
+Zero address machine
+
+Operations
+Data Types
+Instruction Format
+Registers
+Addressing Modes
+
+
+**********
+02-20-2015
+**********
+
+x86                                                                         (ORDINALS)   
+                      8 bits = 1 byte             signed (2's compliment)   unsigned (2's compliment)
+                      16 bits = 1 word            signed (2's compliment)   unsigned (2's compliment)
+ single precision     32 bits = doubleword(dw)    signed (2's compliment)   unsigned (2's compliment)
+ double precision     64 bits = quadword          signed (2's compliment)   unsigned (2's compliment)
+ double extended precision 80 bits, only 80 as many bits are reserved for gaurd bits
+
+Binary Coded Decimal (BCD)
+ - Unpacked
+   - represent 2 numbers with 2 bytes
+ - Packed
+   - pack two bytes together to use one byte to represent 2 numbers
+
+Packed Single Instruction Multiple Data (SIMD)
+  - used for doing arithemetic on numbers in parallel
+  - mainly used for graphic processing
+  - 8 or 16 groups that are packed to 64 or 128
+
+ARM Processors
+  - mobile devices
+  - made to be energy efficient
+  - speed is not the goal
+
+  Operands
+    bits
+     8 byte 
+     16 halfword
+     32 word
+
+ Alignment check
+ Unaligned
+
+ - no floting point
+ - numeric coprocssor
+   - allows the floating point calculations to be done in hardware
+
+  Data Transfer
+  Arithmetic
+  Logical
+  Conversion
+  I/O
+  System Control
+  Transfer of Control
+
+  Move 
+      - source to destination
+  Load
+    - mem to proc
+  Store
+    - proc to mem
+  Exchange
+  Clear
+  Set
+  Push 
+  Pop  
+
+  +
+  -
+  *
+  /
+  Absolute
+  Increment
+  Decrement
+
+  Logical Operators
+    AND
+    OR
+    NOT
+    XOR
+    Test
+    Compare
+    Set Control Bits
+    Shift
+     - Logical
+       11001010 <- = 10010100
+         - C = 1
+       11001010 -> = 01100101
+         - C = 0
+     - Arithmetic
+       - Preserve the sign bit when shifting
+         - ignore sign bit when shifting
+    Rotate
+
+
+**********
+02-23-2015
+**********
+
+page 315 for carry
+
+Conversion
+  - from EBCDIC to ASCII, by doing a lookup in a table and returning the new value
+
+Transfer of Control
+  Unconditional Jump
+  Conditional Jump
+    - result of a test
+    - result of testing flags, depending on which is set and how instruction is written
+  Skip Instruction
+    - can only go past the next instuction
+    - used for entering loops, by setting a negative value of the control, incrementing it until it reaches zero
+    ex)
+      SKIP INCR&SKIP if 0
+      JUMP 100
+
+Procedure Calls
+  Store return address
+    1) Register
+    2) Location
+        Non-Reentrant storage, cannot be used for recursion
+    	  return location is the first instruction in a function
+      	  then increment to load next instruction in the function
+    3) Top of Stack
+
+Stack Frame
+  - one per prodecure call
+    - return point
+      - address to return to
+    - Old Frame Pointer
+      - to get pack to the previous frame
+    - Local Variables
+      - frame pointer +1 for first variable
+      - frame pointer +2 for second variable and so on
+
+x86 Architecture
+  AX -> EAX
+  BX -> EBX
+  CX -> ECX
+  - allows for backward compatability with addresses smaller than 32 bits
+
+  MOV, MOVSX
+  PUSH, POP
+  LEA
+    - Load Effective Address
+  ADD
+  SUB
+  MUL
+  DIV
+  MOVB
+    - Move Byte
+  LODS
+    - Load string
+  ENTER, LEAVE
+    - preseve stack access
+
+  Logical Operations
+    AND
+    BTS
+      - Bit Test Set
+    BSF
+      - Bit Scan Forward
+        - set register of the could of the first occurance of a 1 in a bit field
+    SHL
+    SHR
+    SAL
+    SAR
+    ROL
+    ROR
+
+  Segment Register
+    - used for jumping to address bigger than architecure
+ 
+  Parity 
+    - least significant sign byte
+      1 = even
+      0 = odd
+
+
+**********
+02-25-2015
+**********
+
+x86
+  - CISC
+  - 4 basic registers
+  - ADD M
+  - floating point numbers
+
+ARM
+  - RISC
+    - larger register set (32 is common)
+    - LOAD/STORE
+      - LOAD R1, M
+      - ADD R1, R2
+  - Branching
+    - (+-)32MB
+    - PC(R15)
+  - insructions are all the same size
+  - Data Processing
+    - ADD, Logical, Shift
+  - Multiply (Integer)
+  - Parallel +,-	
+    - add/subtract two numbers in parallel
+  - every instruction has within it a condition code
+    - ex) ZCVN
+  - S bit
+    - Status flag
+
+Little-Endian vs. Big-Endian
+  Big-Endian (ARM, PowerPC, IBM 360/390 series)
+    - most significant bits are first
+    - 10000000 00000000
+
+  Little-Endian (x86 machines)	
+    - least significant bits are first
+    - 00000000 10000000
+   
+**********
+Chapter 13
+**********
+
+Addressing Modes
+    - A = address field instruction
+    - R = contents of address field in instruction that refers to a register
+    - EA = Effective Address, address actually go to to get opperand you need
+    - (X) = Contents of register/memory location of X
+
+  Immediate
+    - Operand = A
+  Direct
+    - EA = A
+    - what we use in rscpu
+  Indirect addressing
+    - EA = (A)
+  Register
+    - EA = R
+  Register Indirect
+    - EA = (R)
+    - saves time and space
+  Displacement
+    - EA = A + (R)
+    - A: displacement
+    - R: segment address, base address
+    Relative Addressing
+      - PC is segment address
+    Base-register address
+      - base address + displacement
+    Indexing
+      - Index register
+      post-indexing
+        - EA = A+(R)
+        - (R) = (R)+1
+      pre-indexing 
+        - (R) = (R)+1
+        - EA = A+(R)	
+    Stack
+      - FILO
+      - Pushdown
+      - pointer to the top of the stack (TOS)
+
+**********
+02-27-2015
+**********
+
+Addressing Modes
+  x86
+    - started historically with 16 bit registers
+      - known as a word
+    - 2 bytes per register
+    ex)
+      AX 
+
+
+**********
+03-09-2015
+**********
+
+Instruction Formats
+  Length
+    - Variable
+    - Fixed
+      n * 8 "word" size
+      instruction format normally same as word size
+
+IBM 360/370/390
+  - use 32 bit word
+  - LOAD RegisterNumber <- Address
+  - STOR RegisterNumber -> Address
+    - 1.5 address machine
+
+word size normally equal to fixed point numbers
+
+Once length of wordsize is determined must come up with fields for instruction
+  Opcode
+    - size varies as instruction set size varies
+    - n bits -> 2^n instructions
+  Addressing bits
+    - numeber of operands
+    - Register vs. memory
+    - Register sets
+      - stack pointer
+      - integer registers
+      - foating point registers
+      - etc.
+    - Address range -> register
+    - Address granuality 
+      - byte addressable
+    - Aligned on a word address
+
+PDP-8
+  Opcode
+    - 0-2 bits
+  Direct/Indirect bit
+    - 1 bit
+  Zero/Current page
+    - 1 bit
+
+    0    2 |  3  |  4  | 
+    Opcode | D/I | Z/C |
+
+  Microinstructions
+    | 1110 | CLA | RAR | RAL |
+    - each bit in opcode represents to do/don't execute instruction
+
+PDP-10
+  Orthogonality
+    - The other elements of an instruction are not determined by the opcode
+  Completeness
+  Direct addressing
+    - Base plus displacement
+  36 bit word size
+  36 bit instruction length
+  fixed length instructions
+    Opcode 
+      - first 9 bits
+    Register
+      - 9 to 12 bits, equates to 16 registers
+    Indirect bit
+      - 13th bit
+    Index
+      - 14 to 18 bits
+    Displacement
+      - 18 to 35 bits
+
+PDP-11
+  16 bit wordsize
+  Variable length instructions
+  8, 16 bit registers
+    - 2 dedicated registers
+      - stack register
+      - program counter
+  0, 1, 2 address
+    - 4 to 16 bits
+    - 6 bits for registers
+ Allows for more compact programs due to variable size instruction
+
+VAX
+  1. All instructions should have a "natural" number of operands
+  2. All operands should have the same generality in specification
+  Opcode
+    - 1 to 2 bytes
+  Operand specifiers
+    - 0 to 6 operand specifiers
+      - one for the start of an operand, one for the end of an operand
+  Conisquently requires a much more complex CPU
+
+x86
+  Instruction prefixes
+    - 0, 1, 2, 3, 4 bits
+    LOCK
+      - System instructions
+    Segment override
+    Operand size override
+      - 16 or 32 bits
+      - allows for 8 bit operand
+    Address size override
+      - 16 or 32 bits
+
+Processor Organization
+  Basic Needs of a processor
+    - Fetch instruction
+    - Interpret instruction
+    - Fetch data
+    - Process data
+    - Write data, memory or I/O
+
+  
+**********
+03-11-2015
+**********
+
+User visible register
+  - General Purpose
+  - Data
+  - Address
+    - Segment
+    - Index
+    - Stack Pointer
+  - Condition Codes
+  - Control
+    - PC
+    - IR
+    - MAR
+    - MBR
+
+Moterolla 68000
+  - 8 data registers
+  - 8 address registers
+    - one is a stack pointer
+    - one is program counter
+
+x86
+  - 4 general registers
+    - A -> accumulator
+    - B -> base
+    - C -> count
+    - D -> data
+  - 4 more registers
+    - stack pointer
+    - base pointer
+    - source register
+    - destination register
+
+Fetch
+Execute
+
+How can you speed up the execution of a machine?
+  - Pipelining
+issues with pipelining?
+  - Memory access
+  - JUMP
+
+FI // makes memory access
+  - Fetch Instruction
+DI
+  - Decode Instruction
+CO
+  - Calculate Operands
+FO // makes memory access
+  - Fetch Operands
+EI
+  - Execute Instruction
+WO // makes memory access
+  - Write Operand
+
+Time to execute single instruction (tao)
+   - ~T = max(~Ti) + d = ~Tn + d : (1 <= i <= k)
+   - Tk,n = [k + (n-1)] * ~T
+   - Sk = (T1,n)/(Tk,n) = (nk~T)/[k+(n-1)]~T] = (nk)/(k+(n-1))
+
+Test Chapters 11-14
+
+
+**********
+03-16-2015
+**********
+
+Causes of problems in pipelining
+  - Conditional Jumps
+  - Multiple accesses to memory at the same time
+  
+Pipeline Hazards
+  Resource hazard
+    Memory access
+    ALU
+      - if one operation is doing an add and the other one is to fetch the operands, yet you need to add to create the new address, you need to make one instruction wait.
+        - Multiple memory accesses or multiple ALU's will solve this issue.
+
+  Data hazard
+    - ADD EAX, EBX
+      SUB ECX, EAX
+        - if the first instruction is not finished and the second instruction is fetched the result of the second instruction may not be correct.
+    RAW
+      - Read After Write
+        - true dependency
+    WAW
+      - Write After Write
+        - output dependency
+    WAR
+      - Write After Read
+        - anti dependency
+
+  Control hazards
+    Multiple Screens
+      - load up two pipelines
+        - if jump is taken or not, then load the pipeline for path taken
+      - bad if multiple jumps in a row are made
+    Prefetch Branch Target
+      - Prefetch next instruction for the branch and load it into a register to eliminate the need to fetch on the next instruction cycle
+    Loop Buffer
+      - Prefetch variables/conditional branches and load them into buffer registers
+    Predict never taken (static, in firmware)
+      - if never taken, don't load registers
+      - always load the registers at the beginning of the loop
+    Predict always taken (static, in firmware)
+      - if always taken, load the registers
+      - don't load the registers at the beginning of the loop, but rather before it starts and only once
+    Predict by opcode (75% accurate) (static, in firmware)
+    Taken/Not switch (dynamic)
+      - uses history bits to predict the instruction which is next to execute
+
+    
+**********
+03-23-2015
+**********
+
+********
+Chaper 4
+********
+
+Memory and Storage
+
+Location
+  Internal
+    - registers
+    - cahce
+    - main memory
+    - ROM
+  External
+    - optical, Mag., Tapes
+
+Capacity
+  Number of words
+  Number of bytes
+  Addressable unit
+   0 1 2 3 4 5 6 7 8
+  | | | | | | | | | |
+
+Unit of Transfer
+  Word
+    - bus width
+  Block
+    - need for buffer/cache in between
+    - loaded from physical memory
+
+Method of accessing
+  Sequential
+    - like tapes
+  Direct 
+    - wait for read/write head on hard disk
+  Random
+    - any location can be accessed at any time
+  Associative
+    - Like in java
+    - Key and value
+
+Performance
+  Access time (Latency)
+    Random Access
+      - Amount of time when you access a piece of data and when you access the next piece of data
+    Direct Access
+
+  Memory cycle time
+    - destructive read
+
+  Transfer rate
+    Random Access
+      - 1/(cycle time)
+    Non-Random Access
+      - Tn
+        - rate at which you can transfer n bits
+      - R
+        - Bits per second
+      - Tn = Ta + (n/R)
+
+Physical Types of memory
+  Volatile
+    - if power goes off, you loose the data in there or it decays
+    - RAM
+  Non-volatile
+    - power or refresh is un-needed
+    - Magnetic
+    - ROM
+    - Flash
+
+  Erasable
+    - RAM
+    - Magnetic
+    - Flash
+  Non-erasable
+    - ROM
+  
+  Organization
+    - how is data read/written within
+
+All memory is organized in a...
+Hierarchy (page 117)
+  - Smallest to Largest	(going down)
+  - Decreasing cost per bit 
+  - Increasing capacity
+  - Increasing access time
+  - Decreasing frequency of access by the processor
+
+  Internal
+    - registers
+    - cache
+    - main memory
+  External
+    - magnetic and optical disks
+    - CD ROM, CD, DVD, Blu-Ray	
+  Offline
+    - Magnetic Tape  
+
+Faster access = higher cost/bit
+Greater capacity = smaller cost/bit
+Greater capacity = slower acess time
+
+locality of reference
+
+
+**********
+03-27-2015
+**********
+
+Direct Mapping
+  - divide cache up into lines
+  - lines contain a block of memory
+
+Associative Mapping
+  - longer tag to identify which block in memory it is
+
+Set Associative Mapping 
+
+ 
+**********
+04-01-2015
+**********
+
+Hard Failure
+  - try and use parity bits to correct
+
+Soft Failure
+  - alpha particles
+    - released when radioactive decay occurs
+
+Hamming Code
+  - Hamming worked at AT&T
+
+**********
+04-22-2015
+**********
+
+Functions of several variables?
+Curried functions
+  - Turn function of several variables into a function of 1 variable:
+    - (f x y z) = E
+    - (lambda (x) (lambda (y) (lambda (z) E)))
+
+(define curry (lambda (f) (lambda (x) (lambda (y) (f x y)))))
+  (+ 2 3) = 5
+  (curry +) = compund-procedure
+  ((curry +) 2) = compund-procedure
+  (((curry +) 2) 3)
+
+  A curried function is applied to its arguments "one at a time"
+
+  (format *standard-output* "~a~%" value-to-print)
+    - curry this function to stop putting *standard-output*
+
+Church numberals:
+  0 = (lambda (f) (lambda (x) x))
+  1 = (lambda (f) (lambda (x) (f x)))
+  2 = (lambda (f) (lambda (x) (f (f x))))
+  ...
+  n = (lambda (f) (lambda (x) (f (f (... (f x))))))
+                              -- apply f n times --
+  (succ n) = (lambda (f) (lambda (x) (f (f (... (f (f x))))))) = n+1
+                                     --   apply f n times   --
+
+  succ = (lambda (n) (lambda (f) (lambda (x) (f ((n f) x)))))
+  (succ 0) = (lambda (f) (lambda (x) (f ((0 f) x)))) = 1
+  (succ 1) = (lambda (f) (lambda (x) (f ((1 f) x)))) = 2
+
+  plus = (lambda (m) (lambda (n) (lambda (f) (lambda (x) ((m f) (n f) x)))))
+  times = (lambda (m) (lambda (n) (lambda (f) (m (n f)))))
+  power = (lambda (m) (lambda (n) (lambda (f) (m n) f)))
+        = (lambda (m) (lambda (n) (m n)))
+
+  True(T) = (lambda (x) (lambda (y) x)
+  ((T A) B) = ((lambda (y) A) B) = A
+
+  False(F) = (lambda (x) (lambda (y) y)
+  ((F A) B) = ((lambda (y) y) B) = B
+
+  IF = (lambda (p) (lambda (x) (lambda (y) ((p x) y))))
+  (((IF T) x) y) = ((T x) y) = x
+  (((IF T) F) y) = ((F x) y) = y
+
+

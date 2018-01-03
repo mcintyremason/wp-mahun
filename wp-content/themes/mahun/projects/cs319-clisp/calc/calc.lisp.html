@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; calc - A calculator for integer operations.</span>
+
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>scanner<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>parser<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>tree<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>eval<span class="hl opt">)</span>
+
+<span class="hl slc">;; repl - The read-eval-print loop.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> repl <span class="hl opt">()</span>
+  <span class="hl slc">;; Print a prompt.</span>
+  <span class="hl opt">(</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span> <span class="hl str">&quot;&gt; &quot;</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">handler-case</span>
+   <span class="hl slc">;; Look at the next token.</span>
+   <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+          <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+     <span class="hl opt">(</span><span class="hl kwa">if</span> <span class="hl opt">(</span><span class="hl kwa">not</span> <span class="hl opt">(</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>eof<span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">progn</span>
+           <span class="hl slc">;; Parse a line of input, evaluate it, and print the result.</span>
+           <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">v</span> <span class="hl opt">(</span><span class="hl kwa">eval-expr</span> <span class="hl opt">(</span><span class="hl kwa">parse-line</span><span class="hl opt">))))</span>
+             <span class="hl opt">(</span><span class="hl kwa">if</span> <span class="hl opt">(</span><span class="hl kwa">not</span> <span class="hl opt">(</span><span class="hl kwa">null</span> v<span class="hl opt">))</span>
+                 <span class="hl slc">;; A null value indicates an empty line.</span>
+                 <span class="hl opt">(</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span> <span class="hl str">&quot;~a~%&quot;</span> v<span class="hl opt">)))</span>
+           <span class="hl slc">;; Loop.</span>
+           <span class="hl opt">(</span><span class="hl kwa">repl</span><span class="hl opt">))))</span>
+   <span class="hl opt">(</span><span class="hl kwa">error</span> <span class="hl opt">(</span><span class="hl kwa">e</span><span class="hl opt">)</span> 
+          <span class="hl slc">;; Print the error message and resume.</span>
+          <span class="hl opt">(</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span> <span class="hl str">&quot;~a~%&quot;</span> e<span class="hl opt">)</span>
+          <span class="hl opt">(</span><span class="hl kwa">repl</span><span class="hl opt">))))</span>
+
+<span class="hl opt">(</span><span class="hl kwa">repl</span><span class="hl opt">)</span>
+</pre>
+</div>
+</div>
+</div>
+</body>

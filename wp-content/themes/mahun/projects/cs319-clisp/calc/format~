@@ -1,0 +1,21 @@
+#!/bin/bash
+
+count=$(wc -l $1 | cut -f 1 -d ' ')
+echo '<div class="num-hl">'
+echo '<div class="num-hl-row">'
+echo '<div class="num">'
+echo '<pre>'
+for ((i = 1; i <= $count; i++))
+do
+    echo $i
+done
+echo '</pre>'
+echo '</div>'
+echo '<div class="hl">'
+echo '<pre>'
+highlight -s lisp -I -f --style=edit-nedit --font=monaco,monospace -i $1
+echo '</pre>'
+echo '</div>'
+echo '</div>'
+echo '</div>'
+

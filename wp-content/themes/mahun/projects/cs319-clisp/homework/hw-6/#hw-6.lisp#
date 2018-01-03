@@ -1,0 +1,104 @@
+; Mason McIntyre
+; 02-08-2015
+; hw-6.lisp
+
+(defstruct term coef exp)
+
+(defun simplify (r)
+  (cond
+   ((null r) ())
+   (t (poly-add (car r) (cadr r)))
+   )
+)
+
+(defun poly-add (p q)
+  (setq tp (car p))
+  (setq tq (car q))
+  (cond
+   ((null p) q)
+   ((null q) p)
+   ((= (term-exp tp) (term-exp tq)) (if (not (= (+ (term-coef tp) (term-coef tq)) 0)) (cons (make-term :coef (+ (term-coef tp) (term-coef tq)) :exp (term-exp tp)) (poly-add (cdr p) (cdr q))) (poly-add (cdr p) (cdr q))))
+   ((> (term-exp tp) (term-exp tq)) (cons tp (poly-add (cdr p) q)))
+   ((> (term-exp tq) (term-exp tp)) (cons tq (poly-add p (cdr q))))
+   (t (poly-add (cdr p) (cdr q)))
+   )
+)
+
+(defun poly-sub (p q)
+  (setq tp (car p))
+  (setq tq (car q))
+  (cond
+   ((and (null p) (not (null q)) (cons (make-term :coef (* (term-coef tq) -1) :exp (term-exp tq)) (poly-sub p (cdr q)))))
+   ((null q) p)
+   ((= (term-exp tp) (term-exp tq)) (if (not (= (+ (term-coef tp) (* (term-coef tq) -1)) 0)) (cons (make-term :coef (+ (term-coef tp) (* (term-coef tq) -1)) :exp (term-exp tp)) (poly-sub (cdr p) (cdr q))) (poly-sub (cdr p) (cdr q))))
+   ((> (term-exp tp) (term-exp tq)) (cons tp (poly-sub (cdr p) q)))
+   ((> (term-exp tq) (term-exp tp)) (cons (make-term :coef (* (term-coef tq) -1) :exp (term-exp tq)) (poly-sub p  (cdr q))))
+   (t (poly-sub (cdr p) (cdr q)))
+   )
+)
+
+(defun poly-mul (p q)
+  (setq tp (car p))
+  (setq tq (car q))
+  (cond
+   ((null p) ())
+   ((null q) ())
+   (t (simplify (list (poly-mul-h tp q) (poly-mul (cdr p) q))))
+   )
+)
+
+(defun poly-mul-h (tp q)
+  (setq tq (car q))
+  (cond
+   ((null tp) ())
+   ((null q) ())
+   (t (cons (make-term :coef (* (term-coef tp) (term-coef tq)) :exp (+ (term-exp tp) (term-exp tq))) (poly-mul-h tp (cdr q))))
+   )
+)
+
+(defun poly-div (p q)
+  (setq tp (car p))
+  (setq tq (car q))
+  (cond
+   ((null p) ())
+   ((null q) "Cannot divide by zero")
+   (t (simplify (list (poly-div-h p tq) (poly-div p tq))))
+   )
+)
+
+(defun poly-div-h (p q)
+  (setq tq (car q))
+  (cond
+   ((null tp) ())
+   ((null q) ())
+   ((= (term-coef (car q)) 0) ())
+   (t (cons (make-term :coef (truncate (term-coef tp) (term-coef tq)) :exp (- (term-exp tp) (term-exp tq))) (poly-div-h tp (cdr q))))
+   )
+)
+
+(defun poly-pow (p n)
+  (cond
+   ((= n 0) (list (make-term :coef 1 :exp 0)))
+   ((= n 1) p)
+   ((> n 1) (poly-mul (poly-pow p (- n 1)) p))
+  )
+)
+
+(defun poly-der (p)
+  (setq tp (car p))
+  (cond
+   ((null p) ())
+   ((= (term-exp tp) 0) (poly-der (cdr p)))
+   (t (cons (make-term :coef (* (term-coef tp) (term-exp tp)) :exp (- (term-exp tp ) 1)) (poly-der (cdr p))))
+   )
+)
+
+(defun poly-string (p)
+  (setq tp (car p))
+  (if (not (null p)) (setq sign (if (< (term-coef tp) 0) "-" "")) (setq sign ""))
+  (cond
+   ((null p) ())
+   ((= (term-exp tp) 0) (concatenate 'string (format nil " ~a ~a" sign (abs (term-coef tp))) (poly-string (cdr p))))
+   (t (concatenate 'string (format nil " ~a ~a x^~a" sign (abs (term-coef tp)) (term-exp tp)) (poly-string (cdr p))))
+   )
+)

@@ -1,0 +1,32 @@
+program;
+var x, y;
+procedure p(a, b);
+begin
+  write(a);
+  writeln(b)
+end;
+procedure q(a);
+var y, z;
+begin
+  y := 17;
+  z := 2;
+  writeln(17 * a);
+  p(a, z * a);
+end;
+procedure count (n);
+begin
+  if n > 0 then
+  begin
+    writeln(n);
+    count(n - 1)
+  end
+end;
+begin
+  x := 12;
+  y := 10;
+  q(2);
+  q(5);
+  count(10);
+  write(x);
+  writeln(y);
+end.

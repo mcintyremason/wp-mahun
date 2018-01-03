@@ -1,0 +1,30 @@
+program;
+procedure even(n);
+begin
+  if n = 0 then
+    writeln(true)
+  else
+    odd(n - 1)
+end;
+procedure odd(n);
+begin
+  if n = 0 then
+    writeln(false)
+  else
+    even(n - 1)
+end;
+procedure fact(n, a);
+begin
+  if n = 0 then
+    writeln(a)
+  else
+    fact(n - 1, n * a)
+end;
+begin
+  even(4);
+  even(5);
+  odd(4);
+  odd(5);
+  fact(5, 1);
+  fact(0, 1)
+end.

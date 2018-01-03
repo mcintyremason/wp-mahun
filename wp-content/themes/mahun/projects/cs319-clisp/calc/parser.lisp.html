@@ -1,0 +1,160 @@
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; parser.lisp - A recursive descent parser for the calculator program.</span>
+
+<span class="hl slc">;; match - Checks whether the next token is m and then discards it.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> match <span class="hl opt">(</span><span class="hl kwa">m</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span>
+    <span class="hl opt">(</span><span class="hl kwa">if</span> <span class="hl opt">(</span><span class="hl kwa">eq</span> type m<span class="hl opt">)</span>
+        nil
+      <span class="hl opt">(</span><span class="hl kwa">syntax-error</span> m type<span class="hl opt">))))</span>
+
+<span class="hl slc">;; syntax-error - Throws an error message when a syntax error is found.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> syntax-error <span class="hl opt">(</span><span class="hl kwa">expected</span> found<span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">flush-line</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">error</span> <span class="hl opt">(</span><span class="hl kwa">format</span> nil <span class="hl str">&quot;Syntax error: expecting ~a but found ~a.&quot;</span> expected found<span class="hl opt">)))</span>
+
+<span class="hl slc">;; line -&gt; expr eol | eol</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-line <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span>
+     <span class="hl opt">((</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>eol<span class="hl opt">) (</span><span class="hl kwa">read-t</span><span class="hl opt">) (</span><span class="hl kwa">make-empty-expr</span><span class="hl opt">))</span>
+     <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">prog1</span> <span class="hl opt">(</span><span class="hl kwa">parse-expr</span><span class="hl opt">) (</span><span class="hl kwa">match</span> <span class="hl opt">'</span>eol<span class="hl opt">))))))</span>
+
+<span class="hl slc">;; expr -&gt; add-expr</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-expr <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">parse-add-expr</span><span class="hl opt">))</span>
+
+<span class="hl slc">;; add-expr -&gt; mult-expr add-expr-tail</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-add-expr <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">lrand</span> <span class="hl opt">(</span><span class="hl kwa">parse-mult-expr</span><span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">parse-add-expr-tail</span> lrand<span class="hl opt">)))</span>
+    
+<span class="hl slc">;; add-expr-tail -&gt; empty | (PLUS | MINUS) mult-expr add-expr-tail</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-add-expr-tail <span class="hl opt">(</span><span class="hl kwa">lrand</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> 
+     <span class="hl opt">((</span><span class="hl kwa">or</span> <span class="hl opt">(</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>plus<span class="hl opt">) (</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>minus<span class="hl opt">))</span>
+      <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span>
+      <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">rrand</span> <span class="hl opt">(</span><span class="hl kwa">parse-mult-expr</span><span class="hl opt">)))</span>
+        <span class="hl opt">(</span><span class="hl kwa">parse-add-expr-tail</span> <span class="hl opt">(</span><span class="hl kwa">make-binary-expr</span> type lrand rrand<span class="hl opt">))))</span>
+     <span class="hl opt">(</span><span class="hl kwa">t</span> lrand<span class="hl opt">))))</span>
+
+<span class="hl slc">;; mult-expr -&gt; prim-expr mult-expr-tail</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-mult-expr <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">lrand</span> <span class="hl opt">(</span><span class="hl kwa">parse-prim-expr</span><span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">parse-mult-expr-tail</span> lrand<span class="hl opt">)))</span>
+    
+<span class="hl slc">;; mult-expr-tail -&gt; empty | (TIMES | DIV | MOD)  prim-expr mult-expr-tail</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-mult-expr-tail <span class="hl opt">(</span><span class="hl kwa">lrand</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> <span class="hl opt">((</span><span class="hl kwa">or</span> <span class="hl opt">(</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>times<span class="hl opt">) (</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>div<span class="hl opt">) (</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>mod<span class="hl opt">))</span>
+           <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span>
+           <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">rrand</span> <span class="hl opt">(</span><span class="hl kwa">parse-prim-expr</span><span class="hl opt">)))</span>
+             <span class="hl opt">(</span><span class="hl kwa">parse-mult-expr-tail</span> <span class="hl opt">(</span><span class="hl kwa">make-binary-expr</span> type lrand rrand<span class="hl opt">))))</span>
+          <span class="hl opt">(</span><span class="hl kwa">t</span> lrand<span class="hl opt">))))</span>
+
+<span class="hl slc">;; prim-expr -&gt; INTEGER | LEFT-PAREN expr RIGHT-PAREN</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> parse-prim-expr <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">token</span> <span class="hl opt">(</span><span class="hl kwa">peek-t</span><span class="hl opt">))</span>
+         <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>type<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> 
+     <span class="hl opt">((</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>left-paren<span class="hl opt">)</span> 
+      <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span>
+      <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">e</span> <span class="hl opt">(</span><span class="hl kwa">parse-expr</span><span class="hl opt">)))</span>
+        <span class="hl opt">(</span><span class="hl kwa">match</span> <span class="hl opt">'</span>right-paren<span class="hl opt">)</span>
+        e<span class="hl opt">))</span>
+     <span class="hl opt">((</span><span class="hl kwa">eq</span> type <span class="hl opt">'</span>integer<span class="hl opt">)</span>
+      <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span>
+      <span class="hl opt">(</span><span class="hl kwa">make-integer-expr</span> <span class="hl opt">(</span><span class="hl kwa">getf</span> token <span class="hl opt">:</span>value<span class="hl opt">)))</span>
+     <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">read-t</span><span class="hl opt">)</span> 
+        <span class="hl opt">(</span><span class="hl kwa">syntax-error</span> <span class="hl str">&quot;INTEGER or LEFT-PAREN&quot;</span> type<span class="hl opt">)))))</span>
+</pre>
+</div>
+</div>
+</div>

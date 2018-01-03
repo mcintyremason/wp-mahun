@@ -1,0 +1,429 @@
+// Mason McIntyre
+// 02-16-2015
+// rscpu2.java
+// The purpose of this program is to represent a relatively simple CPU. This is done by using global variables to simulate registers.
+
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class rscpu2{
+  static short AR, PC;
+  static byte AC, R, DR, IR, TR, M[];
+  static boolean Z, C, V, N;
+  
+  static void fetchCycle(){  /* the fetch cycle */
+    int val;
+    AR = PC; /* set Address Register to the Program Counter */
+    System.out.printf("fetch 1: AR = %d and PC = %d\n", AR, PC);
+    DR = M[AR]; /* set the Data Register to the Memory allocation stored at index at AR */
+    PC++; /* increment the Program Counter */
+    val = (int)(DR & 0xff); /* conversion made for printing output */
+    System.out.printf("fetch 2: DR = %d and PC = %d\n", val, PC);
+    IR = DR; /* set the Instruction Register to the value in the Data Register */
+    AR = PC; /* set the Address Register to the value stored in the incremented Program Counter */
+    System.out.printf("fetch 3: IR = %d and AR = %d\n", val, AR);
+  }
+  
+  static void NOP (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("NOP instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+ }
+
+  static void LDAC (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("LDAC instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void STAC (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("STAC instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void MVAC (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("MVAC instruction");
+    R = AC; /* set the general register to the value in the accumulator */
+    System.out.printf("MVAC1 R = %d\n", R);
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void MOVR (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("MOVR instruction");
+    AC = R; /* set the accumulator to the value of the general register */
+    System.out.printf("MOVR1 AC = %d\n", AC);
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JUMP (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JUMP instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JMPZ (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JMPZ instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JPNZ (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JPNZ instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JMPC (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JMPC instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JV (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JV instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void JN (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("JN instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void ADD (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("ADD instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void SUB (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("SUB instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void INAC (){
+    int bsign, asign; /* used to indicatie if a change in sign occurs */
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    int num; /* used to check for a carry in the operation */
+    String flagbits; /* used to convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("INAC instruction");
+
+    if(AC >= 0) /* note the sign before manipulation of the accumulator */
+      bsign = 1;
+    else
+      bsign = -1;
+    
+    AC++; /* increment accumulator */
+    num = (int)(AC & 0x100); /* mask out the 8 bits and mask in the 9th */
+
+    if(AC >= 0) /* note the sign after manipulation of the accumulator */
+      asign = 1;
+    else
+      asign = -1;
+    
+    if(AC == 0) /* flag set if accumulator is zero */
+      Z = true;
+    else
+      Z = false;
+
+    if(num > 0) /* flag set if there is a 9th bit, which would mean num is set to be a positive integer */
+      C = true;
+    else 
+      C = false;
+
+    if(bsign == asign) /* flags set for overflow */
+      V = false;
+    else
+      V = true;
+
+    if(AC < 0) /* flag set if the accumulator is negative */
+      N = true;
+    else
+      N = false;
+
+    flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.printf("INAC1 AC = %d ZCVN = %s\n", AC, flagbits);
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void CLAC (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits; /* used to convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("CLAC instruction");
+    AC = 0; /* reset accumulator */
+    Z = true; /* set zero flag */
+    C = false; /* set carry flag */
+    V = false; /* set overflow flag */
+    N = false; /* set negative flag */
+    flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.printf("CLAC1 AC = %d ZCVN = %s\n", AC, flagbits);
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void AND (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("AND instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void OR (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("OR instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void XOR (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("XOR instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void NOT (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("NOT instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void RL (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("RL instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void RR (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("RR instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void LSL (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("LSL instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void LSR (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("LSR instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void MVI (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("MVI instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+    fetchCycle(); /* call fetch cycle instruction */
+  }
+
+  static void HALT (){
+    int val = (int)(DR & 0xff); /* conversion made for printing output */
+    String flagbits = flagsToString(Z, C, V, N); /* convert flag booleans (ZCVN) into its binary string representation */
+    System.out.println("HALT instruction");
+    System.out.printf("Instruction Complete: AC = %d R = %d ZCVN = %s AR = %d PC = %d DR = %d\n", AC, R, flagbits, AR, PC, val);
+  }
+
+
+  static void findOpCode (byte op){
+    switch(op){
+    case (byte)0:   /* 0000 0000 */
+      NOP();
+      return;
+    case (byte)1:   /* 0000 0001 */
+      LDAC();
+      return;
+    case (byte)2:   /* 0000 0010 */
+      STAC();
+      return;
+    case (byte)3:   /* 0000 0011 */
+      MVAC();
+      return;
+    case (byte)4:   /* 0000 0100 */
+      MOVR();
+      return;
+    case (byte)5:   /* 0000 0101 */
+      JUMP();
+      return;
+    case (byte)6:   /* 0000 0110 */
+      JMPZ();
+      return;
+    case (byte)7:   /* 0000 0111 */
+      JPNZ();
+      return;
+    case (byte)8:   /* 0000 1000 */
+      ADD();
+      return;
+    case (byte)9:   /* 0000 1001 */
+      SUB();
+      return;
+    case (byte)10:   /* 0000 1010 */
+      INAC();
+      return;
+    case (byte)11:   /* 0000 1011 */
+      CLAC();
+      return;
+    case (byte)12:   /* 0000 1100 */
+      AND();
+      return;
+    case (byte)13:   /* 0000 1101 */
+      OR();
+      return;
+    case (byte)14:   /* 0000 1110 */
+      XOR();
+      return;
+    case (byte)15:   /* 0000 1111 */
+      NOT();
+      return;
+    case (byte)16:   /* 0001 0000 */
+      JMPC();
+      return;
+    case (byte)17:   /* 0001 0001 */
+      JV();
+      return;
+    case (byte)18:   /* 0001 0010 */
+      RL();
+      return;
+    case (byte)19:   /* 0001 0011 */
+      RR();
+      return;
+    case (byte)20:   /* 0001 0100 */
+      LSL();
+      return;
+    case (byte)21:   /* 0001 0101 */
+      LSR();
+      return;
+    case (byte)22:   /* 0001 0110 */
+      MVI();
+      return;
+    case (byte)23:   /* 0001 0111 */
+      JN();
+      return;
+    case (byte)255: /* 1111 1111 */
+      HALT();
+      return;
+    default:
+      return;
+    }
+  }
+
+  static String flagsToString (boolean z, boolean c, boolean v, boolean n){
+    StringBuilder stringBuilder = new StringBuilder();
+    if(z == true)
+      stringBuilder.append("1");
+    else 
+      stringBuilder.append("0");
+    if(c == true)
+      stringBuilder.append("1");
+    else 
+      stringBuilder.append("0");
+    if(v == true)
+      stringBuilder.append("1");
+    else 
+      stringBuilder.append("0");
+    if(n == true)
+      stringBuilder.append("1");
+    else 
+      stringBuilder.append("0");
+
+    return stringBuilder.toString();
+  }
+
+  public static void main(String[] args){
+    String filename, line;
+    int count = 0, memSize = 65536;
+    byte byteVal;
+    File fd;
+    Scanner S = new Scanner(System.in);
+
+    AR = 0;
+    AC = 0;
+    R = 0;
+    PC = 0;
+    DR = 0;
+    IR = 0;
+    TR = 0;
+
+    M = new byte[memSize]; /* allocate array able to hold 2^8 simulated memory allocations */
+
+    for(int i = 0; i < memSize; i++){ /* initialize all memory allocations to zero */
+      M[i] = 0;
+    }
+    
+    System.out.print("rscpu written by Mason McIntyre\n");
+    System.out.print("Enter the name of the file containing the program: \n");
+    filename = S.next(); /* get filename */
+    
+    fd = new File(filename);
+    System.out.println("You've opened the file " + filename);
+
+    try{ /* check that the file is falid. */
+      S = new Scanner(fd); 
+    }catch (IOException e){
+      System.err.println(e);
+      System.exit(1);
+    }
+
+    while(S.hasNextLine()) { /* parse through file line by line */
+      line = S.nextLine();
+      M[count] = (byte)Integer.parseInt(line, 16); /* convert line into integer by parsing the string as a base 16 number and then cast to a byte */
+      count++;
+    }
+
+    System.out.print("End of file reached.\n");
+    fetchCycle(); /* initiate the first fetch instruction */
+    
+    for(int i = 0; i < count; i++){
+      findOpCode(M[i]); /* find the proper opcode for each byte read in */
+    }
+  }
+}

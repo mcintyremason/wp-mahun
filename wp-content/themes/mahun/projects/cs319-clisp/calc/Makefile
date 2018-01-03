@@ -1,0 +1,4 @@
+%.lisp.html : %.lisp
+	./format $< > $@
+
+

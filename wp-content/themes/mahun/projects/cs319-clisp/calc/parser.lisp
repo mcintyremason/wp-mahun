@@ -1,0 +1,74 @@
+;; parser.lisp - A recursive descent parser for the calculator program.
+
+;; match - Checks whether the next token is m and then discards it.
+(defun match (m)
+  (let* ((token (peek-t))
+         (type (getf token :type)))
+    (read-t)
+    (if (eq type m)
+        nil
+      (syntax-error m type))))
+
+;; syntax-error - Throws an error message when a syntax error is found.
+(defun syntax-error (expected found)
+  (flush-line)
+  (error (format nil "Syntax error: expecting ~a but found ~a." expected found)))
+
+;; line -> expr eol | eol
+(defun parse-line ()
+  (let* ((token (peek-t))
+         (type (getf token :type)))
+    (cond
+     ((eq type 'eol) (read-t) (make-empty-expr))
+     (t (prog1 (parse-expr) (match 'eol))))))
+
+;; expr -> add-expr
+(defun parse-expr ()
+  (parse-add-expr))
+
+;; add-expr -> mult-expr add-expr-tail
+(defun parse-add-expr ()
+  (let ((lrand (parse-mult-expr)))
+    (parse-add-expr-tail lrand)))
+    
+;; add-expr-tail -> empty | (PLUS | MINUS) mult-expr add-expr-tail
+(defun parse-add-expr-tail (lrand)
+  (let* ((token (peek-t))
+         (type (getf token :type)))
+    (cond 
+     ((or (eq type 'plus) (eq type 'minus))
+      (read-t)
+      (let ((rrand (parse-mult-expr)))
+        (parse-add-expr-tail (make-binary-expr type lrand rrand))))
+     (t lrand))))
+
+;; mult-expr -> prim-expr mult-expr-tail
+(defun parse-mult-expr ()
+  (let ((lrand (parse-prim-expr)))
+    (parse-mult-expr-tail lrand)))
+    
+;; mult-expr-tail -> empty | (TIMES | DIV | MOD)  prim-expr mult-expr-tail
+(defun parse-mult-expr-tail (lrand)
+  (let* ((token (peek-t))
+         (type (getf token :type)))
+    (cond ((or (eq type 'times) (eq type 'div) (eq type 'mod))
+           (read-t)
+           (let ((rrand (parse-prim-expr)))
+             (parse-mult-expr-tail (make-binary-expr type lrand rrand))))
+          (t lrand))))
+
+;; prim-expr -> INTEGER | LEFT-PAREN expr RIGHT-PAREN
+(defun parse-prim-expr ()
+  (let* ((token (peek-t))
+         (type (getf token :type)))
+    (cond 
+     ((eq type 'left-paren) 
+      (read-t)
+      (let ((e (parse-expr)))
+        (match 'right-paren)
+        e))
+     ((eq type 'integer)
+      (read-t)
+      (make-integer-expr (getf token :value)))
+     (t (read-t) 
+        (syntax-error "INTEGER or LEFT-PAREN" type)))))

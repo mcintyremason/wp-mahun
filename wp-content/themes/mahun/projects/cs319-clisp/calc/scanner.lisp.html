@@ -1,0 +1,156 @@
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; scanner.lisp - The lexical analyzer for the calculator program.</span>
+
+<span class="hl slc">;; A token is a property list with :type and :value keys. If the value is </span>
+<span class="hl slc">;; not important, then nil is stored.</span>
+
+<span class="hl slc">;; *buffer* - Holds the next token. If the value is nil then</span>
+<span class="hl slc">;;            the buffer is empty.</span>
+<span class="hl opt">(</span><span class="hl kwa">defvar</span> <span class="hl opt">*</span>buffer<span class="hl opt">*</span> nil<span class="hl opt">)</span>
+
+<span class="hl slc">;; peek-t - Returns, but does not discard, the next token.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> peek-t <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">if</span> <span class="hl opt">(</span><span class="hl kwa">null</span> <span class="hl opt">*</span>buffer<span class="hl opt">*) (</span><span class="hl kwa">fill-buffer</span><span class="hl opt">))</span>  
+  <span class="hl opt">*</span>buffer<span class="hl opt">*)</span>
+
+<span class="hl slc">;; read-t - Returns and discards the next token.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> read-t <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">prog1</span> <span class="hl opt">*</span>buffer<span class="hl opt">* (</span><span class="hl kwa">setq</span> <span class="hl opt">*</span>buffer<span class="hl opt">*</span> nil<span class="hl opt">)))</span>
+
+<span class="hl slc">;; read-c - Reads a character from standard input, returning nil </span>
+<span class="hl slc">;;          at end of file.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> read-c <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">read-char</span> <span class="hl opt">*</span>standard-input<span class="hl opt">*</span> nil nil<span class="hl opt">))</span>
+
+<span class="hl slc">;; peekc - Peeks at the next character in standard input without</span>
+<span class="hl slc">;;         removing it from the stream. Returns nil at end of file.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> peek-c <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">peek-char</span> nil <span class="hl opt">*</span>standard-input<span class="hl opt">*</span> nil nil<span class="hl opt">))</span>
+
+<span class="hl slc">;; read-digits - Reads digits as characters and returns a list in </span>
+<span class="hl slc">;;               reverse order. Chars is a list containing the first</span>
+<span class="hl slc">;;               character (which has already been read).</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> read-digits <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">c</span> <span class="hl opt">(</span><span class="hl kwa">peek-c</span><span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span>
+     <span class="hl opt">((</span><span class="hl kwa">null</span> c<span class="hl opt">)</span> nil<span class="hl opt">)</span>
+     <span class="hl opt">((</span><span class="hl kwa">digit-char-p</span> c<span class="hl opt">) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">cons</span> c <span class="hl opt">(</span><span class="hl kwa">read-digits</span><span class="hl opt">)))</span>
+     <span class="hl opt">(</span><span class="hl kwa">t</span> nil<span class="hl opt">))))</span>
+
+<span class="hl slc">;; make-integer - Converts a list of characters (digits) in reverse order</span>
+<span class="hl slc">;;                into integer.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> make-integer <span class="hl opt">(</span><span class="hl kwa">digits</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">read-from-string</span> <span class="hl opt">(</span><span class="hl kwa">coerce</span> digits <span class="hl opt">'</span>string<span class="hl opt">)))</span>
+
+<span class="hl slc">;; store-token - Stores a token in the buffer.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> store-token <span class="hl opt">(</span><span class="hl kwa">type</span> <span class="hl opt">&amp;</span>optional <span class="hl opt">(</span><span class="hl kwa">value</span> nil<span class="hl opt">))</span>
+  <span class="hl opt">(</span><span class="hl kwa">setq</span> <span class="hl opt">*</span>buffer<span class="hl opt">* (</span><span class="hl kwa">list</span> <span class="hl opt">:</span>type type <span class="hl opt">:</span>value value<span class="hl opt">)))</span>
+
+<span class="hl slc">;; fill-buffer - Fills the buffer with the next token.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> fill-buffer <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">c</span> <span class="hl opt">(</span><span class="hl kwa">peek-c</span><span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> <span class="hl opt">((</span><span class="hl kwa">null</span> c<span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>eof<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\space<span class="hl opt">) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">fill-buffer</span><span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">digit-char-p</span> c<span class="hl opt">)</span> 
+           <span class="hl opt">(</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>integer <span class="hl opt">(</span><span class="hl kwa">make-integer</span> <span class="hl opt">(</span><span class="hl kwa">read-digits</span><span class="hl opt">))))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span><span class="hl esc">\n</span>ewline<span class="hl opt">) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>eol<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\<span class="hl opt">() (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>left-paren<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\<span class="hl opt">)) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>right-paren<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\<span class="hl opt">+) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>plus<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\-<span class="hl opt">) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>minus<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\<span class="hl opt">*) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>times<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\<span class="hl opt">/) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>div<span class="hl opt">))</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span>\%<span class="hl opt">) (</span><span class="hl kwa">read-c</span><span class="hl opt">) (</span><span class="hl kwa">store-token</span> <span class="hl opt">'</span>mod<span class="hl opt">))</span>
+          <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">flush-line</span><span class="hl opt">) (</span><span class="hl kwa">error</span> <span class="hl opt">(</span><span class="hl kwa">format</span> nil <span class="hl str">&quot;Syntax error: invalid character [~a]&quot;</span> c<span class="hl opt">))))))</span>
+
+<span class="hl slc">;; flush-line - Discards the remainder of an input line. This function</span>
+<span class="hl slc">;;              is called after an error.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> flush-line <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">c</span> <span class="hl opt">(</span><span class="hl kwa">read-c</span><span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> <span class="hl opt">((</span><span class="hl kwa">null</span> c<span class="hl opt">)</span> nil<span class="hl opt">)</span>
+          <span class="hl opt">((</span><span class="hl kwa">char</span><span class="hl opt">=</span> c <span class="hl opt">#</span><span class="hl esc">\n</span>ewline<span class="hl opt">)</span> nil<span class="hl opt">)</span>
+          <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">flush-line</span><span class="hl opt">)))))</span>
+
+</pre>
+</div>
+</div>
+</div>

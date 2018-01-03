@@ -1,0 +1,35 @@
+;; eval-expr - Evaluate an expression.
+(defun eval-expr (e)
+  (let ((type (getf e :type)))
+    (cond 
+     ((eq type 'empty) (eval-empty-expr e))
+     ((eq type 'binary) (eval-binary-expr e))
+     ((eq type 'integer) (eval-integer-expr e)))))
+
+;; eval-binary-expr - Evaluate an expression with a binary operator.
+(defun eval-binary-expr (e)
+  ;; Extract the components.
+  (let* ((op (getf e :op))
+        (lrand (getf e :lrand))
+        (rrand (getf e :rrand))
+        (lrand-value (eval-expr lrand))
+        (rrand-value (eval-expr rrand)))
+    (cond
+     ;; Recursively evaluate the operands and apply the operator.
+     ((eq op 'plus) (+ lrand-value rrand-value))
+     ((eq op 'minus) (- lrand-value rrand-value))
+     ((eq op 'times) (* lrand-value rrand-value))
+     ((eq op 'div) 
+      (if (zerop rrand-value) 
+          (error "Error: division by zero")
+        (/ lrand-value rrand-value)))
+     ((eq op 'mode) 
+      (if (zerop rrand-value) 
+          (error "Error: division by zero")
+        (mod lrand-value rrand-value))))))
+
+;; eval-integer-expr - Evaluate an integer expression.
+(defun eval-integer-expr (e) (getf e :value))
+
+;; eval-empty-expr - Evaluate an empty expression. The value is always nil.
+(defun eval-empty-expr (e) nil)

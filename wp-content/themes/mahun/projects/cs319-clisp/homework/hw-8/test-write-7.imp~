@@ -1,0 +1,7 @@
+i := 1;
+n := 10;
+while i <= n do
+begin
+  write(i : i, n - i : n - 1);
+  writeln();
+end

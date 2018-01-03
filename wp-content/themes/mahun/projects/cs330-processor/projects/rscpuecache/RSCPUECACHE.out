@@ -1,0 +1,1476 @@
+Username:  mcintym
+Date:      Tue Apr 21 12:09:04 EDT 2015
+ 
+*** compiling ***
+--- running ---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.0
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+Value of AR = 1
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 2
+fetch 3: IR = 0 and AR = 2
+CLAC instruction
+CLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 2 PC = 2 DR = 0
+fetch 1: AR = 2 and PC = 2
+Value of AR = 2
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 3
+fetch 3: IR = 0 and AR = 3
+INAC instruction
+INAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 3 PC = 3 DR = 0
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+STAC instruction
+STAC1 DR = 32 PC = 5 AR = 5
+STAC2 TR = 32 DR = 0 PC = 6 AR = 5
+STAC3 AR = 8192
+STAC4 DR = 1
+Value of AR = 8192
+The main memory block number = 2048
+The cache line number = 0
+The cache tag and line = 0:0000
+Miss!
+The cache tag and line = 2:1,0,0,0
+STAC5 M[AR] = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 8192 PC = 6 DR = 1
+fetch 1: AR = 6 and PC = 6
+Value of AR = 6
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:1000
+Miss!
+The cache tag and line = 0:32,0,0,-1
+fetch 2: DR = 0 and PC = 7
+fetch 3: IR = 0 and AR = 7
+NOP instruction
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 7 PC = 7 DR = 0
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:3200-1
+Hit!
+The cache tag and line = 0:32,0,0,-1
+fetch 2: DR = 255 and PC = 8
+fetch 3: IR = 255 and AR = 8
+HALT instruction
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 8 PC = 8 DR = 255
+--- Running again ---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.c1
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+Value of AR = 1
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 2
+fetch 3: IR = 0 and AR = 2
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 2 PC = 2 DR = 0
+fetch 1: AR = 2 and PC = 2
+Value of AR = 2
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 3
+fetch 3: IR = 0 and AR = 3
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 3 PC = 3 DR = 0
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+XSTAC instruction
+XSTAC1 DR = 36 PC = 5 AR = 5
+XSTAC2 TR = 36 DR = 64 PC = 6 AR = 5
+XSTAC3 AR = 9280
+XSTAC4 DR = 1
+Value of AR = 9280
+The main memory block number = 2320
+The cache line number = 272
+The cache tag and line = 16:0000
+Miss!
+The cache tag and line = 2:0,0,0,0
+XSTAC5 M[AR] = 0
+Value of AR = 9281
+The main memory block number = 2320
+The cache line number = 272
+The cache tag and line = 2:0000
+Hit!
+The cache tag and line = 2:0,1,0,0
+XSTAC6 M[AR] = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 9281 PC = 6 DR = 1
+fetch 1: AR = 6 and PC = 6
+Value of AR = 6
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0100
+Miss!
+The cache tag and line = 0:36,64,-117,-127
+fetch 2: DR = 139 and PC = 7
+fetch 3: IR = 139 and AR = 7
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 7 PC = 7 DR = 139
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:3664-117-127
+Hit!
+The cache tag and line = 0:36,64,-117,-127
+fetch 2: DR = 129 and PC = 8
+fetch 3: IR = 129 and AR = 8
+XLDAC instruction
+XLDAC1 DR = 36 PC = 9 AR = 9
+XLDAC2 TR = 36 DR = 64 PC = 10 AR = 9
+XLDAC3 AR = 9280
+XLDAC4 DR = 0
+XLDAC5 DR = 1
+XLDAC6 AC = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 1000 AR = 9281 PC = 10 DR = 1
+fetch 1: AR = 10 and PC = 10
+Value of AR = 10
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:3664-117-127
+Miss!
+The cache tag and line = 0:36,64,0,-1
+fetch 2: DR = 0 and PC = 11
+fetch 3: IR = 0 and AR = 11
+NOP instruction
+Instruction Complete: AC = 1 R = 0 ZCVN = 1000 AR = 11 PC = 11 DR = 0
+fetch 1: AR = 11 and PC = 11
+Value of AR = 11
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:36640-1
+Hit!
+The cache tag and line = 0:36,64,0,-1
+fetch 2: DR = 255 and PC = 12
+fetch 3: IR = 255 and AR = 12
+HALT instruction
+Instruction Complete: AC = 1 R = 0 ZCVN = 1000 AR = 12 PC = 12 DR = 255
+--- runnning again---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.c2
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+MVI instruction
+MVI1 DR = 1 PC = 2 AR = 2
+MVI2 AC = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 2 PC = 2 DR = 1
+fetch 1: AR = 2 and PC = 2
+Value of AR = 2
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 3
+fetch 3: IR = 0 and AR = 3
+MVAC instruction
+MVAC1 R = 1
+Instruction Complete: AC = 1 R = 1 ZCVN = 0000 AR = 3 PC = 3 DR = 0
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+MVI instruction
+MVI1 DR = 5 PC = 5 AR = 5
+MVI2 AC = 5
+Instruction Complete: AC = 5 R = 1 ZCVN = 0000 AR = 5 PC = 5 DR = 5
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0000
+Miss!
+The cache tag and line = 0:5,2,32,64
+fetch 2: DR = 2 and PC = 6
+fetch 3: IR = 2 and AR = 6
+STAC instruction
+STAC1 DR = 32 PC = 7 AR = 7
+STAC2 TR = 32 DR = 64 PC = 8 AR = 7
+STAC3 AR = 8256
+STAC4 DR = 5
+Value of AR = 8256
+The main memory block number = 2064
+The cache line number = 16
+The cache tag and line = 16:523264
+Miss!
+The cache tag and line = 2:5,0,0,0
+STAC5 M[AR] = 5
+Instruction Complete: AC = 5 R = 1 ZCVN = 0000 AR = 8256 PC = 8 DR = 5
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:5000
+Miss!
+The cache tag and line = 0:9,7,0,5
+fetch 2: DR = 9 and PC = 9
+fetch 3: IR = 9 and AR = 9
+SUB instruction
+SUB1 AC = 4 ZCVN = 0100
+Instruction Complete: AC = 4 R = 1 ZCVN = 0100 AR = 9 PC = 9 DR = 9
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:9705
+Hit!
+The cache tag and line = 0:9,7,0,5
+fetch 2: DR = 7 and PC = 10
+fetch 3: IR = 7 and AR = 10
+JPNZ instruction
+JPNZY1 DR = 0 AR = 11
+JPNZY2 TR = 0 DR = 5
+JPNZY3 PC = 5
+Instruction Complete: AC = 4 R = 1 ZCVN = 0100 AR = 11 PC = 5 DR = 5
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:9705
+Hit!
+The cache tag and line = 0:9,7,0,5
+fetch 2: DR = 7 and PC = 6
+fetch 3: IR = 7 and AR = 6
+STAC instruction
+STAC1 DR = 32 PC = 7 AR = 7
+STAC2 TR = 32 DR = 64 PC = 8 AR = 7
+STAC3 AR = 8256
+STAC4 DR = 4
+Value of AR = 8256
+The main memory block number = 2064
+The cache line number = 16
+The cache tag and line = 2:9705
+Hit!
+The cache tag and line = 2:4,7,0,5
+STAC5 M[AR] = 4
+Instruction Complete: AC = 4 R = 1 ZCVN = 0100 AR = 8256 PC = 8 DR = 4
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:4705
+Hit!
+The cache tag and line = 0:4,7,0,5
+fetch 2: DR = 4 and PC = 9
+fetch 3: IR = 4 and AR = 9
+SUB instruction
+SUB1 AC = 3 ZCVN = 0100
+Instruction Complete: AC = 3 R = 1 ZCVN = 0100 AR = 9 PC = 9 DR = 4
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:4705
+Hit!
+The cache tag and line = 0:4,7,0,5
+fetch 2: DR = 7 and PC = 10
+fetch 3: IR = 7 and AR = 10
+JPNZ instruction
+JPNZY1 DR = 0 AR = 11
+JPNZY2 TR = 0 DR = 5
+JPNZY3 PC = 5
+Instruction Complete: AC = 3 R = 1 ZCVN = 0100 AR = 11 PC = 5 DR = 5
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:4705
+Hit!
+The cache tag and line = 0:4,7,0,5
+fetch 2: DR = 7 and PC = 6
+fetch 3: IR = 7 and AR = 6
+STAC instruction
+STAC1 DR = 32 PC = 7 AR = 7
+STAC2 TR = 32 DR = 64 PC = 8 AR = 7
+STAC3 AR = 8256
+STAC4 DR = 3
+Value of AR = 8256
+The main memory block number = 2064
+The cache line number = 16
+The cache tag and line = 2:4705
+Hit!
+The cache tag and line = 2:3,7,0,5
+STAC5 M[AR] = 3
+Instruction Complete: AC = 3 R = 1 ZCVN = 0100 AR = 8256 PC = 8 DR = 3
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:3705
+Hit!
+The cache tag and line = 0:3,7,0,5
+fetch 2: DR = 3 and PC = 9
+fetch 3: IR = 3 and AR = 9
+SUB instruction
+SUB1 AC = 2 ZCVN = 0100
+Instruction Complete: AC = 2 R = 1 ZCVN = 0100 AR = 9 PC = 9 DR = 3
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:3705
+Hit!
+The cache tag and line = 0:3,7,0,5
+fetch 2: DR = 7 and PC = 10
+fetch 3: IR = 7 and AR = 10
+JPNZ instruction
+JPNZY1 DR = 0 AR = 11
+JPNZY2 TR = 0 DR = 5
+JPNZY3 PC = 5
+Instruction Complete: AC = 2 R = 1 ZCVN = 0100 AR = 11 PC = 5 DR = 5
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:3705
+Hit!
+The cache tag and line = 0:3,7,0,5
+fetch 2: DR = 7 and PC = 6
+fetch 3: IR = 7 and AR = 6
+STAC instruction
+STAC1 DR = 32 PC = 7 AR = 7
+STAC2 TR = 32 DR = 64 PC = 8 AR = 7
+STAC3 AR = 8256
+STAC4 DR = 2
+Value of AR = 8256
+The main memory block number = 2064
+The cache line number = 16
+The cache tag and line = 2:3705
+Hit!
+The cache tag and line = 2:2,7,0,5
+STAC5 M[AR] = 2
+Instruction Complete: AC = 2 R = 1 ZCVN = 0100 AR = 8256 PC = 8 DR = 2
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:2705
+Hit!
+The cache tag and line = 0:2,7,0,5
+fetch 2: DR = 2 and PC = 9
+fetch 3: IR = 2 and AR = 9
+SUB instruction
+SUB1 AC = 1 ZCVN = 0100
+Instruction Complete: AC = 1 R = 1 ZCVN = 0100 AR = 9 PC = 9 DR = 2
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:2705
+Hit!
+The cache tag and line = 0:2,7,0,5
+fetch 2: DR = 7 and PC = 10
+fetch 3: IR = 7 and AR = 10
+JPNZ instruction
+JPNZY1 DR = 0 AR = 11
+JPNZY2 TR = 0 DR = 5
+JPNZY3 PC = 5
+Instruction Complete: AC = 1 R = 1 ZCVN = 0100 AR = 11 PC = 5 DR = 5
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:2705
+Hit!
+The cache tag and line = 0:2,7,0,5
+fetch 2: DR = 7 and PC = 6
+fetch 3: IR = 7 and AR = 6
+STAC instruction
+STAC1 DR = 32 PC = 7 AR = 7
+STAC2 TR = 32 DR = 64 PC = 8 AR = 7
+STAC3 AR = 8256
+STAC4 DR = 1
+Value of AR = 8256
+The main memory block number = 2064
+The cache line number = 16
+The cache tag and line = 2:2705
+Hit!
+The cache tag and line = 2:1,7,0,5
+STAC5 M[AR] = 1
+Instruction Complete: AC = 1 R = 1 ZCVN = 0100 AR = 8256 PC = 8 DR = 1
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:1705
+Hit!
+The cache tag and line = 0:1,7,0,5
+fetch 2: DR = 1 and PC = 9
+fetch 3: IR = 1 and AR = 9
+SUB instruction
+SUB1 AC = 0 ZCVN = 1100
+Instruction Complete: AC = 0 R = 1 ZCVN = 1100 AR = 9 PC = 9 DR = 1
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:1705
+Hit!
+The cache tag and line = 0:1,7,0,5
+fetch 2: DR = 7 and PC = 10
+fetch 3: IR = 7 and AR = 10
+JPNZ instruction
+JPNZN1 PC = 11
+JPNZN2 PC = 12
+Instruction Complete: AC = 0 R = 1 ZCVN = 1100 AR = 0 PC = 12 DR = 7
+fetch 1: AR = 12 and PC = 12
+Value of AR = 12
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 3:1705
+Miss!
+The cache tag and line = 0:-1,0,0,0
+fetch 2: DR = 255 and PC = 13
+fetch 3: IR = 255 and AR = 13
+HALT instruction
+Instruction Complete: AC = 0 R = 1 ZCVN = 1100 AR = 13 PC = 13 DR = 255
+--- running again---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.c3
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+XMVI instruction
+XMVI1 DR = 0 PC = 2 AR = 2
+XMVI2 DR = 0 PC = 3 AR = 3
+XMVI3 AC = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 3 PC = 3 DR = 1
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+XSTAC instruction
+XSTAC1 DR = 4 PC = 5 AR = 5
+XSTAC2 TR = 4 DR = 0 PC = 6 AR = 5
+XSTAC3 AR = 1024
+XSTAC4 DR = 0
+Value of AR = 1024
+The main memory block number = 256
+The cache line number = 256
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+XSTAC5 M[AR] = 0
+Value of AR = 1025
+The main memory block number = 256
+The cache line number = 256
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+XSTAC6 M[AR] = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1025 PC = 6 DR = 0
+fetch 1: AR = 6 and PC = 6
+Value of AR = 6
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0000
+Miss!
+The cache tag and line = 0:4,0,-118,-126
+fetch 2: DR = 138 and PC = 7
+fetch 3: IR = 138 and AR = 7
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 7 PC = 7 DR = 138
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:40-118-126
+Hit!
+The cache tag and line = 0:4,0,-118,-126
+fetch 2: DR = 130 and PC = 8
+fetch 3: IR = 130 and AR = 8
+XSTAC instruction
+XSTAC1 DR = 4 PC = 9 AR = 9
+XSTAC2 TR = 4 DR = 4 PC = 10 AR = 9
+XSTAC3 AR = 1028
+XSTAC4 DR = 1
+Value of AR = 1028
+The main memory block number = 257
+The cache line number = 257
+The cache tag and line = 1:40-118-126
+Miss!
+The cache tag and line = 0:0,0,0,0
+XSTAC5 M[AR] = 0
+Value of AR = 1029
+The main memory block number = 257
+The cache line number = 257
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,1,0,0
+XSTAC6 M[AR] = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 1029 PC = 10 DR = 1
+fetch 1: AR = 10 and PC = 10
+Value of AR = 10
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:0100
+Miss!
+The cache tag and line = 0:4,4,-118,-126
+fetch 2: DR = 138 and PC = 11
+fetch 3: IR = 138 and AR = 11
+XINAC instruction
+XINAC1 AC = 2 ZCVN = 0000
+Instruction Complete: AC = 2 R = 0 ZCVN = 0000 AR = 11 PC = 11 DR = 138
+fetch 1: AR = 11 and PC = 11
+Value of AR = 11
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:44-118-126
+Hit!
+The cache tag and line = 0:4,4,-118,-126
+fetch 2: DR = 130 and PC = 12
+fetch 3: IR = 130 and AR = 12
+XSTAC instruction
+XSTAC1 DR = 4 PC = 13 AR = 13
+XSTAC2 TR = 4 DR = 8 PC = 14 AR = 13
+XSTAC3 AR = 1032
+XSTAC4 DR = 2
+Value of AR = 1032
+The main memory block number = 258
+The cache line number = 258
+The cache tag and line = 2:44-118-126
+Miss!
+The cache tag and line = 0:0,0,0,0
+XSTAC5 M[AR] = 0
+Value of AR = 1033
+The main memory block number = 258
+The cache line number = 258
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,2,0,0
+XSTAC6 M[AR] = 2
+Instruction Complete: AC = 2 R = 0 ZCVN = 0000 AR = 1033 PC = 14 DR = 2
+fetch 1: AR = 14 and PC = 14
+Value of AR = 14
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 3:0200
+Miss!
+The cache tag and line = 0:4,8,-118,-126
+fetch 2: DR = 138 and PC = 15
+fetch 3: IR = 138 and AR = 15
+XINAC instruction
+XINAC1 AC = 3 ZCVN = 0000
+Instruction Complete: AC = 3 R = 0 ZCVN = 0000 AR = 15 PC = 15 DR = 138
+fetch 1: AR = 15 and PC = 15
+Value of AR = 15
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:48-118-126
+Hit!
+The cache tag and line = 0:4,8,-118,-126
+fetch 2: DR = 130 and PC = 16
+fetch 3: IR = 130 and AR = 16
+XSTAC instruction
+XSTAC1 DR = 4 PC = 17 AR = 17
+XSTAC2 TR = 4 DR = 8 PC = 18 AR = 17
+XSTAC3 AR = 1032
+XSTAC4 DR = 3
+Value of AR = 1032
+The main memory block number = 258
+The cache line number = 258
+The cache tag and line = 0:48-118-126
+Hit!
+The cache tag and line = 0:0,8,-118,-126
+XSTAC5 M[AR] = 0
+Value of AR = 1033
+The main memory block number = 258
+The cache line number = 258
+The cache tag and line = 0:08-118-126
+Hit!
+The cache tag and line = 0:0,3,-118,-126
+XSTAC6 M[AR] = 3
+Instruction Complete: AC = 3 R = 0 ZCVN = 0000 AR = 1033 PC = 18 DR = 3
+fetch 1: AR = 18 and PC = 18
+Value of AR = 18
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 4:03-118-126
+Miss!
+The cache tag and line = 0:4,8,-127,4
+fetch 2: DR = 129 and PC = 19
+fetch 3: IR = 129 and AR = 19
+XLDAC instruction
+XLDAC1 DR = 4 PC = 20 AR = 20
+XLDAC2 TR = 4 DR = 0 PC = 21 AR = 20
+XLDAC3 AR = 1024
+XLDAC4 DR = 0
+XLDAC5 DR = 0
+XLDAC6 AC = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1025 PC = 21 DR = 0
+fetch 1: AR = 21 and PC = 21
+Value of AR = 21
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 5:48-1274
+Miss!
+The cache tag and line = 0:0,-127,4,4
+fetch 2: DR = 129 and PC = 22
+fetch 3: IR = 129 and AR = 22
+XLDAC instruction
+XLDAC1 DR = 4 PC = 23 AR = 23
+XLDAC2 TR = 4 DR = 4 PC = 24 AR = 23
+XLDAC3 AR = 1028
+XLDAC4 DR = 0
+XLDAC5 DR = 1
+XLDAC6 AC = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 1029 PC = 24 DR = 1
+fetch 1: AR = 24 and PC = 24
+Value of AR = 24
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 6:0-12744
+Miss!
+The cache tag and line = 0:-1,0,0,0
+fetch 2: DR = 255 and PC = 25
+fetch 3: IR = 255 and AR = 25
+HALT instruction
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 25 PC = 25 DR = 255
+--- running again---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.6
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+Value of AR = 1
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 2
+fetch 3: IR = 0 and AR = 2
+MVI instruction
+MVI1 DR = 1 PC = 3 AR = 3
+MVI2 AC = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 3 PC = 3 DR = 1
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+INAC instruction
+INAC1 AC = 2 ZCVN = 0000
+Instruction Complete: AC = 2 R = 0 ZCVN = 0000 AR = 4 PC = 4 DR = 0
+fetch 1: AR = 4 and PC = 4
+Value of AR = 4
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0000
+Miss!
+The cache tag and line = 0:3,22,10,8
+fetch 2: DR = 3 and PC = 5
+fetch 3: IR = 3 and AR = 5
+MVAC instruction
+MVAC1 R = 2
+Instruction Complete: AC = 2 R = 2 ZCVN = 0000 AR = 5 PC = 5 DR = 3
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:322108
+Hit!
+The cache tag and line = 0:3,22,10,8
+fetch 2: DR = 22 and PC = 6
+fetch 3: IR = 22 and AR = 6
+MVI instruction
+MVI1 DR = 10 PC = 7 AR = 7
+MVI2 AC = 10
+Instruction Complete: AC = 10 R = 2 ZCVN = 0000 AR = 7 PC = 7 DR = 10
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:322108
+Hit!
+The cache tag and line = 0:3,22,10,8
+fetch 2: DR = 8 and PC = 8
+fetch 3: IR = 8 and AR = 8
+ADD instruction
+ADD1 AC = 12 ZCVN = 0000
+Instruction Complete: AC = 12 R = 2 ZCVN = 0000 AR = 8 PC = 8 DR = 8
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:322108
+Miss!
+The cache tag and line = 0:10,9,22,1
+fetch 2: DR = 10 and PC = 9
+fetch 3: IR = 10 and AR = 9
+INAC instruction
+INAC1 AC = 13 ZCVN = 0000
+Instruction Complete: AC = 13 R = 2 ZCVN = 0000 AR = 9 PC = 9 DR = 10
+fetch 1: AR = 9 and PC = 9
+Value of AR = 9
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:109221
+Hit!
+The cache tag and line = 0:10,9,22,1
+fetch 2: DR = 9 and PC = 10
+fetch 3: IR = 9 and AR = 10
+SUB instruction
+SUB1 AC = 11 ZCVN = 0100
+Instruction Complete: AC = 11 R = 2 ZCVN = 0100 AR = 10 PC = 10 DR = 9
+fetch 1: AR = 10 and PC = 10
+Value of AR = 10
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:109221
+Hit!
+The cache tag and line = 0:10,9,22,1
+fetch 2: DR = 22 and PC = 11
+fetch 3: IR = 22 and AR = 11
+MVI instruction
+MVI1 DR = 1 PC = 12 AR = 12
+MVI2 AC = 1
+Instruction Complete: AC = 1 R = 2 ZCVN = 0100 AR = 12 PC = 12 DR = 1
+fetch 1: AR = 12 and PC = 12
+Value of AR = 12
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 3:109221
+Miss!
+The cache tag and line = 0:19,18,20,21
+fetch 2: DR = 19 and PC = 13
+fetch 3: IR = 19 and AR = 13
+RR instruction
+RR1 AC = -128, ZCVN = 0111
+Instruction Complete: AC = -128 R = 2 ZCVN = 0111 AR = 13 PC = 13 DR = 19
+fetch 1: AR = 13 and PC = 13
+Value of AR = 13
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:19182021
+Hit!
+The cache tag and line = 0:19,18,20,21
+fetch 2: DR = 18 and PC = 14
+fetch 3: IR = 18 and AR = 14
+RL instruction
+RL1 AC = 1, ZCVN = 0110
+Instruction Complete: AC = 1 R = 2 ZCVN = 0110 AR = 14 PC = 14 DR = 18
+fetch 1: AR = 14 and PC = 14
+Value of AR = 14
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:19182021
+Hit!
+The cache tag and line = 0:19,18,20,21
+fetch 2: DR = 20 and PC = 15
+fetch 3: IR = 20 and AR = 15
+LSL instruction
+LSL1 AC = 2, ZCVN = 0000
+Instruction Complete: AC = 2 R = 2 ZCVN = 0000 AR = 15 PC = 15 DR = 20
+fetch 1: AR = 15 and PC = 15
+Value of AR = 15
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:19182021
+Hit!
+The cache tag and line = 0:19,18,20,21
+fetch 2: DR = 21 and PC = 16
+fetch 3: IR = 21 and AR = 16
+LSR instruction
+LSR1 AC = 1, ZCVN = 0000
+Instruction Complete: AC = 1 R = 2 ZCVN = 0000 AR = 16 PC = 16 DR = 21
+fetch 1: AR = 16 and PC = 16
+Value of AR = 16
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 4:19182021
+Miss!
+The cache tag and line = 0:22,15,3,22
+fetch 2: DR = 22 and PC = 17
+fetch 3: IR = 22 and AR = 17
+MVI instruction
+MVI1 DR = 15 PC = 18 AR = 18
+MVI2 AC = 15
+Instruction Complete: AC = 15 R = 2 ZCVN = 0000 AR = 18 PC = 18 DR = 15
+fetch 1: AR = 18 and PC = 18
+Value of AR = 18
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 0:2215322
+Hit!
+The cache tag and line = 0:22,15,3,22
+fetch 2: DR = 3 and PC = 19
+fetch 3: IR = 3 and AR = 19
+MVAC instruction
+MVAC1 R = 15
+Instruction Complete: AC = 15 R = 15 ZCVN = 0000 AR = 19 PC = 19 DR = 3
+fetch 1: AR = 19 and PC = 19
+Value of AR = 19
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 0:2215322
+Hit!
+The cache tag and line = 0:22,15,3,22
+fetch 2: DR = 22 and PC = 20
+fetch 3: IR = 22 and AR = 20
+MVI instruction
+MVI1 DR = -16 PC = 21 AR = 21
+MVI2 AC = -16
+Instruction Complete: AC = -16 R = 15 ZCVN = 0000 AR = 21 PC = 21 DR = -16
+fetch 1: AR = 21 and PC = 21
+Value of AR = 21
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 5:2215322
+Miss!
+The cache tag and line = 0:-16,13,14,22
+fetch 2: DR = 13 and PC = 22
+fetch 3: IR = 13 and AR = 22
+OR instruction
+OR1 AC = -1, R = 15 ZCVN = 0001
+Instruction Complete: AC = -1 R = 15 ZCVN = 0001 AR = 22 PC = 22 DR = 13
+fetch 1: AR = 22 and PC = 22
+Value of AR = 22
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 0:-16131422
+Hit!
+The cache tag and line = 0:-16,13,14,22
+fetch 2: DR = 14 and PC = 23
+fetch 3: IR = 14 and AR = 23
+XOR instruction
+XOR1 AC = -16, R = 15 ZCVN = 0001
+Instruction Complete: AC = -16 R = 15 ZCVN = 0001 AR = 23 PC = 23 DR = 14
+fetch 1: AR = 23 and PC = 23
+Value of AR = 23
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 0:-16131422
+Hit!
+The cache tag and line = 0:-16,13,14,22
+fetch 2: DR = 22 and PC = 24
+fetch 3: IR = 22 and AR = 24
+MVI instruction
+MVI1 DR = 15 PC = 25 AR = 25
+MVI2 AC = 15
+Instruction Complete: AC = 15 R = 15 ZCVN = 0001 AR = 25 PC = 25 DR = 15
+fetch 1: AR = 25 and PC = 25
+Value of AR = 25
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 6:-16131422
+Miss!
+The cache tag and line = 0:15,3,12,-1
+fetch 2: DR = 3 and PC = 26
+fetch 3: IR = 3 and AR = 26
+MVAC instruction
+MVAC1 R = 15
+Instruction Complete: AC = 15 R = 15 ZCVN = 0001 AR = 26 PC = 26 DR = 3
+fetch 1: AR = 26 and PC = 26
+Value of AR = 26
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 0:15312-1
+Hit!
+The cache tag and line = 0:15,3,12,-1
+fetch 2: DR = 12 and PC = 27
+fetch 3: IR = 12 and AR = 27
+AND instruction
+ADD1 AC = 15, R = 15 ZCVN = 0000
+Instruction Complete: AC = 15 R = 15 ZCVN = 0000 AR = 27 PC = 27 DR = 12
+fetch 1: AR = 27 and PC = 27
+Value of AR = 27
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 0:15312-1
+Hit!
+The cache tag and line = 0:15,3,12,-1
+fetch 2: DR = 255 and PC = 28
+fetch 3: IR = 255 and AR = 28
+HALT instruction
+Instruction Complete: AC = 15 R = 15 ZCVN = 0000 AR = 28 PC = 28 DR = 255
+--- running again---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/test.7
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+Value of AR = 1
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 2
+fetch 3: IR = 0 and AR = 2
+XLDAC instruction
+XLDAC1 DR = 0 PC = 3 AR = 3
+XLDAC2 TR = 0 DR = 41 PC = 4 AR = 3
+XLDAC3 AR = 41
+XLDAC4 DR = 0
+XLDAC5 DR = 2
+XLDAC6 AC = 2
+Instruction Complete: AC = 2 R = 0 ZCVN = 0000 AR = 42 PC = 4 DR = 2
+fetch 1: AR = 4 and PC = 4
+Value of AR = 4
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0000
+Miss!
+The cache tag and line = 0:-125,-120,-119,-118
+fetch 2: DR = 131 and PC = 5
+fetch 3: IR = 131 and AR = 5
+XMVAC instruction
+XMVAC1 R = 2
+Instruction Complete: AC = 2 R = 2 ZCVN = 0000 AR = 5 PC = 5 DR = 131
+fetch 1: AR = 5 and PC = 5
+Value of AR = 5
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:-125-120-119-118
+Hit!
+The cache tag and line = 0:-125,-120,-119,-118
+fetch 2: DR = 136 and PC = 6
+fetch 3: IR = 136 and AR = 6
+XADD instruction
+XADD1 AC = 4 ZCVN = 0000
+Instruction Complete: AC = 4 R = 2 ZCVN = 0000 AR = 6 PC = 6 DR = 136
+fetch 1: AR = 6 and PC = 6
+Value of AR = 6
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:-125-120-119-118
+Hit!
+The cache tag and line = 0:-125,-120,-119,-118
+fetch 2: DR = 137 and PC = 7
+fetch 3: IR = 137 and AR = 7
+XSUB instruction
+XSUB1 AC = 2 ZCVN = 0100
+Instruction Complete: AC = 2 R = 2 ZCVN = 0100 AR = 7 PC = 7 DR = 137
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:-125-120-119-118
+Hit!
+The cache tag and line = 0:-125,-120,-119,-118
+fetch 2: DR = 138 and PC = 8
+fetch 3: IR = 138 and AR = 8
+XINAC instruction
+XINAC1 AC = 3 ZCVN = 0000
+Instruction Complete: AC = 3 R = 2 ZCVN = 0000 AR = 8 PC = 8 DR = 138
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:-125-120-119-118
+Miss!
+The cache tag and line = 0:-126,0,46,-117
+fetch 2: DR = 130 and PC = 9
+fetch 3: IR = 130 and AR = 9
+XSTAC instruction
+XSTAC1 DR = 0 PC = 10 AR = 10
+XSTAC2 TR = 0 DR = 46 PC = 11 AR = 10
+XSTAC3 AR = 46
+XSTAC4 DR = 3
+Value of AR = 46
+The main memory block number = 11
+The cache line number = 11
+The cache tag and line = 11:-126046-117
+Miss!
+The cache tag and line = 0:-1,-128,0,0
+XSTAC5 M[AR] = 0
+Value of AR = 47
+The main memory block number = 11
+The cache line number = 11
+The cache tag and line = 0:-1-12800
+Hit!
+The cache tag and line = 0:-1,-128,0,3
+XSTAC6 M[AR] = 3
+Instruction Complete: AC = 3 R = 2 ZCVN = 0000 AR = 47 PC = 11 DR = 3
+fetch 1: AR = 11 and PC = 11
+Value of AR = 11
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 0:-1-12803
+Hit!
+The cache tag and line = 0:-1,-128,0,3
+fetch 2: DR = 3 and PC = 12
+fetch 3: IR = 3 and AR = 12
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 2 ZCVN = 1000 AR = 12 PC = 12 DR = 3
+fetch 1: AR = 12 and PC = 12
+Value of AR = 12
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 3:-1-12803
+Miss!
+The cache tag and line = 0:-116,-115,-119,-114
+fetch 2: DR = 140 and PC = 13
+fetch 3: IR = 140 and AR = 13
+XAND instruction
+XADD1 AC = 0, R = 2 ZCVN = 1000
+Instruction Complete: AC = 0 R = 2 ZCVN = 1000 AR = 13 PC = 13 DR = 140
+fetch 1: AR = 13 and PC = 13
+Value of AR = 13
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:-116-115-119-114
+Hit!
+The cache tag and line = 0:-116,-115,-119,-114
+fetch 2: DR = 141 and PC = 14
+fetch 3: IR = 141 and AR = 14
+EXOR instruction
+EXOR1 AC = 2, R = 2 ZCVN = 0000
+Instruction Complete: AC = 2 R = 2 ZCVN = 0000 AR = 14 PC = 14 DR = 141
+fetch 1: AR = 14 and PC = 14
+Value of AR = 14
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:-116-115-119-114
+Hit!
+The cache tag and line = 0:-116,-115,-119,-114
+fetch 2: DR = 137 and PC = 15
+fetch 3: IR = 137 and AR = 15
+XSUB instruction
+XSUB1 AC = 0 ZCVN = 1100
+Instruction Complete: AC = 0 R = 2 ZCVN = 1100 AR = 15 PC = 15 DR = 137
+fetch 1: AR = 15 and PC = 15
+Value of AR = 15
+The main memory block number = 3
+The cache line number = 3
+The cache tag and line = 0:-116-115-119-114
+Hit!
+The cache tag and line = 0:-116,-115,-119,-114
+fetch 2: DR = 142 and PC = 16
+fetch 3: IR = 142 and AR = 16
+XXOR instruction
+XXOR1 AC = 2, R = 2 ZCVN = 0100
+Instruction Complete: AC = 2 R = 2 ZCVN = 0100 AR = 16 PC = 16 DR = 142
+fetch 1: AR = 16 and PC = 16
+Value of AR = 16
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 4:-116-115-119-114
+Miss!
+The cache tag and line = 0:-118,-113,-117,-118
+fetch 2: DR = 138 and PC = 17
+fetch 3: IR = 138 and AR = 17
+XINAC instruction
+XINAC1 AC = 3 ZCVN = 0000
+Instruction Complete: AC = 3 R = 2 ZCVN = 0000 AR = 17 PC = 17 DR = 138
+fetch 1: AR = 17 and PC = 17
+Value of AR = 17
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 0:-118-113-117-118
+Hit!
+The cache tag and line = 0:-118,-113,-117,-118
+fetch 2: DR = 143 and PC = 18
+fetch 3: IR = 143 and AR = 18
+XNOT instruction
+XNOT1 AC = -4, ZCVN = 0001
+Instruction Complete: AC = -4 R = 2 ZCVN = 0001 AR = 18 PC = 18 DR = 143
+fetch 1: AR = 18 and PC = 18
+Value of AR = 18
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 0:-118-113-117-118
+Hit!
+The cache tag and line = 0:-118,-113,-117,-118
+fetch 2: DR = 139 and PC = 19
+fetch 3: IR = 139 and AR = 19
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 2 ZCVN = 1000 AR = 19 PC = 19 DR = 139
+fetch 1: AR = 19 and PC = 19
+Value of AR = 19
+The main memory block number = 4
+The cache line number = 4
+The cache tag and line = 0:-118-113-117-118
+Hit!
+The cache tag and line = 0:-118,-113,-117,-118
+fetch 2: DR = 138 and PC = 20
+fetch 3: IR = 138 and AR = 20
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 2 ZCVN = 0000 AR = 20 PC = 20 DR = 138
+fetch 1: AR = 20 and PC = 20
+Value of AR = 20
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 5:-118-113-117-118
+Miss!
+The cache tag and line = 0:-108,-107,-109,-110
+fetch 2: DR = 148 and PC = 21
+fetch 3: IR = 148 and AR = 21
+XLSL instruction
+XLSL1 AC = 2, ZCVN = 0000
+Instruction Complete: AC = 2 R = 2 ZCVN = 0000 AR = 21 PC = 21 DR = 148
+fetch 1: AR = 21 and PC = 21
+Value of AR = 21
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 0:-108-107-109-110
+Hit!
+The cache tag and line = 0:-108,-107,-109,-110
+fetch 2: DR = 149 and PC = 22
+fetch 3: IR = 149 and AR = 22
+XLSR instruction
+XLSR1 AC = 1, ZCVN = 0000
+Instruction Complete: AC = 1 R = 2 ZCVN = 0000 AR = 22 PC = 22 DR = 149
+fetch 1: AR = 22 and PC = 22
+Value of AR = 22
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 0:-108-107-109-110
+Hit!
+The cache tag and line = 0:-108,-107,-109,-110
+fetch 2: DR = 147 and PC = 23
+fetch 3: IR = 147 and AR = 23
+XRR instruction
+XRR1 AC = -32768, ZCVN = 0111
+Instruction Complete: AC = -32768 R = 2 ZCVN = 0111 AR = 23 PC = 23 DR = 147
+fetch 1: AR = 23 and PC = 23
+Value of AR = 23
+The main memory block number = 5
+The cache line number = 5
+The cache tag and line = 0:-108-107-109-110
+Hit!
+The cache tag and line = 0:-108,-107,-109,-110
+fetch 2: DR = 146 and PC = 24
+fetch 3: IR = 146 and AR = 24
+XRL instruction
+XRL1 AC = 1, ZCVN = 0110
+Instruction Complete: AC = 1 R = 2 ZCVN = 0110 AR = 24 PC = 24 DR = 146
+fetch 1: AR = 24 and PC = 24
+Value of AR = 24
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 6:-108-107-109-110
+Miss!
+The cache tag and line = 0:-127,0,43,-125
+fetch 2: DR = 129 and PC = 25
+fetch 3: IR = 129 and AR = 25
+XLDAC instruction
+XLDAC1 DR = 0 PC = 26 AR = 26
+XLDAC2 TR = 0 DR = 43 PC = 27 AR = 26
+XLDAC3 AR = 43
+XLDAC4 DR = 127
+XLDAC5 DR = -1
+XLDAC6 AC = 32767
+Instruction Complete: AC = 32767 R = 2 ZCVN = 0110 AR = 44 PC = 27 DR = -1
+fetch 1: AR = 27 and PC = 27
+Value of AR = 27
+The main memory block number = 6
+The cache line number = 6
+The cache tag and line = 0:-127043-125
+Hit!
+The cache tag and line = 0:-127,0,43,-125
+fetch 2: DR = 131 and PC = 28
+fetch 3: IR = 131 and AR = 28
+XMVAC instruction
+XMVAC1 R = 32767
+Instruction Complete: AC = 32767 R = 32767 ZCVN = 0110 AR = 28 PC = 28 DR = 131
+fetch 1: AR = 28 and PC = 28
+Value of AR = 28
+The main memory block number = 7
+The cache line number = 7
+The cache tag and line = 7:-127043-125
+Miss!
+The cache tag and line = 0:-117,-118,-120,-119
+fetch 2: DR = 139 and PC = 29
+fetch 3: IR = 139 and AR = 29
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 32767 ZCVN = 1000 AR = 29 PC = 29 DR = 139
+fetch 1: AR = 29 and PC = 29
+Value of AR = 29
+The main memory block number = 7
+The cache line number = 7
+The cache tag and line = 0:-117-118-120-119
+Hit!
+The cache tag and line = 0:-117,-118,-120,-119
+fetch 2: DR = 138 and PC = 30
+fetch 3: IR = 138 and AR = 30
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 32767 ZCVN = 0000 AR = 30 PC = 30 DR = 138
+fetch 1: AR = 30 and PC = 30
+Value of AR = 30
+The main memory block number = 7
+The cache line number = 7
+The cache tag and line = 0:-117-118-120-119
+Hit!
+The cache tag and line = 0:-117,-118,-120,-119
+fetch 2: DR = 136 and PC = 31
+fetch 3: IR = 136 and AR = 31
+XADD instruction
+XADD1 AC = -32768 ZCVN = 0111
+Instruction Complete: AC = -32768 R = 32767 ZCVN = 0111 AR = 31 PC = 31 DR = 136
+fetch 1: AR = 31 and PC = 31
+Value of AR = 31
+The main memory block number = 7
+The cache line number = 7
+The cache tag and line = 0:-117-118-120-119
+Hit!
+The cache tag and line = 0:-117,-118,-120,-119
+fetch 2: DR = 137 and PC = 32
+fetch 3: IR = 137 and AR = 32
+XSUB instruction
+XSUB1 AC = 1 ZCVN = 0110
+Instruction Complete: AC = 1 R = 32767 ZCVN = 0110 AR = 32 PC = 32 DR = 137
+fetch 1: AR = 32 and PC = 32
+Value of AR = 32
+The main memory block number = 8
+The cache line number = 8
+The cache tag and line = 8:-117-118-120-119
+Miss!
+The cache tag and line = 0:-127,0,43,1
+fetch 2: DR = 129 and PC = 33
+fetch 3: IR = 129 and AR = 33
+XLDAC instruction
+XLDAC1 DR = 0 PC = 34 AR = 34
+XLDAC2 TR = 0 DR = 43 PC = 35 AR = 34
+XLDAC3 AR = 43
+XLDAC4 DR = 127
+XLDAC5 DR = -1
+XLDAC6 AC = 32767
+Instruction Complete: AC = 32767 R = 32767 ZCVN = 0110 AR = 44 PC = 35 DR = -1
+fetch 1: AR = 35 and PC = 35
+Value of AR = 35
+The main memory block number = 8
+The cache line number = 8
+The cache tag and line = 0:-1270431
+Hit!
+The cache tag and line = 0:-127,0,43,1
+fetch 2: DR = 1 and PC = 36
+fetch 3: IR = 1 and AR = 36
+LDAC instruction
+LDAC1 DR = 0 PC = 37 AR = 37
+LDAC2 TR = 0 DR = 45 PC = 38 AR = 37
+LDAC3 AR = 45
+LDAC4 DR = -128
+LDAC5 AC = -128
+Instruction Complete: AC = -128 R = 32767 ZCVN = 0110 AR = 45 PC = 38 DR = -128
+fetch 1: AR = 38 and PC = 38
+Value of AR = 38
+The main memory block number = 9
+The cache line number = 9
+The cache tag and line = 9:-1270431
+Miss!
+The cache tag and line = 0:0,45,8,11
+fetch 2: DR = 8 and PC = 39
+fetch 3: IR = 8 and AR = 39
+ADD instruction
+ADD1 AC = 127 ZCVN = 0110
+Instruction Complete: AC = 127 R = 32767 ZCVN = 0110 AR = 39 PC = 39 DR = 8
+fetch 1: AR = 39 and PC = 39
+Value of AR = 39
+The main memory block number = 9
+The cache line number = 9
+The cache tag and line = 0:045811
+Hit!
+The cache tag and line = 0:0,45,8,11
+fetch 2: DR = 11 and PC = 40
+fetch 3: IR = 11 and AR = 40
+CLAC instruction
+CLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 32767 ZCVN = 1000 AR = 40 PC = 40 DR = 11
+fetch 1: AR = 40 and PC = 40
+Value of AR = 40
+The main memory block number = 10
+The cache line number = 10
+The cache tag and line = 10:045811
+Miss!
+The cache tag and line = 0:-1,0,2,127
+fetch 2: DR = 255 and PC = 41
+fetch 3: IR = 255 and AR = 41
+HALT instruction
+Instruction Complete: AC = 0 R = 32767 ZCVN = 1000 AR = 41 PC = 41 DR = 255
+--- running again---
+ 
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file /home/mathcs/turnin/bracken/cs330/dummy
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+Value of AR = 0
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+XMVI instruction
+XMVI1 DR = 0 PC = 2 AR = 2
+XMVI2 DR = 0 PC = 3 AR = 3
+XMVI3 AC = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 3 PC = 3 DR = -1
+fetch 1: AR = 3 and PC = 3
+Value of AR = 3
+The main memory block number = 0
+The cache line number = 0
+The cache tag and line = 0:0000
+Hit!
+The cache tag and line = 0:0,0,0,0
+fetch 2: DR = 0 and PC = 4
+fetch 3: IR = 0 and AR = 4
+XMVAC instruction
+XMVAC1 R = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 4 PC = 4 DR = 0
+fetch 1: AR = 4 and PC = 4
+Value of AR = 4
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 1:0000
+Miss!
+The cache tag and line = 0:-106,-128,0,-120
+fetch 2: DR = 150 and PC = 5
+fetch 3: IR = 150 and AR = 5
+XMVI instruction
+XMVI1 DR = 0 PC = 6 AR = 6
+XMVI2 DR = 0 PC = 7 AR = 7
+XMVI3 AC = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 7 PC = 7 DR = 0
+fetch 1: AR = 7 and PC = 7
+Value of AR = 7
+The main memory block number = 1
+The cache line number = 1
+The cache tag and line = 0:-106-1280-120
+Hit!
+The cache tag and line = 0:-106,-128,0,-120
+fetch 2: DR = 136 and PC = 8
+fetch 3: IR = 136 and AR = 8
+XADD instruction
+XADD1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 8 PC = 8 DR = 136
+fetch 1: AR = 8 and PC = 8
+Value of AR = 8
+The main memory block number = 2
+The cache line number = 2
+The cache tag and line = 2:-106-1280-120
+Miss!
+The cache tag and line = 0:-1,0,0,0
+fetch 2: DR = 255 and PC = 9
+fetch 3: IR = 255 and AR = 9
+HALT instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 9 PC = 9 DR = 255

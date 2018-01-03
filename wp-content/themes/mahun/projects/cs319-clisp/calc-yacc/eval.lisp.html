@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>eval.lisp</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles-2014.css"></link>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/site-2014.js"></script>
+    <meta name="viewport" content="initial-scale=1.0"></meta>
+  </head>
+  <body>
+    <div class="content">
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; The evaluator for the integer calculator.</span>
+
+<span class="hl slc">;; eval-expr: Traverses an expression tree and computes the value.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> eval-expr <span class="hl opt">(</span><span class="hl kwa">expr</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">etypecase</span> expr
+	     <span class="hl opt">(</span><span class="hl kwa">int-const-expr</span> <span class="hl opt">(</span><span class="hl kwa">int-const-expr-value</span> expr<span class="hl opt">))</span>
+	     <span class="hl opt">(</span><span class="hl kwa">binary-expr</span>
+	      <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">left-val</span> <span class="hl opt">(</span><span class="hl kwa">eval-expr</span> <span class="hl opt">(</span><span class="hl kwa">binary-expr-left</span> expr<span class="hl opt">)))</span>
+		    <span class="hl opt">(</span><span class="hl kwa">right-val</span> <span class="hl opt">(</span><span class="hl kwa">eval-expr</span> <span class="hl opt">(</span><span class="hl kwa">binary-expr-right</span> expr<span class="hl opt">))))</span>
+		<span class="hl opt">(</span><span class="hl kwa">ecase</span> <span class="hl opt">(</span><span class="hl kwa">binary-expr-op</span> expr<span class="hl opt">)</span>
+		       <span class="hl opt">(</span><span class="hl kwa">PLUS</span> <span class="hl opt">(+</span> left-val right-val<span class="hl opt">))</span>
+		       <span class="hl opt">(</span><span class="hl kwa">MINUS</span> <span class="hl opt">(</span><span class="hl kwa">-</span> left-val right-val<span class="hl opt">))</span>
+		       <span class="hl opt">(</span><span class="hl kwa">TIMES</span> <span class="hl opt">(*</span> left-val right-val<span class="hl opt">))</span>
+		       <span class="hl opt">(</span><span class="hl kwa">DIV</span> <span class="hl opt">(</span><span class="hl kwa">truncate</span> <span class="hl opt">(/</span> left-val right-val<span class="hl opt">)))</span>
+		       <span class="hl opt">(</span><span class="hl kwa">MOD</span> <span class="hl opt">(</span><span class="hl kwa">mod</span> left-val right-val<span class="hl opt">)))))))</span>
+</pre>
+</div>
+</div>
+</div>
+    </div>
+  </body>
+</html>

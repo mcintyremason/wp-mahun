@@ -1,0 +1,208 @@
+rscpu written by Mason McIntyre
+Enter the name of the file containing the program: 
+You've opened the file test.7
+End of file reached.
+fetch 1: AR = 0 and PC = 0
+fetch 2: DR = 0 and PC = 1
+fetch 3: IR = 0 and AR = 1
+NOP instruction
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 1 PC = 1 DR = 0
+fetch 1: AR = 1 and PC = 1
+fetch 2: DR = 129 and PC = 2
+fetch 3: IR = 129 and AR = 2
+XLDAC instruction
+XLDAC1 DR = 0 PC = 3 AR = 3
+XLDAC2 TR = 0 DR = 41 PC = 4 AR = 3
+XLDAC3 AR = 41
+XLDAC4 DR = 0
+XLDAC5 AC = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 41 PC = 4 DR = -127
+fetch 1: AR = 4 and PC = 4
+fetch 2: DR = 131 and PC = 5
+fetch 3: IR = 131 and AR = 5
+XMVAC instruction
+XMVAC1 R = 0
+Instruction Complete: AC = 0 R = 0 ZCVN = 0000 AR = 5 PC = 5 DR = 131
+fetch 1: AR = 5 and PC = 5
+fetch 2: DR = 136 and PC = 6
+fetch 3: IR = 136 and AR = 6
+XADD instruction
+XADD1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 6 PC = 6 DR = 136
+fetch 1: AR = 6 and PC = 6
+fetch 2: DR = 137 and PC = 7
+fetch 3: IR = 137 and AR = 7
+XSUB instruction
+XSUB1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 7 PC = 7 DR = 137
+fetch 1: AR = 7 and PC = 7
+fetch 2: DR = 138 and PC = 8
+fetch 3: IR = 138 and AR = 8
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 8 PC = 8 DR = 138
+fetch 1: AR = 8 and PC = 8
+fetch 2: DR = 130 and PC = 9
+fetch 3: IR = 130 and AR = 9
+XSTAC instruction
+XSTAC1 DR = 0 PC = 10 AR = 10
+XSTAC2 TR = 0 DR = 46 PC = 11 AR = 10
+XSTAC3 AR = 46
+XSTAC4 DR = 1
+XSTAC5 M[AR] = 1
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 46 PC = 11 DR = 1
+fetch 1: AR = 11 and PC = 11
+fetch 2: DR = 139 and PC = 12
+fetch 3: IR = 139 and AR = 12
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 12 PC = 12 DR = 139
+fetch 1: AR = 12 and PC = 12
+fetch 2: DR = 140 and PC = 13
+fetch 3: IR = 140 and AR = 13
+XAND instruction
+XADD1 AC = 0, R = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 13 PC = 13 DR = 140
+fetch 1: AR = 13 and PC = 13
+fetch 2: DR = 141 and PC = 14
+fetch 3: IR = 141 and AR = 14
+EXOR instruction
+EXOR1 AC = 0, R = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 14 PC = 14 DR = 141
+fetch 1: AR = 14 and PC = 14
+fetch 2: DR = 137 and PC = 15
+fetch 3: IR = 137 and AR = 15
+XSUB instruction
+XSUB1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 15 PC = 15 DR = 137
+fetch 1: AR = 15 and PC = 15
+fetch 2: DR = 142 and PC = 16
+fetch 3: IR = 142 and AR = 16
+XXOR instruction
+XXOR1 AC = 0, R = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 16 PC = 16 DR = 142
+fetch 1: AR = 16 and PC = 16
+fetch 2: DR = 138 and PC = 17
+fetch 3: IR = 138 and AR = 17
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 17 PC = 17 DR = 138
+fetch 1: AR = 17 and PC = 17
+fetch 2: DR = 143 and PC = 18
+fetch 3: IR = 143 and AR = 18
+XNOT instruction
+XNOT1 AC = -2, ZCVN = 0001
+Instruction Complete: AC = -2 R = 0 ZCVN = 0001 AR = 18 PC = 18 DR = 143
+fetch 1: AR = 18 and PC = 18
+fetch 2: DR = 139 and PC = 19
+fetch 3: IR = 139 and AR = 19
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 0 ZCVN = 1000 AR = 19 PC = 19 DR = 139
+fetch 1: AR = 19 and PC = 19
+fetch 2: DR = 138 and PC = 20
+fetch 3: IR = 138 and AR = 20
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 20 PC = 20 DR = 138
+fetch 1: AR = 20 and PC = 20
+fetch 2: DR = 148 and PC = 21
+fetch 3: IR = 148 and AR = 21
+XLSL instruction
+XLSL1 AC = 2, ZCVN = 0000
+Instruction Complete: AC = 2 R = 0 ZCVN = 0000 AR = 21 PC = 21 DR = 148
+fetch 1: AR = 21 and PC = 21
+fetch 2: DR = 149 and PC = 22
+fetch 3: IR = 149 and AR = 22
+XLSR instruction
+XLSR1 AC = 1, ZCVN = 0000
+Instruction Complete: AC = 1 R = 0 ZCVN = 0000 AR = 22 PC = 22 DR = 149
+fetch 1: AR = 22 and PC = 22
+fetch 2: DR = 147 and PC = 23
+fetch 3: IR = 147 and AR = 23
+XRR instruction
+XRR1 AC = -32768, ZCVN = 0111
+Instruction Complete: AC = -32768 R = 0 ZCVN = 0111 AR = 23 PC = 23 DR = 147
+fetch 1: AR = 23 and PC = 23
+fetch 2: DR = 146 and PC = 24
+fetch 3: IR = 146 and AR = 24
+XRL instruction
+XRL1 AC = 1, ZCVN = 0110
+Instruction Complete: AC = 1 R = 0 ZCVN = 0110 AR = 24 PC = 24 DR = 146
+fetch 1: AR = 24 and PC = 24
+fetch 2: DR = 129 and PC = 25
+fetch 3: IR = 129 and AR = 25
+XLDAC instruction
+XLDAC1 DR = 0 PC = 26 AR = 26
+XLDAC2 TR = 0 DR = 43 PC = 27 AR = 26
+XLDAC3 AR = 43
+XLDAC4 DR = 127
+XLDAC5 AC = 127
+Instruction Complete: AC = 127 R = 0 ZCVN = 0110 AR = 43 PC = 27 DR = -127
+fetch 1: AR = 27 and PC = 27
+fetch 2: DR = 131 and PC = 28
+fetch 3: IR = 131 and AR = 28
+XMVAC instruction
+XMVAC1 R = 127
+Instruction Complete: AC = 127 R = 127 ZCVN = 0110 AR = 28 PC = 28 DR = 131
+fetch 1: AR = 28 and PC = 28
+fetch 2: DR = 139 and PC = 29
+fetch 3: IR = 139 and AR = 29
+XCLAC instruction
+XCLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 127 ZCVN = 1000 AR = 29 PC = 29 DR = 139
+fetch 1: AR = 29 and PC = 29
+fetch 2: DR = 138 and PC = 30
+fetch 3: IR = 138 and AR = 30
+XINAC instruction
+XINAC1 AC = 1 ZCVN = 0000
+Instruction Complete: AC = 1 R = 127 ZCVN = 0000 AR = 30 PC = 30 DR = 138
+fetch 1: AR = 30 and PC = 30
+fetch 2: DR = 136 and PC = 31
+fetch 3: IR = 136 and AR = 31
+XADD instruction
+XADD1 AC = 128 ZCVN = 0000
+Instruction Complete: AC = 128 R = 127 ZCVN = 0000 AR = 31 PC = 31 DR = 136
+fetch 1: AR = 31 and PC = 31
+fetch 2: DR = 137 and PC = 32
+fetch 3: IR = 137 and AR = 32
+XSUB instruction
+XSUB1 AC = 1 ZCVN = 0100
+Instruction Complete: AC = 1 R = 127 ZCVN = 0100 AR = 32 PC = 32 DR = 137
+fetch 1: AR = 32 and PC = 32
+fetch 2: DR = 129 and PC = 33
+fetch 3: IR = 129 and AR = 33
+XLDAC instruction
+XLDAC1 DR = 0 PC = 34 AR = 34
+XLDAC2 TR = 0 DR = 43 PC = 35 AR = 34
+XLDAC3 AR = 43
+XLDAC4 DR = 127
+XLDAC5 AC = 127
+Instruction Complete: AC = 127 R = 127 ZCVN = 0100 AR = 43 PC = 35 DR = -127
+fetch 1: AR = 35 and PC = 35
+fetch 2: DR = 1 and PC = 36
+fetch 3: IR = 1 and AR = 36
+LDAC instruction
+LDAC1 DR = 0 PC = 37 AR = 37
+LDAC2 TR = 0 DR = 45 PC = 38 AR = 37
+LDAC3 AR = 45
+LDAC4 DR = -128
+LDAC5 AC = -128
+Instruction Complete: AC = -128 R = 127 ZCVN = 0100 AR = 45 PC = 38 DR = -128
+fetch 1: AR = 38 and PC = 38
+fetch 2: DR = 8 and PC = 39
+fetch 3: IR = 8 and AR = 39
+ADD instruction
+ADD1 AC = -1 ZCVN = 0101
+Instruction Complete: AC = -1 R = 127 ZCVN = 0101 AR = 39 PC = 39 DR = 8
+fetch 1: AR = 39 and PC = 39
+fetch 2: DR = 11 and PC = 40
+fetch 3: IR = 11 and AR = 40
+CLAC instruction
+CLAC1 AC = 0 ZCVN = 1000
+Instruction Complete: AC = 0 R = 127 ZCVN = 1000 AR = 40 PC = 40 DR = 11
+fetch 1: AR = 40 and PC = 40
+fetch 2: DR = 255 and PC = 41
+fetch 3: IR = 255 and AR = 41
+HALT instruction
+Instruction Complete: AC = 0 R = 127 ZCVN = 1000 AR = 41 PC = 41 DR = 255

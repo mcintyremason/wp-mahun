@@ -1,0 +1,7 @@
+x := 1;
+n := 10;
+for x := n do
+begin
+  writeln(x : 15);
+  x := x + 1
+end

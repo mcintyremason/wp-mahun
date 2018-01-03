@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>calc.lisp</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles-2014.css"></link>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/site-2014.js"></script>
+    <meta name="viewport" content="initial-scale=1.0"></meta>
+  </head>
+  <body>
+    <div class="content">
+<div class="num-hl">
+<div class="num-hl-row">
+<div class="num">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre>
+</div>
+<div class="hl">
+<pre>
+<span class="hl slc">;; The main program for the integer calculator.</span>
+
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>yacc<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">use-package</span> <span class="hl opt">'</span>yacc<span class="hl opt">)</span>
+
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>scanner<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>parser<span class="hl opt">)</span>
+<span class="hl opt">(</span><span class="hl kwa">load</span> <span class="hl opt">'</span>eval<span class="hl opt">)</span>
+
+<span class="hl slc">;; repl: The read-eval-print loop for the calculator.</span>
+<span class="hl opt">(</span><span class="hl kwa">defun</span> repl <span class="hl opt">()</span>
+  <span class="hl opt">(</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span> <span class="hl str">&quot;calc&gt; &quot;</span><span class="hl opt">)</span>
+  <span class="hl opt">(</span><span class="hl kwa">let</span> <span class="hl opt">((</span><span class="hl kwa">line</span> <span class="hl opt">(</span><span class="hl kwa">read-line</span> <span class="hl opt">*</span>standard-input<span class="hl opt">*</span> nil<span class="hl opt">)))</span>
+    <span class="hl opt">(</span><span class="hl kwa">cond</span> <span class="hl opt">((</span><span class="hl kwa">null</span> line<span class="hl opt">)</span> nil<span class="hl opt">)</span>
+	  <span class="hl opt">(</span><span class="hl kwa">t</span> <span class="hl opt">(</span><span class="hl kwa">handler-case</span>
+              <span class="hl opt">(</span><span class="hl kwa">let</span><span class="hl opt">* ((</span><span class="hl kwa">stream</span> <span class="hl opt">(</span><span class="hl kwa">make-string-input-stream</span> line<span class="hl opt">))</span>
+                     <span class="hl opt">(</span><span class="hl kwa">expr</span> <span class="hl opt">(</span><span class="hl kwa">parse-with-lexer</span> 
+                            <span class="hl opt">(</span><span class="hl kwa">lambda</span> <span class="hl opt">() (</span><span class="hl kwa">scan</span> stream<span class="hl opt">))</span>
+                            <span class="hl opt">*</span>expr-parser<span class="hl opt">*)))</span>
+                <span class="hl opt">(</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span>  <span class="hl str">&quot;~a~%&quot;</span> <span class="hl opt">(</span><span class="hl kwa">eval-expr</span> expr<span class="hl opt">)))</span>
+              <span class="hl opt">(</span><span class="hl kwa">error</span> <span class="hl opt">(</span><span class="hl kwa">x</span><span class="hl opt">) (</span><span class="hl kwa">format</span> <span class="hl opt">*</span>standard-output<span class="hl opt">*</span> <span class="hl str">&quot;~a~%&quot;</span> x<span class="hl opt">)))</span>
+	     <span class="hl opt">(</span><span class="hl kwa">repl</span><span class="hl opt">)))))</span>
+
+<span class="hl slc">;; Start the read-eval-print loop.</span>
+<span class="hl opt">(</span><span class="hl kwa">repl</span><span class="hl opt">)</span>
+</pre>
+</div>
+</div>
+</div>
+    </div>
+  </body>
+</html>

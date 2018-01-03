@@ -1,0 +1,15 @@
+Username:  mcintym
+Date:      Fri Jan 16 11:58:34 EST 2015
+ 
+(FTOC 212) => 100 correct
+(FTOC 0) => -18 correct
+(FTOC 47) => 8 correct
+(SUMPROD 3 5) => (8 15) correct
+(SUMPROD -12 4) => (-8 -48) correct
+(SUMPROD 32 55) => (87 1760) correct
+(ROOTS 1 0 1) => NIL correct
+(ROOTS 1 0 -1) => (-1.0 1.0) correct
+(ROOTS 4 12 4) => (-2.618034 -0.381966) correct
+(ROOTS 1 10 25) => (-5.0) correct
+(ROOTS 2 -4 2) => (1.0) correct
+(ROOTS 1 1 1) => NIL correct

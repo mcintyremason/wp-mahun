@@ -1,0 +1,70 @@
+<!$DOCTYPE html>
+
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="Game.js"></script>
+    <style type="text/css">
+      #canvas {
+      position: absolute;
+      height: 25%;
+      width: 40%;
+      left: 32%;
+      }
+      #button1 {
+      display: table-cell;
+      background-color: '#FF0000';
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 30px;
+      }
+      #button2 {
+      display: table-cell;
+      background-color: '#FF0000';
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 30px;
+      }
+      #button3 {
+      display: table-cell;
+      background-color: '#FF0000';
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 30px;
+      }
+      #button4 {
+      display: table-cell;
+      background-color: '#FF0000';
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 30px;
+      }
+      </style>
+  </head>
+  <div>
+    <canvas id='canvas'></canvas>
+  </div>
+  <div id='library'>
+  </div>
+  <div><button id='replay'>Replay</button>
+  </div>
+  <body id='guess' bgcolor='#CCCCCC'>
+    <button id='button1' onClick='guess(1)'>
+    </button>
+    <button id='button2' onClick='guess(2)'>
+    </button>
+    <button id='button3' onClick='guess(3)'>
+    </button>
+    <button id='button4' onClick='guess(4)'>
+    </button>
+  </div>
+  </body>
+</html>

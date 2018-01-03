@@ -1,0 +1,9 @@
+start := 1;
+finish := 10;
+for i := start to finish do 
+begin
+    writeln(i);
+    start := 2;
+    finish := 7;
+    i := i + 1
+end
